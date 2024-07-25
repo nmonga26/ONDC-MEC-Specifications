@@ -1,0 +1,3 @@
+Subscription Services:
+  attribute_set:
+    $ref: "./Subscription_Services/index.yaml"

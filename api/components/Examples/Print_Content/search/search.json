@@ -1,0 +1,67 @@
+{
+  "context": {
+    "domain": "ONDC:MEC10",
+    "location": {
+      "city": {
+        "code": "std:080"
+      },
+      "country": {
+        "code": "IND"
+      }
+    },
+    "action": "search",
+    "version": "2.0.0",
+    "bap_id": "buyerapp.com",
+    "bap_uri": "https://buyerapp.com/ondc",
+    "transaction_id": "T1",
+    "message_id": "M1",
+    "timestamp": "2024-04-01T22:00:00.000Z",
+    "ttl": "PT30S"
+  },
+  "message": {
+    "intent": {
+      "item": {
+        "descriptor": {
+          "name": "Video"
+        }
+      },
+      "category": {
+        "id": "SRV-1002"
+      },
+      "tags": [
+        {
+          "descriptor": {
+            "code": "BUYER_FINDER_FEES"
+          },
+          "display": false,
+          "list": [
+            {
+              "descriptor": {
+                "code": "BUYER_FINDER_FEE_TYPE"
+              },
+              "value": "percent"
+            },
+            {
+              "descriptor": {
+                "code": "BUYER_FINDER_FEE_AMOUNT"
+              },
+              "value": "0"
+            },
+            {
+              "code": "STATIC_TERMS",
+              "value": ""
+            },
+            {
+              "code": "STATIC_TERMS_NEW",
+              "value": "https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf"
+            },
+            {
+              "code": "effective_date",
+              "value": "2023-10-01T00:00:00.000Z"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
