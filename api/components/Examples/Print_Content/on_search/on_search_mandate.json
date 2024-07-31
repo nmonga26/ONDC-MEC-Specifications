@@ -372,6 +372,22 @@
                     },
                     {
                       "descriptor": {
+                        "code": "VOLUME_NUMBER",
+                        "short_desc": "Description",
+                        "long_desc": "Description"
+                      },
+                      "value": "120"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "ISSUE_NUMBER",
+                        "short_desc": "Description",
+                        "long_desc": "Description"
+                      },
+                      "value": "546"
+                    },
+                    {
+                      "descriptor": {
                         "code": "LANGUAGE",
                         "short_desc": "Description",
                         "long_desc": "Description"
@@ -472,20 +488,6 @@
                   "list": [
                     {
                       "descriptor": {
-                        "code": "INFO",
-                        "short_desc": "Description",
-                        "long_desc": "Description"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "descriptor": {
-                    "code": "INFO"
-                  },
-                  "list": [
-                    {
-                      "descriptor": {
                         "code": "PUBLICATION_DATE",
                         "short_desc": "Description",
                         "long_desc": "Description"
@@ -539,6 +541,22 @@
                         "long_desc": "Description"
                       },
                       "value": "India"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "VOLUME_NUMBER",
+                        "short_desc": "Description",
+                        "long_desc": "Description"
+                      },
+                      "value": "120"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "ISSUE_NUMBER",
+                        "short_desc": "Description",
+                        "long_desc": "Description"
+                      },
+                      "value": "546"
                     },
                     {
                       "descriptor": {
@@ -660,20 +678,6 @@
                   "list": [
                     {
                       "descriptor": {
-                        "code": "INFO",
-                        "short_desc": "Description",
-                        "long_desc": "Description"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "descriptor": {
-                    "code": "INFO"
-                  },
-                  "list": [
-                    {
-                      "descriptor": {
                         "code": "PUBLICATION_DATE",
                         "short_desc": "Date of Publication",
                         "long_desc": "Date of Publication"
@@ -719,6 +723,22 @@
                         "long_desc": "Description"
                       },
                       "value": "India"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "VOLUME_NUMBER",
+                        "short_desc": "Description",
+                        "long_desc": "Description"
+                      },
+                      "value": "120"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "ISSUE_NUMBER",
+                        "short_desc": "Description",
+                        "long_desc": "Description"
+                      },
+                      "value": "546"
                     },
                     {
                       "descriptor": {

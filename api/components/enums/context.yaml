@@ -1,19 +1,7 @@
 domain:
-  - code: ONDC:SRV10
-    description: Home Services - Appliance Repair Services
-    reference: <PR/Issue/Discussion Links md format text>
-  - code: ONDC:SRV11
-    description: Home Services - Infra Services
-    reference: <PR/Issue/Discussion Links md format text>
-  - code: ONDC:SRV12
-    description: Home Services - Personal Care Services
-    reference: <PR/Issue/Discussion Links md format text>
-  - code: ONDC:SRV13
-    description: Healthcare Services
-    reference: <PR/Issue/Discussion Links md format text>
-  - code: ONDC:SRV14
-    description: Agriculture Services
-    reference: <PR/Issue/Discussion Links md format text>
   - code: ONDC:MEC10
-    description: Subscription Services
+    description: Print (Newspaper, Magazine, Books)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: ONDC:MEC11
+    description: Audio & Video
     reference: <PR/Issue/Discussion Links md format text>
