@@ -12,13 +12,20 @@ function formatText(inputText) {
 
 function toUnderscoreCase(inputText) {
   const words = inputText.split(" ");
-  const lowerCaseWords = words.map((word) => word === word.toUpperCase() ? `#${word.toLowerCase()}#`: word.toLowerCase()).join("_") + ".md";
-  
-  return lowerCaseWords
+  const lowerCaseWords =
+    words
+      .map((word) =>
+        word === word.toUpperCase()
+          ? `#${word.toLowerCase()}#`
+          : word.toLowerCase()
+      )
+      .join("_") + ".md";
+
+  return lowerCaseWords;
 }
 async function getFeatures(branchName) {
   if (!branchName) return;
-  const url = `https://api.github.com/repos/ONDC-Official/ONDC-SRV-Specifications/contents/api/docs?ref=${branchName}`;
+  const url = `https://api.github.com/repos/ONDC-Official/ONDC-MEC-Specifications/contents/api/docs?ref=${branchName}`;
 
   try {
     const response = await fetch(url, {
@@ -71,7 +78,7 @@ function markdownConverter(selectedOption) {
     }
   });
   const filePath = download_url;
-  
+
   fetch(filePath)
     .then((response) => {
       if (response.ok) {
