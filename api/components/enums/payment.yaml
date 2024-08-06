@@ -11,11 +11,8 @@ payment:
       reference: <PR/Issue/Discussion Links md format text>
   collected_by:
     - code: BAP
-      description: Collected by BAP
+      description: Collected by BAP (Buyer)
       reference: <PR/Issue/Discussion Links md format text>
     - code: BPP
-      description: Collected by BPP
-      reference: <PR/Issue/Discussion Links md format text>
-    - code: SOR
-      description: Collected by Seller on Record
+      description: Collected by BPP (Seller)
       reference: <PR/Issue/Discussion Links md format text>

@@ -1,7 +1,7 @@
 context:
   parent: true
   domain:
-    description: domain code, enums - ONDC:MEC10 (Print)
+    description: domain code, enums - ONDC:MEC10 (Print Media)
     required: mandatory
     usage: "ONDC:MEC10"
     reference: if any
@@ -51,9 +51,9 @@ message:
     fulfillment:
       parent: true
       type:
-        description: fulfillment type for the service, enum - "Buyer-Fulfilled, Seller-Fulfilled"
+        description: fulfillment type for the service, enum - "Online, Offline, Subscription"
         required: required
-        usage: "Seller-Fulfilled"
+        usage: "Online"
         reference: if any
       stops:
         location:

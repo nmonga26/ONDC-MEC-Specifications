@@ -1,3 +1,0 @@
-search:
-  examples:
-    - $ref: "./search/search.yaml"
