@@ -2597,15 +2597,16 @@ x-enum:
                 reference: <PR/Issue/Discussion Links md format text>
         fulfillments:
           type: &ref_1
-            - code: Seller-Fulfilled
-              description: >-
-                Services for which seller is able to pickup samples from buyer
-                location
+            - code: ONLINE
+              description: For services/products that can be fulfilled digitally
               reference: <PR/Issue/Discussion Links md format text>
-            - code: Buyer-Fulfilled
+            - code: OFFLINE
+              description: For services/products that needs to be fulfilled physically
+              reference: <PR/Issue/Discussion Links md format text>
+            - code: SUBSCRIPTION
               description: >-
-                When the buyer sends out the sample/or goes to the seller
-                location for availing a service
+                For services/products that can be periodically delivered at a
+                specific interval in both online and offline mode
               reference: <PR/Issue/Discussion Links md format text>
   on_search:
     context:
@@ -2654,13 +2655,10 @@ x-enum:
               reference: <PR/Issue/Discussion Links md format text>
           collected_by:
             - code: BAP
-              description: Collected by BAP
+              description: Collected by BAP (Buyer)
               reference: <PR/Issue/Discussion Links md format text>
             - code: BPP
-              description: Collected by BPP
-              reference: <PR/Issue/Discussion Links md format text>
-            - code: SOR
-              description: Collected by Seller on Record
+              description: Collected by BPP (Seller)
               reference: <PR/Issue/Discussion Links md format text>
   confirm:
     context:
@@ -2675,19 +2673,22 @@ x-enum:
         payments: *ref_3
         status: &ref_5
           - code: Created
-            description: about the enum
+            description: When the order is initially created by the buyer
             reference: <PR/Issue/Discussion Links md format text>
           - code: Accepted
-            description: about the enum
+            description: When the order is initially accepted by the seller
             reference: <PR/Issue/Discussion Links md format text>
           - code: In-progress
-            description: about the enum
+            description: When one or more fulfillments for the order are still pending
             reference: <PR/Issue/Discussion Links md format text>
           - code: Completed
-            description: about the enum
+            description: When all the fulfillments are completed for the order
+            reference: <PR/Issue/Discussion Links md format text>
+          - code: Active
+            description: When the order is active
             reference: <PR/Issue/Discussion Links md format text>
           - code: Cancelled
-            description: about the enum
+            description: When the order has been cancelled
             reference: <PR/Issue/Discussion Links md format text>
   on_confirm:
     context:
@@ -2702,28 +2703,20 @@ x-enum:
                 - code: PENDING
                   description: When the fulfillment is still in pending state
                   reference: <PR/Issue/Discussion Links md format text>
-                - code: IN_TRANSIT
-                  description: When the agent has left for picking up the sample
+                - code: PACKED
+                  description: When the item(s) has been packed by the seller
                   reference: <PR/Issue/Discussion Links md format text>
-                - code: AT_LOCATION
-                  description: When the agent is at the location for pickup
+                - code: AGENT-ASSIGNED
+                  description: When an agent has been assigned for the fulfillment
                   reference: <PR/Issue/Discussion Links md format text>
-                - code: COLLECTED_BY_AGENT
-                  description: When the sample is collected by the agent
+                - code: ORDER-PICKED-UP
+                  description: When the item(s) have been picked up by the agent
                   reference: <PR/Issue/Discussion Links md format text>
-                - code: RECEIVED_AT_LAB
-                  description: When the same is first received at the lab
+                - code: OUT-FOR-DELIVERY
+                  description: When the item(s) are out for delivery
                   reference: <PR/Issue/Discussion Links md format text>
-                - code: TEST_COMPLETED
-                  description: When the test has been completed but report is not generated
-                  reference: <PR/Issue/Discussion Links md format text>
-                - code: REPORT_GENERATED
-                  description: When the report is generated
-                  reference: <PR/Issue/Discussion Links md format text>
-                - code: REPORT_SHARED
-                  description: >-
-                    When the fulfillment is marked as completed and report has
-                    been shared
+                - code: COMPLETED
+                  description: When the item(s) are successfully delivered/fulfilled
                   reference: <PR/Issue/Discussion Links md format text>
         quote:
           breakup: *ref_4
@@ -11445,14 +11438,14 @@ x-examples:
                                 value: tax
                     ttl: P1D
 x-attributes:
-  Subscription Services:
+  Print Media:
     attribute_set:
       search:
         parent: true
         context:
           parent: true
           domain:
-            description: domain code, enums - ONDC:MEC10 (Subscription Services)
+            description: domain code, enums - ONDC:MEC10 (Print)
             required: mandatory
             usage: ONDC:MEC10
             reference: if any
@@ -12114,17 +12107,17 @@ x-attributes:
                     usage: '2023-11-16T09:00:00.000Z'
 x-errorcodes:
   code:
-    - Code: '90001'
+    - Code: '100001'
       Reason: Schedule selected by the buyer is not available
       Who can use code?: BPP
       Usage: Used in error object
       Action: /on_select
-    - Code: '90002'
+    - Code: '100002'
       Reason: Incorrect OTP provided by buyer
       Who can use code?: BPP
       Usage: Used in error object
       Action: /on_status
-    - Code: '90003'
+    - Code: '100003'
       Reason: Schedule is not provided by the buyer
       Who can use code?: BPP
       Usage: Used in NACK
