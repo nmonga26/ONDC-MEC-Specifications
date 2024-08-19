@@ -46,14 +46,14 @@ message:
       category:
         description: Category of the search
         required: optional
-        usage: "SRV15-1001"
+        usage: "MEC10-1001"
         reference: if any
     fulfillment:
       parent: true
       type:
-        description: fulfillment type for the service, enum - "Online, Offline, Subscription"
+        description: fulfillment type for the service, enum - "ONLINE, OFFLINE, SUBSCRIPTIOM"
         required: required
-        usage: "Online"
+        usage: "ONLINE"
         reference: if any
       stops:
         location:

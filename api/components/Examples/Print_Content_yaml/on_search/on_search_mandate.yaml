@@ -1,5 +1,5 @@
-summary: ''
-description: ''
+summary: ""
+description: ""
 value:
   context:
     domain: ONDC:MEC10
@@ -16,16 +16,16 @@ value:
     bpp_uri: https://sellerapp.com/ondc
     transaction_id: T1
     message_id: M1
-    timestamp: '2024-04-01T22:00:30.000Z'
+    timestamp: "2024-04-01T22:00:30.000Z"
     ttl: PT30S
   message:
     catalog:
       payments:
-        - id: '1'
+        - id: "1"
           type: PRE-FULFILLMENT
-        - id: '2'
+        - id: "2"
           type: ON-FULFILLMENT
-        - id: '3'
+        - id: "3"
           type: POST-FULFILLMENT
       descriptor:
         name: Magazine Service Provider
@@ -42,7 +42,7 @@ value:
             long_desc: Digital Magazine Provider
             images:
               - url: https://abc.com/images/1-shop-img
-          rating: '4.4'
+          rating: "4.4"
           ttl: PT1D
           locations:
             - id: L1
@@ -55,7 +55,7 @@ value:
                 code: KA
               country:
                 code: IND
-              area_code: '560076'
+              area_code: "560076"
           creds:
             - id: MGZ-12345678
               type: Certificate
@@ -85,10 +85,10 @@ value:
                   list:
                     - descriptor:
                         code: LANGUAGE
-                      value: item.tags.attributes.language
+                      value: item.tags.info.language
                     - descriptor:
                         code: SEQ
-                      value: '1'
+                      value: "1"
                 - descriptor:
                     code: ATTR
                   list:
@@ -97,7 +97,7 @@ value:
                       value: item.tags.attributes.edition
                     - descriptor:
                         code: SEQ
-                      value: '2'
+                      value: "2"
           fulfillments:
             - id: F1
               type: ONLINE
@@ -147,7 +147,7 @@ value:
                   - mimetype: image/jpeg
                     url: preview_image_1
               rating:
-                value: '4'
+                value: "4"
               creator:
                 descriptor:
                   name: India Today
@@ -158,9 +158,9 @@ value:
                   count: 1
               price:
                 currency: INR
-                value: '199.00'
-                offered_value: '199.00'
-                maximum_value: '299.00'
+                value: "199.00"
+                offered_value: "199.00"
+                maximum_value: "299.00"
               category_ids:
                 - SRV15-1001
                 - C1
@@ -169,13 +169,13 @@ value:
                 - F2
                 - F3
               payment_ids:
-                - '1'
+                - "1"
               cancellation_terms:
                 - fulfillment_state:
                     descriptor:
                       code: PENDING
                   cancellation_fee:
-                    percentage: '0.00'
+                    percentage: "0.00"
               tags:
                 - descriptor:
                     code: ATTRIBUTES
@@ -203,7 +203,7 @@ value:
                         code: FILE_SIZE
                         short_desc: Description
                         long_desc: Description
-                      value: '87343'
+                      value: "87343"
                     - descriptor:
                         code: FILE_SIZE_UNIT
                         short_desc: Description
@@ -213,12 +213,12 @@ value:
                         code: NUMBER_OF_ISSUES
                         short_desc: Description
                         long_desc: Description
-                      value: '100'
+                      value: "100"
                     - descriptor:
                         code: NUMBER_OF_PAGES
                         short_desc: Description
                         long_desc: Description
-                      value: '70'
+                      value: "70"
                     - descriptor:
                         code: COUNTRY_OF_ORIGIN
                         short_desc: Description
@@ -238,7 +238,7 @@ value:
                         code: DOWNLOADABLE
                         short_desc: Description
                         long_desc: Description
-                      value: 'Y'
+                      value: "Y"
               matched: true
               recommended: true
             - id: I2
@@ -257,7 +257,7 @@ value:
                   - mimetype: image/jpeg
                     url: preview_image_1
               rating:
-                value: '4'
+                value: "4"
               creator:
                 descriptor:
                   name: India Today
@@ -268,9 +268,9 @@ value:
                   count: 1
               price:
                 currency: INR
-                value: '199.00'
-                offered_value: '199.00'
-                maximum_value: '299.00'
+                value: "199.00"
+                offered_value: "199.00"
+                maximum_value: "299.00"
               category_ids:
                 - SRV15-1001
                 - C1
@@ -279,13 +279,13 @@ value:
                 - F2
                 - F3
               payment_ids:
-                - '1'
+                - "1"
               cancellation_terms:
                 - fulfillment_state:
                     descriptor:
                       code: PENDING
                   cancellation_fee:
-                    percentage: '0.00'
+                    percentage: "0.00"
               tags:
                 - descriptor:
                     code: ATTRIBUTES
@@ -311,7 +311,7 @@ value:
                         code: FILE_SIZE
                         short_desc: Description
                         long_desc: Description
-                      value: '87343'
+                      value: "87343"
                     - descriptor:
                         code: FILE_SIZE_UNIT
                         short_desc: Description
@@ -321,12 +321,12 @@ value:
                         code: NUMBER_OF_ISSUES
                         short_desc: Description
                         long_desc: Description
-                      value: '100'
+                      value: "100"
                     - descriptor:
                         code: NUMBER_OF_PAGES
                         short_desc: Description
                         long_desc: Description
-                      value: '70'
+                      value: "70"
                     - descriptor:
                         code: COUNTRY_OF_ORIGIN
                         short_desc: Description
@@ -346,7 +346,7 @@ value:
                         code: DOWNLOADABLE
                         short_desc: Description
                         long_desc: Description
-                      value: 'Y'
+                      value: "Y"
               matched: true
               recommended: true
             - id: I3
@@ -364,7 +364,7 @@ value:
                   - mimetype: image/jpeg
                     url: preview_image_1
               rating:
-                value: '4.5'
+                value: "4.5"
               creator:
                 descriptor:
                   name: India Today
@@ -375,9 +375,9 @@ value:
                   count: 1
               price:
                 currency: INR
-                value: '299.00'
-                offered_value: '299.00'
-                maximum_value: '399.00'
+                value: "299.00"
+                offered_value: "299.00"
+                maximum_value: "399.00"
               category_ids:
                 - SRV15-1001
                 - C1
@@ -385,30 +385,30 @@ value:
                 - F2
                 - F4
               payment_ids:
-                - '1'
+                - "1"
               cancellation_terms:
                 - fulfillment_state:
                     descriptor:
                       code: PENDING
                   cancellation_fee:
-                    percentage: '0.00'
+                    percentage: "0.00"
               time:
                 label: validity
                 range:
-                  start: '2022-11-10T00:00:00.000Z'
-                  end: '2022-11-20T19:30:00.000Z'
+                  start: "2022-11-10T00:00:00.000Z"
+                  end: "2022-11-20T19:30:00.000Z"
                 days: 4,5
                 schedule:
                   frequency: PT1H
                   holidays:
-                    - '2023-11-13'
-                    - '2023-11-15'
+                    - "2023-11-13"
+                    - "2023-11-15"
                   times:
-                    - '2023-11-16T09:30:00.000Z'
-                    - '2023-11-16T19:30:00.000Z'
-                    - '2023-11-14T19:30:00.000Z'
-                    - '2023-11-17T19:30:00.000Z'
-                    - '2023-11-17T09:30:00.000Z'
+                    - "2023-11-16T09:30:00.000Z"
+                    - "2023-11-16T19:30:00.000Z"
+                    - "2023-11-14T19:30:00.000Z"
+                    - "2023-11-17T19:30:00.000Z"
+                    - "2023-11-17T09:30:00.000Z"
               tags:
                 - descriptor:
                     code: ATTRIBUTES
@@ -429,7 +429,7 @@ value:
                         code: FILE_SIZE
                         short_desc: Description
                         long_desc: Description
-                      value: '87343'
+                      value: "87343"
                     - descriptor:
                         code: FILE_SIZE_UNIT
                         short_desc: Description
@@ -439,12 +439,12 @@ value:
                         code: NUMBER_OF_ISSUES
                         short_desc: Description
                         long_desc: Description
-                      value: '100'
+                      value: "100"
                     - descriptor:
                         code: NUMBER_OF_PAGES
                         short_desc: Description
                         long_desc: Description
-                      value: '70'
+                      value: "70"
                     - descriptor:
                         code: COUNTRY_OF_ORIGIN
                         short_desc: Description
@@ -464,7 +464,7 @@ value:
                         code: DOWNLOADABLE
                         short_desc: Description
                         long_desc: Description
-                      value: 'Y'
+                      value: "Y"
               matched: true
               recommended: true
           tags:
@@ -479,7 +479,7 @@ value:
                   value: SRV15-1001
                 - descriptor:
                     code: type
-                  value: '13'
+                  value: "13"
                 - descriptor:
                     code: val
                   value: >-
@@ -502,10 +502,10 @@ value:
                   value: SRV15-1001
                 - descriptor:
                     code: type
-                  value: '10'
+                  value: "10"
                 - descriptor:
                     code: val
-                  value: '5'
+                  value: "5"
                 - descriptor:
                     code: unit
                   value: km
@@ -520,7 +520,7 @@ value:
                   value: SRV15-1001
                 - descriptor:
                     code: type
-                  value: '11'
+                  value: "11"
                 - descriptor:
                     code: val
                   value: 560001,560002
@@ -538,7 +538,7 @@ value:
                   value: SRV15-1001
                 - descriptor:
                     code: type
-                  value: '12'
+                  value: "12"
                 - descriptor:
                     code: val
                   value: IND
@@ -561,24 +561,24 @@ value:
               time:
                 label: validity
                 range:
-                  start: '2024-04-01T00:00:00.000Z'
-                  end: '2024-04-10T00:00:00.000Z'
+                  start: "2024-04-01T00:00:00.000Z"
+                  end: "2024-04-10T00:00:00.000Z"
                 tags:
                   - code: QUALIFIER
                     list:
                       - code: ITEM_COUNT
-                        value: '2'
+                        value: "2"
                   - code: BENEFIT
                     list:
                       - code: ITEM_COUNT
-                        value: '1'
+                        value: "1"
                       - code: ITEM_ID
                         value: SKU ITEM ID
                       - code: ITEM_VALUE
-                        value: '200.00'
+                        value: "200.00"
                   - code: META
                     list:
                       - code: ADDITIVE
-                        value: 'no'
+                        value: "no"
                       - code: AUTO
-                        value: 'yes'
+                        value: "yes"

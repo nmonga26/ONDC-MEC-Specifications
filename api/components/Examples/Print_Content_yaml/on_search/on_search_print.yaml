@@ -93,7 +93,7 @@ value:
                   list:
                     - descriptor:
                         code: LANGUAGE
-                      value: item.tags.attributes.language
+                      value: item.tags.info.language
                     - descriptor:
                         code: SEQ
                       value: "1"

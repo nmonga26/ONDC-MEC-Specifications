@@ -3095,7 +3095,7 @@ x-flows:
                   descriptor:
                     name: Magazines
                 category:
-                  id: SRV-1001
+                  id: MEC10-1001
                 tags:
                   - descriptor:
                       code: BUYER_FINDER_FEES
@@ -3199,7 +3199,7 @@ x-flows:
                             list:
                               - descriptor:
                                   code: LANGUAGE
-                                value: item.tags.attributes.language
+                                value: item.tags.info.language
                               - descriptor:
                                   code: SEQ
                                 value: '1'
@@ -11445,7 +11445,7 @@ x-attributes:
         context:
           parent: true
           domain:
-            description: domain code, enums - ONDC:MEC10 (Print)
+            description: domain code, enums - ONDC:MEC10 (Print Media)
             required: mandatory
             usage: ONDC:MEC10
             reference: if any
@@ -11495,16 +11495,16 @@ x-attributes:
               category:
                 description: Category of the search
                 required: optional
-                usage: SRV15-1001
+                usage: MEC10-1001
                 reference: if any
             fulfillment:
               parent: true
               type:
                 description: >-
-                  fulfillment type for the service, enum - "Buyer-Fulfilled,
-                  Seller-Fulfilled"
+                  fulfillment type for the service, enum - "ONLINE, OFFLINE,
+                  SUBSCRIPTIOM"
                 required: required
-                usage: Seller-Fulfilled
+                usage: ONLINE
                 reference: if any
               stops:
                 location:
@@ -11559,10 +11559,10 @@ x-attributes:
                 reference: if any
               type:
                 description: >-
-                  fulfillment type of the service, enum - "Seller-Fulfilled,
-                  Buyer-Fulfilled"
+                  fulfillment type of the service, enum - "ONLINE, OFFLINE,
+                  SUBSCRIPTION"
                 required: required
-                usage: Seller-Fulfilled
+                usage: ONLINE
                 reference: if any
             payments:
               parent: true
@@ -11581,12 +11581,12 @@ x-attributes:
               name:
                 description: name of service provider, as applicable
                 required: required
-                usage: ABC store
+                usage: Magazine/Newspaper Provider
                 reference: if any
               short_desc:
                 description: description of service provider
                 required: required
-                usage: At home Service Providers
+                usage: '-'
                 reference: if any
             providers:
               parent: true
@@ -11598,7 +11598,7 @@ x-attributes:
               descriptor:
                 description: details of the service provider
                 required: required
-                usage: ABC store
+                usage: Magazine/Newspaper Provider
                 reference: if any
               locations:
                 description: service provider locations
@@ -11608,9 +11608,9 @@ x-attributes:
               items:
                 descriptor:
                   name:
-                    description: name of the service provided by the service provider
+                    description: name of the item provided by the service provider
                     required: required
-                    usage: Home Painting - Home consultation
+                    usage: Weekly Newspaper/Magazine
                     reference: if any
                   price:
                     value:
@@ -11628,7 +11628,7 @@ x-attributes:
                     category id of the service provided by the service provider
                     which was sent in /search call
                   required: required
-                  usage: SRV15-1001
+                  usage: MEC10-1001
                   reference: if any
                 fulfillment_ids:
                   description: >-
@@ -11687,7 +11687,7 @@ x-attributes:
                         description of the offer being provided by the service
                         provider
                       required: optional
-                      usage: Cushion Cleaning
+                      usage: Free newsletter with sports news
                       reference: if any
                   item_ids:
                     description: item ids on which this offer is applicable
@@ -11829,10 +11829,10 @@ x-attributes:
               breakup:
                 title:
                   description: >-
-                    title of the service charges enum - Sofa Cleaning, tax,
+                    title of the service charges enum - Weekly Magazine, tax,
                     discount, convenience_fee
                   required: required
-                  usage: Sofa Cleaning
+                  usage: Weekly Magazine
                   reference: if any
                 price:
                   description: price of the quote breakup type
@@ -11889,10 +11889,10 @@ x-attributes:
                   reference: if any
                 title:
                   description: >-
-                    title of the service charges enum - Sofa Cleaning, tax,
+                    title of the service charges enum - Weekly Magazine, tax,
                     discount, convenience_fee
                   required: required
-                  usage: Sofa Cleaning
+                  usage: Weekly Magazine
                   reference: if any
             payments:
               parent: true
@@ -11959,9 +11959,14 @@ x-attributes:
             state:
               description: >-
                 status of the order, enum - "Created", "Accepted",
-                "In-progress", "Completed", "Cancelled"
+                "In-progress", "Completed", "Cancelled", "Active"
               required: required
               usage: Created
+              reference: if any
+            ref_order_ids:
+              description: Orders that are currently linked to this order
+              required: not-required
+              usage: '[1001203, 1001204]'
               reference: if any
             fulfillments:
               parent: true
@@ -12095,7 +12100,8 @@ x-attributes:
                   code:
                     description: >-
                       Denotes the state of the fulfillment; Enum; Values can be
-                      - "Pending", "In-Transit", "At-Location", "Completed";
+                      - "Pending", "Packed", "Agent-Assigned",
+                      "Out-For-Delivery", "Order-Picked-Up", "Completed";
                     required: mandatory
                     usage: '-'
                     reference: if any

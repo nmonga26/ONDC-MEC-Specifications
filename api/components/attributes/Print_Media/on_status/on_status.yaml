@@ -24,7 +24,7 @@ message:
       state:
         descriptor:
           code:
-            description: Denotes the state of the fulfillment; Enum; Values can be - "Pending", "In-Transit", "At-Location", "Completed";
+            description: Denotes the state of the fulfillment; Enum; Values can be - "Pending", "Packed", "Agent-Assigned", "Out-For-Delivery", "Order-Picked-Up", "Completed";
             required: mandatory
             usage: "-"
             reference: if any

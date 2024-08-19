@@ -22,7 +22,7 @@ value:
         descriptor:
           name: Magazines
       category:
-        id: SRV-1001
+        id: MEC10-1001
       tags:
         - descriptor:
             code: BUYER_FINDER_FEES

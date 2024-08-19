@@ -10,9 +10,9 @@ message:
         usage: "1"
         reference: if any
       type:
-        description: fulfillment type of the service, enum - "Seller-Fulfilled, Buyer-Fulfilled"
+        description: fulfillment type of the service, enum - "ONLINE, OFFLINE, SUBSCRIPTION"
         required: required
-        usage: "Seller-Fulfilled"
+        usage: "ONLINE"
         reference: if any
     payments:
       parent: true
@@ -31,12 +31,12 @@ message:
       name:
         description: name of service provider, as applicable
         required: required
-        usage: "ABC store"
+        usage: "Magazine/Newspaper Provider"
         reference: if any
       short_desc:
         description: description of service provider
         required: required
-        usage: "At home Service Providers"
+        usage: "-"
         reference: if any
     providers:
       parent: true
@@ -48,7 +48,7 @@ message:
       descriptor:
         description: details of the service provider
         required: required
-        usage: "ABC store"
+        usage: "Magazine/Newspaper Provider"
         reference: if any
       locations:
         description: service provider locations
@@ -58,9 +58,9 @@ message:
       items:
         descriptor:
           name:
-            description: name of the service provided by the service provider
+            description: name of the item provided by the service provider
             required: required
-            usage: "Home Painting - Home consultation"
+            usage: "Weekly Newspaper/Magazine"
             reference: if any
           price:
             value:
@@ -76,7 +76,7 @@ message:
         category_ids:
           description: category id of the service provided by the service provider which was sent in /search call
           required: required
-          usage: "SRV15-1001"
+          usage: "MEC10-1001"
           reference: if any
         fulfillment_ids:
           description: fulfillment id of the service provided by the service provider
@@ -131,7 +131,7 @@ message:
             short_desc:
               description: description of the offer being provided by the service provider
               required: optional
-              usage: "Cushion Cleaning"
+              usage: "Free newsletter with sports news"
               reference: if any
           item_ids:
             description: item ids on which this offer is applicable

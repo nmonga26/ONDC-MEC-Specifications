@@ -1,5 +1,5 @@
-summary: ''
-description: ''
+summary: ""
+description: ""
 value:
   context:
     domain: ONDC:MEC10
@@ -14,7 +14,7 @@ value:
     bap_uri: https://buyerapp.com/ondc
     transaction_id: T1
     message_id: M1
-    timestamp: '2024-04-01T22:00:00.000Z'
+    timestamp: "2024-04-01T22:00:00.000Z"
     ttl: PT30S
   message:
     intent:
@@ -22,7 +22,7 @@ value:
         descriptor:
           name: Magazines
       category:
-        id: SRV-1001
+        id: MEC10-1001
       tags:
         - descriptor:
             code: BUYER_FINDER_FEES
@@ -33,4 +33,4 @@ value:
               value: percent
             - descriptor:
                 code: BUYER_FINDER_FEE_AMOUNT
-              value: '0'
+              value: "0"

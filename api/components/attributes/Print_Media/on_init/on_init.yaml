@@ -16,13 +16,13 @@ message:
           usage: "-"
           reference: if any
         title:
-          description: title of the service charges enum - Sofa Cleaning, tax, discount, convenience_fee
+          description: title of the service charges enum - Weekly Magazine, tax, discount, convenience_fee
           required: required
-          usage: "Sofa Cleaning"
+          usage: "Weekly Magazine"
           reference: if any
     payments:
       parent: true
-      type: 
+      type:
         description: stage when fulfillment will be done by service provider, enum - "PRE-FULFILLMENT", "ON-FULFILLMENT", "POST-FULFILLMENT"
         required: required
         usage: "PRE-FULFILLMENT"
