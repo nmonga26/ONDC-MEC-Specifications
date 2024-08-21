@@ -3305,10 +3305,15 @@ x-flows:
                                   long_desc: Description
                                 value: Delhi
                               - descriptor:
-                                  code: READING_AGE
+                                  code: READING_AGE_MIN
                                   short_desc: Description
                                   long_desc: Description
-                                value: 14+
+                                value: '14'
+                              - descriptor:
+                                  code: READING_AGE_MAX
+                                  short_desc: Description
+                                  long_desc: Description
+                                value: '60'
                               - descriptor:
                                   code: FILE_SIZE
                                   short_desc: Description
@@ -3394,6 +3399,16 @@ x-flows:
                                   short_desc: Description
                                   long_desc: Description
                                 value: Newsletter
+                              - descriptor:
+                                  code: CONCURRENT_ACCESS
+                                  short_desc: Description
+                                  long_desc: Description
+                                value: 'Y'
+                              - descriptor:
+                                  code: CONCURRENT_NO_OF_ACCESS
+                                  short_desc: Description
+                                  long_desc: Description
+                                value: '5'
                         matched: true
                         recommended: true
                       - id: I2
@@ -3456,10 +3471,15 @@ x-flows:
                                   long_desc: Description
                                 value: Bangalore
                               - descriptor:
-                                  code: READING_AGE
+                                  code: READING_AGE_MIN
                                   short_desc: Description
                                   long_desc: Description
-                                value: 14+
+                                value: '14'
+                              - descriptor:
+                                  code: READING_AGE_MAX
+                                  short_desc: Description
+                                  long_desc: Description
+                                value: '60'
                               - descriptor:
                                   code: FILE_SIZE
                                   short_desc: Description
@@ -3545,6 +3565,16 @@ x-flows:
                                   short_desc: Description
                                   long_desc: Description
                                 value: Newsletter
+                              - descriptor:
+                                  code: CONCURRENT_ACCESS
+                                  short_desc: Description
+                                  long_desc: Description
+                                value: 'Y'
+                              - descriptor:
+                                  code: CONCURRENT_NO_OF_ACCESS
+                                  short_desc: Description
+                                  long_desc: Description
+                                value: '5'
                         matched: true
                         recommended: true
                       - id: I3
@@ -3584,6 +3614,20 @@ x-flows:
                           - F4
                         payment_ids:
                           - '1'
+                        add_ons:
+                          - id: A1
+                            descriptor:
+                              name: Sports Newsletter
+                              short_desc: Sports newsletter of the month
+                              long_desc: Sports newsletter of the month with latest news
+                            price:
+                              currency: INR
+                              value: '50.00'
+                            quantity:
+                              unitized:
+                                measure:
+                                  unit: unit
+                                  value: '1'
                         cancellation_terms:
                           - fulfillment_state:
                               descriptor:
@@ -3622,10 +3666,15 @@ x-flows:
                                   long_desc: Description
                                 value: Bangalore
                               - descriptor:
-                                  code: READING_AGE
+                                  code: READING_AGE_MIN
                                   short_desc: Description
                                   long_desc: Description
-                                value: 14+
+                                value: '14'
+                              - descriptor:
+                                  code: READING_AGE_MAX
+                                  short_desc: Description
+                                  long_desc: Description
+                                value: '60'
                               - descriptor:
                                   code: FILE_SIZE
                                   short_desc: Description
@@ -3711,6 +3760,16 @@ x-flows:
                                   short_desc: Description
                                   long_desc: Description
                                 value: Newsletter
+                              - descriptor:
+                                  code: CONCURRENT_ACCESS
+                                  short_desc: Description
+                                  long_desc: Description
+                                value: 'Y'
+                              - descriptor:
+                                  code: CONCURRENT_NO_OF_ACCESS
+                                  short_desc: Description
+                                  long_desc: Description
+                                value: '5'
                         matched: true
                         recommended: true
                     tags:
@@ -10499,10 +10558,15 @@ x-flows:
                                   long_desc: Description
                                 value: Delhi
                               - descriptor:
-                                  code: READING_AGE
+                                  code: READING_AGE_MIN
                                   short_desc: Description
                                   long_desc: Description
-                                value: 14+
+                                value: '14'
+                              - descriptor:
+                                  code: READING_AGE_MAX
+                                  short_desc: Description
+                                  long_desc: Description
+                                value: '60'
                               - descriptor:
                                   code: FILE_SIZE
                                   short_desc: Description
@@ -10588,6 +10652,16 @@ x-flows:
                                   short_desc: Description
                                   long_desc: Description
                                 value: Newsletter
+                              - descriptor:
+                                  code: CONCURRENT_ACCESS
+                                  short_desc: Description
+                                  long_desc: Description
+                                value: 'Y'
+                              - descriptor:
+                                  code: CONCURRENT_NO_OF_ACCESS
+                                  short_desc: Description
+                                  long_desc: Description
+                                value: '5'
                         matched: true
                         recommended: true
                       - id: I2
@@ -10650,10 +10724,15 @@ x-flows:
                                   long_desc: Description
                                 value: Bangalore
                               - descriptor:
-                                  code: READING_AGE
+                                  code: READING_AGE_MIN
                                   short_desc: Description
                                   long_desc: Description
-                                value: 14+
+                                value: '14'
+                              - descriptor:
+                                  code: READING_AGE_MAX
+                                  short_desc: Description
+                                  long_desc: Description
+                                value: '60'
                               - descriptor:
                                   code: FILE_SIZE
                                   short_desc: Description
@@ -10674,11 +10753,6 @@ x-flows:
                                   short_desc: Description
                                   long_desc: Description
                                 value: 0970819-7
-                              - descriptor:
-                                  code: NUMBER_OF_ISSUES
-                                  short_desc: Description
-                                  long_desc: Description
-                                value: '100'
                               - descriptor:
                                   code: NUMBER_OF_PAGES
                                   short_desc: Description
@@ -10739,6 +10813,16 @@ x-flows:
                                   short_desc: Description
                                   long_desc: Description
                                 value: Newsletter
+                              - descriptor:
+                                  code: CONCURRENT_ACCESS
+                                  short_desc: Description
+                                  long_desc: Description
+                                value: 'Y'
+                              - descriptor:
+                                  code: CONCURRENT_NO_OF_ACCESS
+                                  short_desc: Description
+                                  long_desc: Description
+                                value: '5'
                         matched: true
                         recommended: true
                       - id: I3
@@ -10778,6 +10862,20 @@ x-flows:
                           - F4
                         payment_ids:
                           - '1'
+                        add_ons:
+                          - id: A1
+                            descriptor:
+                              name: Sports Newsletter
+                              short_desc: Sports newsletter of the month
+                              long_desc: Sports newsletter of the month with latest news
+                            price:
+                              currency: INR
+                              value: '50.00'
+                            quantity:
+                              unitized:
+                                measure:
+                                  unit: unit
+                                  value: '1'
                         cancellation_terms:
                           - fulfillment_state:
                               descriptor:
@@ -10816,10 +10914,15 @@ x-flows:
                                   long_desc: Description
                                 value: Bangalore
                               - descriptor:
-                                  code: READING_AGE
+                                  code: READING_AGE_MIN
                                   short_desc: Description
                                   long_desc: Description
-                                value: 14+
+                                value: '14'
+                              - descriptor:
+                                  code: READING_AGE_MAX
+                                  short_desc: Description
+                                  long_desc: Description
+                                value: '60'
                               - descriptor:
                                   code: FILE_SIZE
                                   short_desc: Description
@@ -10905,6 +11008,16 @@ x-flows:
                                   short_desc: Description
                                   long_desc: Description
                                 value: Newsletter
+                              - descriptor:
+                                  code: CONCURRENT_ACCESS
+                                  short_desc: Description
+                                  long_desc: Description
+                                value: 'Y'
+                              - descriptor:
+                                  code: CONCURRENT_NO_OF_ACCESS
+                                  short_desc: Description
+                                  long_desc: Description
+                                value: '5'
                         matched: true
                         recommended: true
                     tags:
@@ -15394,10 +15507,15 @@ x-examples:
                                     long_desc: Description
                                   value: Delhi
                                 - descriptor:
-                                    code: READING_AGE
+                                    code: READING_AGE_MIN
                                     short_desc: Description
                                     long_desc: Description
-                                  value: 14+
+                                  value: '14'
+                                - descriptor:
+                                    code: READING_AGE_MAX
+                                    short_desc: Description
+                                    long_desc: Description
+                                  value: '60'
                                 - descriptor:
                                     code: FILE_SIZE
                                     short_desc: Description
@@ -15483,6 +15601,16 @@ x-examples:
                                     short_desc: Description
                                     long_desc: Description
                                   value: Newsletter
+                                - descriptor:
+                                    code: CONCURRENT_ACCESS
+                                    short_desc: Description
+                                    long_desc: Description
+                                  value: 'Y'
+                                - descriptor:
+                                    code: CONCURRENT_NO_OF_ACCESS
+                                    short_desc: Description
+                                    long_desc: Description
+                                  value: '5'
                           matched: true
                           recommended: true
                         - id: I2
@@ -15545,10 +15673,15 @@ x-examples:
                                     long_desc: Description
                                   value: Bangalore
                                 - descriptor:
-                                    code: READING_AGE
+                                    code: READING_AGE_MIN
                                     short_desc: Description
                                     long_desc: Description
-                                  value: 14+
+                                  value: '14'
+                                - descriptor:
+                                    code: READING_AGE_MAX
+                                    short_desc: Description
+                                    long_desc: Description
+                                  value: '60'
                                 - descriptor:
                                     code: FILE_SIZE
                                     short_desc: Description
@@ -15569,11 +15702,6 @@ x-examples:
                                     short_desc: Description
                                     long_desc: Description
                                   value: 0970819-7
-                                - descriptor:
-                                    code: NUMBER_OF_ISSUES
-                                    short_desc: Description
-                                    long_desc: Description
-                                  value: '100'
                                 - descriptor:
                                     code: NUMBER_OF_PAGES
                                     short_desc: Description
@@ -15634,6 +15762,16 @@ x-examples:
                                     short_desc: Description
                                     long_desc: Description
                                   value: Newsletter
+                                - descriptor:
+                                    code: CONCURRENT_ACCESS
+                                    short_desc: Description
+                                    long_desc: Description
+                                  value: 'Y'
+                                - descriptor:
+                                    code: CONCURRENT_NO_OF_ACCESS
+                                    short_desc: Description
+                                    long_desc: Description
+                                  value: '5'
                           matched: true
                           recommended: true
                         - id: I3
@@ -15673,6 +15811,22 @@ x-examples:
                             - F4
                           payment_ids:
                             - '1'
+                          add_ons:
+                            - id: A1
+                              descriptor:
+                                name: Sports Newsletter
+                                short_desc: Sports newsletter of the month
+                                long_desc: >-
+                                  Sports newsletter of the month with latest
+                                  news
+                              price:
+                                currency: INR
+                                value: '50.00'
+                              quantity:
+                                unitized:
+                                  measure:
+                                    unit: unit
+                                    value: '1'
                           cancellation_terms:
                             - fulfillment_state:
                                 descriptor:
@@ -15711,10 +15865,15 @@ x-examples:
                                     long_desc: Description
                                   value: Bangalore
                                 - descriptor:
-                                    code: READING_AGE
+                                    code: READING_AGE_MIN
                                     short_desc: Description
                                     long_desc: Description
-                                  value: 14+
+                                  value: '14'
+                                - descriptor:
+                                    code: READING_AGE_MAX
+                                    short_desc: Description
+                                    long_desc: Description
+                                  value: '60'
                                 - descriptor:
                                     code: FILE_SIZE
                                     short_desc: Description
@@ -15800,6 +15959,16 @@ x-examples:
                                     short_desc: Description
                                     long_desc: Description
                                   value: Newsletter
+                                - descriptor:
+                                    code: CONCURRENT_ACCESS
+                                    short_desc: Description
+                                    long_desc: Description
+                                  value: 'Y'
+                                - descriptor:
+                                    code: CONCURRENT_NO_OF_ACCESS
+                                    short_desc: Description
+                                    long_desc: Description
+                                  value: '5'
                           matched: true
                           recommended: true
                       tags:
@@ -16111,10 +16280,15 @@ x-examples:
                                     long_desc: Description
                                   value: Delhi
                                 - descriptor:
-                                    code: READING_AGE
+                                    code: READING_AGE_MIN
                                     short_desc: Description
                                     long_desc: Description
-                                  value: 14+
+                                  value: '14'
+                                - descriptor:
+                                    code: READING_AGE_MAX
+                                    short_desc: Description
+                                    long_desc: Description
+                                  value: '60'
                                 - descriptor:
                                     code: FILE_SIZE
                                     short_desc: Description
@@ -16200,6 +16374,16 @@ x-examples:
                                     short_desc: Description
                                     long_desc: Description
                                   value: Newsletter
+                                - descriptor:
+                                    code: CONCURRENT_ACCESS
+                                    short_desc: Description
+                                    long_desc: Description
+                                  value: 'Y'
+                                - descriptor:
+                                    code: CONCURRENT_NO_OF_ACCESS
+                                    short_desc: Description
+                                    long_desc: Description
+                                  value: '5'
                           matched: true
                           recommended: true
                         - id: I2
@@ -16262,10 +16446,15 @@ x-examples:
                                     long_desc: Description
                                   value: Bangalore
                                 - descriptor:
-                                    code: READING_AGE
+                                    code: READING_AGE_MIN
                                     short_desc: Description
                                     long_desc: Description
-                                  value: 14+
+                                  value: '14'
+                                - descriptor:
+                                    code: READING_AGE_MAX
+                                    short_desc: Description
+                                    long_desc: Description
+                                  value: '60'
                                 - descriptor:
                                     code: FILE_SIZE
                                     short_desc: Description
@@ -16351,6 +16540,16 @@ x-examples:
                                     short_desc: Description
                                     long_desc: Description
                                   value: Newsletter
+                                - descriptor:
+                                    code: CONCURRENT_ACCESS
+                                    short_desc: Description
+                                    long_desc: Description
+                                  value: 'Y'
+                                - descriptor:
+                                    code: CONCURRENT_NO_OF_ACCESS
+                                    short_desc: Description
+                                    long_desc: Description
+                                  value: '5'
                           matched: true
                           recommended: true
                         - id: I3
@@ -16390,6 +16589,22 @@ x-examples:
                             - F4
                           payment_ids:
                             - '1'
+                          add_ons:
+                            - id: A1
+                              descriptor:
+                                name: Sports Newsletter
+                                short_desc: Sports newsletter of the month
+                                long_desc: >-
+                                  Sports newsletter of the month with latest
+                                  news
+                              price:
+                                currency: INR
+                                value: '50.00'
+                              quantity:
+                                unitized:
+                                  measure:
+                                    unit: unit
+                                    value: '1'
                           cancellation_terms:
                             - fulfillment_state:
                                 descriptor:
@@ -16428,10 +16643,15 @@ x-examples:
                                     long_desc: Description
                                   value: Bangalore
                                 - descriptor:
-                                    code: READING_AGE
+                                    code: READING_AGE_MIN
                                     short_desc: Description
                                     long_desc: Description
-                                  value: 14+
+                                  value: '14'
+                                - descriptor:
+                                    code: READING_AGE_MAX
+                                    short_desc: Description
+                                    long_desc: Description
+                                  value: '60'
                                 - descriptor:
                                     code: FILE_SIZE
                                     short_desc: Description
@@ -16517,6 +16737,16 @@ x-examples:
                                     short_desc: Description
                                     long_desc: Description
                                   value: Newsletter
+                                - descriptor:
+                                    code: CONCURRENT_ACCESS
+                                    short_desc: Description
+                                    long_desc: Description
+                                  value: 'Y'
+                                - descriptor:
+                                    code: CONCURRENT_NO_OF_ACCESS
+                                    short_desc: Description
+                                    long_desc: Description
+                                  value: '5'
                           matched: true
                           recommended: true
                       tags:
