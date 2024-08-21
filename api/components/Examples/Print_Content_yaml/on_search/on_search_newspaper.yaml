@@ -162,7 +162,7 @@ value:
                 offered_value: '199.00'
                 maximum_value: '299.00'
               category_ids:
-                - MEC10-1001
+                - MEC10-1002
                 - C1
               fulfillment_ids:
                 - F1
@@ -328,7 +328,7 @@ value:
                 offered_value: '199.00'
                 maximum_value: '299.00'
               category_ids:
-                - MEC10-1001
+                - MEC10-1002
                 - C1
               fulfillment_ids:
                 - F1
@@ -488,7 +488,7 @@ value:
                 offered_value: '299.00'
                 maximum_value: '399.00'
               category_ids:
-                - MEC10-1001
+                - MEC10-1002
                 - C1
               fulfillment_ids:
                 - F2
@@ -662,7 +662,7 @@ value:
                   value: L1
                 - descriptor:
                     code: CATEGORY
-                  value: MEC10-1001
+                  value: MEC10-1002
                 - descriptor:
                     code: TYPE
                   value: '13'
@@ -685,7 +685,7 @@ value:
                   value: L1
                 - descriptor:
                     code: CATEGORY
-                  value: MEC10-1001
+                  value: MEC10-1002
                 - descriptor:
                     code: TYPE
                   value: '10'
@@ -703,7 +703,7 @@ value:
                   value: L1
                 - descriptor:
                     code: CATEGORY
-                  value: MEC10-1001
+                  value: MEC10-1002
                 - descriptor:
                     code: TYPE
                   value: '11'
@@ -721,7 +721,7 @@ value:
                   value: L1
                 - descriptor:
                     code: CATEGORY
-                  value: MEC10-1001
+                  value: MEC10-1002
                 - descriptor:
                     code: TYPE
                   value: '12'
