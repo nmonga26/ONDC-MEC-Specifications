@@ -170,7 +170,7 @@ value:
                 offered_value: "199.00"
                 maximum_value: "299.00"
               category_ids:
-                - SRV15-1001
+                - MEC10-1001
                 - C1
                 - C5
               fulfillment_ids:
@@ -302,7 +302,7 @@ value:
                 offered_value: "199.00"
                 maximum_value: "299.00"
               category_ids:
-                - SRV15-1001
+                - MEC10-1001
                 - C1
                 - C5
               fulfillment_ids:
@@ -431,7 +431,7 @@ value:
                 offered_value: "299.00"
                 maximum_value: "399.00"
               category_ids:
-                - SRV15-1001
+                - MEC10-1001
                 - C2
                 - C5
               fulfillment_ids:
@@ -551,7 +551,7 @@ value:
                   value: L1
                 - descriptor:
                     code: category
-                  value: SRV15-1001
+                  value: MEC10-1001
                 - descriptor:
                     code: type
                   value: "13"
@@ -574,7 +574,7 @@ value:
                   value: L1
                 - descriptor:
                     code: category
-                  value: SRV15-1001
+                  value: MEC10-1001
                 - descriptor:
                     code: type
                   value: "10"
@@ -592,7 +592,7 @@ value:
                   value: L1
                 - descriptor:
                     code: category
-                  value: SRV15-1001
+                  value: MEC10-1001
                 - descriptor:
                     code: type
                   value: "11"
@@ -610,7 +610,7 @@ value:
                   value: L1
                 - descriptor:
                     code: category
-                  value: SRV15-1001
+                  value: MEC10-1001
                 - descriptor:
                     code: type
                   value: "12"

@@ -6,3 +6,5 @@
 - $ref: "./Digital_Magazine_Single_Online_Order/index.yaml"
 - $ref: "./Digital_Magazine_Transferred_Subscription/index.yaml"
 - $ref: "./Digital_Magazine_Paused_Subscription/index.yaml"
+- $ref: "./Newspaper_Single_Purchase/index.yaml"
+- $ref: "./Newspaper_Subscription/index.yaml"

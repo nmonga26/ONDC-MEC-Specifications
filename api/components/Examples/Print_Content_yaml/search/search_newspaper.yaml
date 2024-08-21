@@ -20,9 +20,9 @@ value:
     intent:
       item:
         descriptor:
-          name: Magazines
+          name: Newspaper
       category:
-        id: MEC10-1001
+        id: MEC10-1002
       tags:
         - descriptor:
             code: BUYER_FINDER_FEES

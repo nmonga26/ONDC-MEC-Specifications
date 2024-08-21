@@ -277,7 +277,7 @@
                 "offered_value": "199.00",
                 "maximum_value": "299.00"
               },
-              "category_ids": ["SRV15-1001", "C1"],
+              "category_ids": ["MEC10-1001", "C1"],
               "fulfillment_ids": ["F1", "F2", "F3"],
               "payment_ids": ["1"],
               "cancellation_terms": [
@@ -316,11 +316,19 @@
                     },
                     {
                       "descriptor": {
-                        "code": "READING_AGE",
+                        "code": "READING_AGE_MIN",
                         "short_desc": "Description",
                         "long_desc": "Description"
                       },
-                      "value": "14+"
+                      "value": "14"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "READING_AGE_MAX",
+                        "short_desc": "Description",
+                        "long_desc": "Description"
+                      },
+                      "value": "60"
                     },
                     {
                       "descriptor": {
@@ -457,6 +465,22 @@
                         "long_desc": "Description"
                       },
                       "value": "Newsletter"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "CONCURRENT_ACCESS",
+                        "short_desc": "Description",
+                        "long_desc": "Description"
+                      },
+                      "value": "Y"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "CONCURRENT_NO_OF_ACCESS",
+                        "short_desc": "Description",
+                        "long_desc": "Description"
+                      },
+                      "value": "5"
                     }
                   ]
                 }
@@ -513,7 +537,7 @@
                 "offered_value": "199.00",
                 "maximum_value": "299.00"
               },
-              "category_ids": ["SRV15-1001", "C1"],
+              "category_ids": ["MEC10-1001", "C1"],
               "fulfillment_ids": ["F1", "F2", "F3"],
               "payment_ids": ["1"],
               "cancellation_terms": [
@@ -552,11 +576,19 @@
                     },
                     {
                       "descriptor": {
-                        "code": "READING_AGE",
+                        "code": "READING_AGE_MIN",
                         "short_desc": "Description",
                         "long_desc": "Description"
                       },
-                      "value": "14+"
+                      "value": "14"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "READING_AGE_MAX",
+                        "short_desc": "Description",
+                        "long_desc": "Description"
+                      },
+                      "value": "60"
                     },
                     {
                       "descriptor": {
@@ -693,6 +725,22 @@
                         "long_desc": "Description"
                       },
                       "value": "Newsletter"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "CONCURRENT_ACCESS",
+                        "short_desc": "Description",
+                        "long_desc": "Description"
+                      },
+                      "value": "Y"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "CONCURRENT_NO_OF_ACCESS",
+                        "short_desc": "Description",
+                        "long_desc": "Description"
+                      },
+                      "value": "5"
                     }
                   ]
                 }
@@ -748,9 +796,31 @@
                 "offered_value": "299.00",
                 "maximum_value": "399.00"
               },
-              "category_ids": ["SRV15-1001", "C1"],
+              "category_ids": ["MEC10-1001", "C1"],
               "fulfillment_ids": ["F2", "F4"],
               "payment_ids": ["1"],
+              "add_ons": [
+                {
+                  "id": "A1",
+                  "descriptor": {
+                    "name": "Sports Newsletter",
+                    "short_desc": "Sports newsletter of the month",
+                    "long_desc": "Sports newsletter of the month with latest news"
+                  },
+                  "price": {
+                    "currency": "INR",
+                    "value": "50.00"
+                  },
+                  "quantity": {
+                    "unitized": {
+                      "measure": {
+                        "unit": "unit",
+                        "value": "1"
+                      }
+                    }
+                  }
+                }
+              ],
               "cancellation_terms": [
                 {
                   "fulfillment_state": {
@@ -806,11 +876,19 @@
                     },
                     {
                       "descriptor": {
-                        "code": "READING_AGE",
+                        "code": "READING_AGE_MIN",
                         "short_desc": "Description",
                         "long_desc": "Description"
                       },
-                      "value": "14+"
+                      "value": "14"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "READING_AGE_MAX",
+                        "short_desc": "Description",
+                        "long_desc": "Description"
+                      },
+                      "value": "60"
                     },
                     {
                       "descriptor": {
@@ -947,6 +1025,22 @@
                         "long_desc": "Description"
                       },
                       "value": "Newsletter"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "CONCURRENT_ACCESS",
+                        "short_desc": "Description",
+                        "long_desc": "Description"
+                      },
+                      "value": "Y"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "CONCURRENT_NO_OF_ACCESS",
+                        "short_desc": "Description",
+                        "long_desc": "Description"
+                      },
+                      "value": "5"
                     }
                   ]
                 }
@@ -971,7 +1065,7 @@
                   "descriptor": {
                     "code": "CATEGORY"
                   },
-                  "value": "SRV15-1001"
+                  "value": "MEC10-1001"
                 },
                 {
                   "descriptor": {
@@ -1008,7 +1102,7 @@
                   "descriptor": {
                     "code": "CATEGORY"
                   },
-                  "value": "SRV15-1001"
+                  "value": "MEC10-1001"
                 },
                 {
                   "descriptor": {
@@ -1045,7 +1139,7 @@
                   "descriptor": {
                     "code": "CATEGORY"
                   },
-                  "value": "SRV15-1001"
+                  "value": "MEC10-1001"
                 },
                 {
                   "descriptor": {
@@ -1082,7 +1176,7 @@
                   "descriptor": {
                     "code": "CATEGORY"
                   },
-                  "value": "SRV15-1001"
+                  "value": "MEC10-1001"
                 },
                 {
                   "descriptor": {

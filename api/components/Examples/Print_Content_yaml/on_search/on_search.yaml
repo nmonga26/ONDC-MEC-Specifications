@@ -125,7 +125,7 @@ value:
                 offered_value: '499.00'
                 maximum_value: '599.00'
               category_ids:
-                - SRV15-1002
+                - MEC10-1002
                 - C1
               fulfillment_ids:
                 - F1
@@ -187,7 +187,7 @@ value:
                 offered_value: '999.00'
                 maximum_value: '1199.00'
               category_ids:
-                - SRV15-1002
+                - MEC10-1002
                 - C1
               fulfillment_ids:
                 - F1
@@ -249,7 +249,7 @@ value:
                 offered_value: '1399.00'
                 maximum_value: '1599.00'
               category_ids:
-                - SRV15-1002
+                - MEC10-1002
                 - C1
               fulfillment_ids:
                 - F1
@@ -312,7 +312,7 @@ value:
                 offered_value: '0.00'
                 maximum_value: '0.00'
               category_ids:
-                - SRV15-1002
+                - MEC10-1002
                 - C1
               fulfillment_ids:
                 - F1
@@ -381,7 +381,7 @@ value:
                 offered_value: '299.00'
                 maximum_value: '299.00'
               category_ids:
-                - SRV15-1002
+                - MEC10-1002
                 - C2
               fulfillment_ids:
                 - F1

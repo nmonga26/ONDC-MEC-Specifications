@@ -1,7 +1,7 @@
-summary: Digital Magazine - Single Order Online without Subscription
-description: The following is an illustrative flow to perform a transaction of a nature where a buyer would like to request for digital magazine in a subscription fashion. The booking majorly happens in four phases of order processing flow, i.e. Discovery of available services and service providers based on serviceability, order, fulfillment and post-fulfillment.
+summary: Newspaper - Single Order without Subscription
+description: The following is an illustrative flow to perform a transaction of a nature where a buyer would like to request for newspaper in a subscription fashion. The booking majorly happens in four phases of order processing flow, i.e. Discovery of available services and service providers based on serviceability, order, fulfillment and post-fulfillment.
 details:
-  - description: Sequence Diagram for Purchasing Digital Magazine - Single Order
+  - description: Sequence Diagram for Purchasing Newspaper - Single Order
     mermaidGraph: >-
       sequenceDiagram
         participant B as Buyer
@@ -10,10 +10,10 @@ details:
         participant SA1 as SellerApp1
         participant SA2 as SellerApp2
         Note Over B,SA2: **SEARCH FLOW**
-        B ->> BA: Search for Digital magazine <br>based within the city
-        BA ->> G: **/search** - Search for Digital magazine<br> based services within the city
-        G ->> SA1: **/search** - Digital magazine request broadcasted <br>based on city/category and domain in context
-        G ->> SA2: **/search** - Digital magazine request broadcasted <br>based on city/category and domain in context
+        B ->> BA: Search for newspaper <br>based within the city
+        BA ->> G: **/search** - Search for newspaper<br> based services within the city
+        G ->> SA1: **/search** - newspaper request broadcasted <br>based on city/category and domain in context
+        G ->> SA2: **/search** - newspaper request broadcasted <br>based on city/category and domain in context
         SA1 ->> BA: **/on_search** - Services catalog returned <br>with seller statutory details, pricing,<br> and different subscription fulfillments
         SA2 ->> BA: **/on_search** - Services catalog returned <br>with seller statutory details, pricing,<br> and different subscription fulfillments
         Note Over BA,SA1: Buyer now has the option to choose the <br>services from either Seller 1 or Seller 2 or both
@@ -57,7 +57,7 @@ details:
       sequenceDiagram
         participant B as Buyer
         participant BA as BuyerApp
-        participant SA as SellerApp
+        participant SA as SellerApp      
         Note Over B,SA: **ORDER STATUS FLOW**
         B ->> BA: Checks the order status
         BA ->> SA: **/status** - Enquire order status <br>or tracking information
@@ -83,48 +83,48 @@ steps:
     description: Search intent sent by the buyer based on the particular subscription service required - e.g. Magazines
     reference: if any
     example:
-      $ref: "../../Examples/Print_Content_yaml/search/search_mandate.yaml"
+      $ref: "../../Examples/Print_Content_yaml/search/search_newspaper.yaml"
   - summary: Returns the catalog specific to the search intent
     api: on_search
     description: Returns the catalog specific to the search intent
     reference: if any
     example:
-      $ref: "../../Examples/Print_Content_yaml/on_search/on_search_mandate.yaml"
+      $ref: "../../Examples/Print_Content_yaml/on_search/on_search_newspaper.yaml"
   - summary: Buyer selects the required media service
     api: select
     description: Buyer selects the required media service + suitable fulfillment type
     reference: if any
     example:
-      $ref: "../../Examples/Print_Content_yaml/select/select_single.yaml"
+      $ref: "../../Examples/Print_Content_yaml/select/select_newspaper.yaml"
   - summary: Seller confirms the schedule and returns the quote for service
     api: on_select
     description: Seller confirms the schedule and returns the quote for service
     reference: if any
     example:
-      $ref: "../../Examples/Print_Content_yaml/on_select/on_select_single.yaml"
+      $ref: "../../Examples/Print_Content_yaml/on_select/on_select_newspaper.yaml"
   - summary: Buyer initialises the order for service
     api: init
     description: Buyer initialises the order and provides billing details
     reference: if any
     example:
-      $ref: "../../Examples/Print_Content_yaml/init/init_single.yaml"
+      $ref: "../../Examples/Print_Content_yaml/init/init_newspaper.yaml"
   - summary: Seller provides the final quotation + esingle
     api: on_init
     description: Seller provides the final quotation for the service with payment url link for e-single in the payments object
     reference: if any
     example:
-      $ref: "../../Examples/Print_Content_yaml/on_init/on_init_single.yaml"
+      $ref: "../../Examples/Print_Content_yaml/on_init/on_init_newspaper.yaml"
   - summary: Buyer confirm the order for the service
     api: confirm
     description: Buyer makes the payment on the seller payment link that is rendered by the buyer app to confirm the order
     example:
-      $ref: "../../Examples/Print_Content_yaml/confirm/confirm_single.yaml"
+      $ref: "../../Examples/Print_Content_yaml/confirm/confirm_newspaper.yaml"
   - summary: Seller accepts the order for service
     api: on_confirm
     description: Seller app confirms the payment received and sends an /on_confirm call for confirming subscription
     reference: if any
     example:
-      $ref: "../../Examples/Print_Content_yaml/on_confirm/on_confirm_single.yaml"
+      $ref: "../../Examples/Print_Content_yaml/on_confirm/on_confirm_newspaper.yaml"
   - summary: Buyer requests for status of the order
     api: status
     description: Buyer requests for status of the order
@@ -137,6 +137,30 @@ steps:
     reference: if any
     example:
       $ref: "../../Examples/Print_Content_yaml/on_status/on_status_pending.yaml"
+  - summary: Seller sends back the status of the order
+    api: on_status (Packed)
+    description: Seller app sends the current status of the order when order is packed
+    reference: if any
+    example:
+      $ref: "../../Examples/Print_Content_yaml/on_status/on_status_packed.yaml"
+  - summary: Seller sends back the current status of the order
+    api: on_status (Agent Assigned)
+    description: Seller app sends the current status update of the order when the agent has been assigned
+    reference: if any
+    example:
+      $ref: "../../Examples/Print_Content_yaml/on_status/on_status_agent_assigned.yaml"
+  - summary: Seller sends back the current status of the order
+    api: on_status (Order Picked Up)
+    description: Seller app sends the current status update of the order when an agent has been assigned
+    reference: if any
+    example:
+      $ref: "../../Examples/Print_Content_yaml/on_status/on_status_order_picked_up.yaml"
+  - summary: Seller sends back the current status of the order
+    api: on_status (Out for Delivery)
+    description: Seller app sends the current status update of the order when the order is out for delivery
+    reference: if any
+    example:
+      $ref: "../../Examples/Print_Content_yaml/on_status/on_status_out_for_delivery.yaml"
   - summary: Seller sends back the current status of the order
     api: on_status (Completed)
     description: Seller app sends the current status update of the order when the order is completed

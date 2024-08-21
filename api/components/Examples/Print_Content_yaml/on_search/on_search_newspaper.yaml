@@ -28,18 +28,18 @@ value:
         - id: '3'
           type: POST-FULFILLMENT
       descriptor:
-        name: Magazine Service Provider
-        short_desc: Magazine Service Provider
-        long_desc: Magazine Service Provider
+        name: Newspaper Service Provider
+        short_desc: Newspaper Service Provider
+        long_desc: Newspaper Service Provider
         images:
           - url: https://abc.com/images/1-shop-img
       providers:
         - id: P1
           descriptor:
-            name: Digital Magazine Provider
+            name: Newspaper Provider
             code: N001
-            short_desc: Digital Magazine Provider
-            long_desc: Digital Magazine Provider
+            short_desc: Newspaper Provider
+            long_desc: Newspaper Provider
             images:
               - url: https://abc.com/images/1-shop-img
           rating: '4.4'
@@ -59,7 +59,7 @@ value:
           creds:
             - id: MGZ-12345678
               type: Certificate
-              desc: Certified Magazine Provider
+              desc: Certified Newspaper Provider
               url: https://abcd.cdn.com/images/bage-img
           categories:
             - id: C1
@@ -94,7 +94,7 @@ value:
                   list:
                     - descriptor:
                         code: EDITION
-                      value: item.tags.attributes.edition
+                      value: item.tags.info.edition
                     - descriptor:
                         code: SEQ
                       value: '2'
@@ -134,7 +134,7 @@ value:
             - id: I1
               parent_item_id: C3
               descriptor:
-                name: Weekly India Today Magazine
+                name: India Today Newspaper
                 short_desc: Features Fashion & Sports
                 long_desc: Features Fashion & Sports
                 images:
@@ -285,7 +285,7 @@ value:
             - id: I2
               parent_item_id: C3
               descriptor:
-                name: Weekly India Today Magazine
+                name: India Today Newspaper
                 short_desc: Features Fashion & Sports
                 long_desc: Features Fashion & Sports
                 images:
@@ -435,7 +435,7 @@ value:
               recommended: true
             - id: I3
               descriptor:
-                name: Monthly India Today Magazine
+                name: Monthly India Today Newspaper
                 short_desc: Features Fashion & Sports
                 long_desc: Features Fashion & Sports
                 images:

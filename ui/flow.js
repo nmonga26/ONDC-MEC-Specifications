@@ -104,6 +104,7 @@ function loadFlows(data) {
   flows.forEach((flow) => {
     var option = document.createElement("option");
     option.text = flow.summary;
+    console.log(option);
     flowDropdown.add(option);
   });
   loadFlow(flows[0].summary);
