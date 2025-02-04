@@ -1,9 +1,9 @@
 context:
   parent: true
   domain:
-    description: domain code, enums - ONDC:MEC10 (Print Media)
+    description: domain code, enums - ONDC:MEC11 (Audio/Video Media)
     required: mandatory
-    usage: "ONDC:MEC10"
+    usage: "ONDC:MEC11"
     reference: if any
   city:
     code:
@@ -46,7 +46,7 @@ message:
       category:
         description: Category of the search
         required: optional
-        usage: "MEC10-1001"
+        usage: "MEC11-1001"
         reference: if any
     fulfillment:
       parent: true

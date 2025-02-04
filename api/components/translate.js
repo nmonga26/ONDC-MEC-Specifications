@@ -28,8 +28,8 @@ const traverse = (source) => {
   }
 };
 
-let folderName = "Print_Content";
-const traversedPaths = traverse("./Examples/Print_Content");
+let folderName = "OTT_services";
+const traversedPaths = traverse("./Examples/OTT_services");
 
 traversedPaths.forEach((path, i) => {
   path.forEach((jsonPath, j) => {

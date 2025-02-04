@@ -1,7 +1,7 @@
 breakup:
   title:
-    - code: Weekly Magazine
-      description: Weekly Magazine
+    - code: Movie
+      description: Movie
       reference: <PR/Issue/Discussion Links md format text>
     - code: tax
       description: tax

@@ -20,21 +20,41 @@ catalog:
           $ref: "./Tag.yaml#/serviceability"
     items:
       tags:
-        - code: SERVICE_INFORMATION
-          description: Information of the service
-          reference: <PR/Issue/Discussion Links md format text>
-          list:
-            $ref: "./Tag.yaml#/SERVICE_INFORMATION"
         - code: RESCHEDULE_TERMS
           description: Reschedule terms for the item
           reference: <PR/Issue/Discussion Links md format text>
           list:
             $ref: "./Tag.yaml#/RESCHEDULE_TERMS"
-        - code: ATTRIBUTE
+        - code: ATTRIBUTES
           description: Attribute of a particular item
           reference: <PR/Issue/Discussion Links md format text>
           list:
-            $ref: "./Tag.yaml#/ATTRIBUTE"
+            $ref: "./Tag.yaml#/ATTRIBUTES"
+        - code: METADATA
+          description: Attribute of a particular item
+          reference: <PR/Issue/Discussion Links md format text>
+          list:
+            $ref: "./Tag.yaml#/METADATA"
+        - code: RENTAL_INFO
+          description: Rental information
+          reference: <PR/Issue/Discussion Links md format text>
+          list:
+            $ref: "./Tag.yaml#/RENTAL_INFO"
+        - code: SUPPORTED_DEVICES
+          description: Supported device for streaming
+          reference: <PR/Issue/Discussion Links md format text>
+          list:
+            $ref: "./Tag.yaml#/SUPPORTED_DEVICES"
+        - code: <SEASON_ID>
+          description: Season information if TV Show
+          reference: <PR/Issue/Discussion Links md format text>
+          list:
+            $ref: "./Tag.yaml#/SEASON"
+        - code: <EPISODE_ID>
+          description: Episode information if TV Show
+          reference: <PR/Issue/Discussion Links md format text>
+          list:
+            $ref: "./Tag.yaml#/EPISODE"
   categories:
     tags:
       - code: SELECTION

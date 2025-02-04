@@ -16,9 +16,9 @@ message:
           usage: "-"
           reference: if any
         title:
-          description: title of the service charges enum - Weekly Magazine, tax, discount, convenience_fee
+          description: title of the service charges enum - Movie, tax, discount, convenience_fee
           required: required
-          usage: "Weekly Magazine"
+          usage: "Movie"
           reference: if any
     payments:
       parent: true

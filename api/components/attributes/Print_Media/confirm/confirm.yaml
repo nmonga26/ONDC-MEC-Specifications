@@ -21,6 +21,4 @@ message:
               description: end time of the service
               required: required
               usage: "2023-11-16T10:30:00Z"
-              reference: if any  
-
-        
+              reference: if any

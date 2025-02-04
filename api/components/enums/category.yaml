@@ -1,7 +1,13 @@
 category_ids:
-  - code: MEC10-1001
-    description: Magazines
+  - code: MEC11-1001
+    description: Movies
     reference: <PR/Issue/Discussion Links md format text>
-  - code: MEC10-1002
-    description: Newspaper & Books
+  - code: MEC11-1002
+    description: TV Series
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: MEC11-1003
+    description: TV Channel
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: MEC11-1004
+    description: Platform Package
     reference: <PR/Issue/Discussion Links md format text>

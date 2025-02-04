@@ -96,10 +96,175 @@ RESCHEDULE_TERMS:
   - code: RESCHEDULE_WITHIN
     description: Time within which it should be rescheduled after the fulfilment has been changed
     reference: <PR/Issue/Discussion Links md format text>
-ATTRIBUTE:
-  - code: TYPE
-    description: Type of the item, mandatory only when the item is a customization
+ATTRIBUTES:
+  - code: METADATA
+    description: Metadata of the content
     reference: <PR/Issue/Discussion Links md format text>
+  - code: RENTAL_INFO
+    description: Rental information if the item is available on rent
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: SUPPORTED_DEVICES
+    description: Supported devices to stream on
+    reference: <PR/Issue/Discussion Links md format text>
+RENTAL_INFO:
+  - code: CONDITION
+    description: Condition on which the watching duration starts
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: DURATION
+    description: The duration time that the user can watch the movie for
+    reference: <PR/Issue/Discussion Links md format text>
+SUPPORTED_DEVICES:
+  - code: DOWNLOAD_DEVICES
+    description: Max number of devices on which download is allowed
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: MULTI_DEVICE_SUPPORT
+    description: Max number of devices on which content is allowed to play
+    reference: <PR/Issue/Discussion Links md format text>'
+  - code: CONCURRENT_STREAMING
+    description: Max number of devices on which content is allowed to play concurrently
+    reference: <PR/Issue/Discussion Links md format text>
+METADATA:
+  - code: CONTENT_ID
+    description: Unique ID of the content
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: DURATION
+    description: Duration in seconds
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: STREAMING_URL
+    description: URL on which media is available
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: GENRE
+    description: Comma separated list of genres
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: PARENTAL_RATING
+    description: Parental rating of the content
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: CAST
+    description: Comma-separated list of the cast of the movie/show
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: WRITER
+    description: Comma-separated list of writers on the show
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: MUSIC
+    description: Comma-separated list of music composers on the show
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: DIRECTOR
+    description: The director of the show
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: PRODUCER
+    description: The producer of the show
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: RELEASE_YEAR
+    description: The year of release
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: DESCRIPTORS
+    description: The descriptors for show eg. "Violence,Mature Theme"
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: LANGUAGE
+    description: Language the media is available in
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: DOWNLOADABLE
+    description: Whether the show is downloaded or not
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: NO_OF_SEASONS
+    description: Seasons in the show, required if TV Show
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: SEASONS_IDS
+    description: Comma-separated list of season IDs, required if TV show
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: COUNTRY_OF_ORIGIN
+    description: Country of origin of the media
+    reference: <PR/Issue/Discussion Links md format text>
+SEASON:
+  - code: SEQ
+    description: Sequence of the season
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: SUBTITLES
+    description: Comma-separated list of available subtitles
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: RESOLUTION_SUPPORTED
+    description: Comma-separated list of video quality available
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: TITLE
+    description: Title of the series
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: GENRE
+    description: Comma separated list of genres
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: PARENTAL_RATING
+    description: Parental rating of the content
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: CAST
+    description: Comma-separated list of the cast of the movie/show
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: WRITER
+    description: Comma-separated list of writers on the show
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: MUSIC
+    description: Comma-separated list of music composers on the show
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: DIRECTOR
+    description: The director of the show
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: PRODUCER
+    description: The producer of the show
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: RELEASE_YEAR
+    description: The year of release
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: DESCRIPTORS
+    description: The descriptors for show eg. "Violence,Mature Theme"
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: LANGUAGE
+    description: Language the media is available in
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: DOWNLOADABLE
+    description: Whether the show is downloaded or not
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: NO_OF_EPISODES
+    description: Episodes in the show, required if TV Show
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: EPISODES_IDS
+    description: Comma-separated list of episodees IDs, required if TV show
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: IMAGES_SM
+    description: Comma-separated list of small sizes images to be used for thumbnails
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: IMAGES_LG
+    description: Comma-separated list of small sizes images to be used for previews
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: TRAILERS
+    description: Comma-separated list of trailers
+    reference: <PR/Issue/Discussion Links md format text>
+EPISODE:
+  - code: SEQ
+    description: Sequence of the season
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: TITLE
+    description: Title of the series
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: RELEASE_DATE
+    description: Release date of the episode
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: STREAMING_URL
+    description: Streaming URL of the media
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: CAST
+    description: Comma-separated list of the cast of the movie/show
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: DURATION
+    description: Duration in seconds
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: IMAGES_SM
+    description: Comma-separated list of small sizes images to be used for thumbnails
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: IMAGES_LG
+    description: Comma-separated list of small sizes images to be used for previews
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: TRAILERS
+    description: Comma-separated list of trailers
+    reference: <PR/Issue/Discussion Links md format text>
+
 SETTLEMENT_DETAILS:
   - code: COUNTERPARTY
     description: The counterparty to which the settlement needs to be done - BAP/BPP
