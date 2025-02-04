@@ -2795,20 +2795,6 @@ x-tags:
                   reference: <PR/Issue/Discussion Links md format text>
           items:
             tags:
-              - code: SERVICE_INFORMATION
-                description: Information of the service
-                reference: <PR/Issue/Discussion Links md format text>
-                list:
-                  - code: PICKUP_TAT
-                    description: >-
-                      TAT for picking up the sample, only required if
-                      Seller-Fulfilled
-                    reference: <PR/Issue/Discussion Links md format text>
-                  - code: COMPLETION_TAT
-                    description: >-
-                      TAT for completing the whole test including pickup TAT, if
-                      applicable
-                    reference: <PR/Issue/Discussion Links md format text>
               - code: RESCHEDULE_TERMS
                 description: Reschedule terms for the item
                 reference: <PR/Issue/Discussion Links md format text>
