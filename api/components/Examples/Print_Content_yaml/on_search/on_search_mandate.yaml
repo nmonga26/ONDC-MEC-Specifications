@@ -106,10 +106,10 @@ value:
             - id: F3
               type: SUBSCRIPTION
               stops:
-                time:
-                  schedule:
-                    frequency: P1W
-                  duration: P8W
+                - time:
+                    schedule:
+                      frequency: P1W
+                    duration: P8W
               tags:
                 - descriptor:
                     code: INFO

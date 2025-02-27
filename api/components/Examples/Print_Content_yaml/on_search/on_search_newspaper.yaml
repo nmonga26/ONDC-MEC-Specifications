@@ -106,10 +106,10 @@ value:
             - id: F3
               type: SUBSCRIPTION
               stops:
-                time:
-                  schedule:
-                    frequency: P1W
-                  duration: P8W
+                - time:
+                    schedule:
+                      frequency: P1W
+                    duration: P8W
               tags:
                 - descriptor:
                     code: INFO
@@ -146,8 +146,7 @@ value:
                     url: preview_video_image
                   - mimetype: image/jpeg
                     url: preview_image_1
-              rating:
-                value: '4'
+              rating: '4'
               creator:
                 descriptor:
                   name: India Today
@@ -312,8 +311,7 @@ value:
                     url: preview_video_image
                   - mimetype: image/jpeg
                     url: preview_image_1
-              rating:
-                value: '4'
+              rating: '4'
               creator:
                 descriptor:
                   name: India Today
@@ -472,8 +470,7 @@ value:
                     url: preview_video_image
                   - mimetype: image/jpeg
                     url: preview_image_1
-              rating:
-                value: '4.5'
+              rating: '4'
               creator:
                 descriptor:
                   name: India Today

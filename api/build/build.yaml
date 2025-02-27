@@ -3220,10 +3220,10 @@ x-flows:
                       - id: F3
                         type: SUBSCRIPTION
                         stops:
-                          time:
-                            schedule:
-                              frequency: P1W
-                            duration: P8W
+                          - time:
+                              schedule:
+                                frequency: P1W
+                              duration: P8W
                         tags:
                           - descriptor:
                               code: INFO
@@ -10473,10 +10473,10 @@ x-flows:
                       - id: F3
                         type: SUBSCRIPTION
                         stops:
-                          time:
-                            schedule:
-                              frequency: P1W
-                            duration: P8W
+                          - time:
+                              schedule:
+                                frequency: P1W
+                              duration: P8W
                         tags:
                           - descriptor:
                               code: INFO
@@ -10513,8 +10513,7 @@ x-flows:
                               url: preview_video_image
                             - mimetype: image/jpeg
                               url: preview_image_1
-                        rating:
-                          value: '4'
+                        rating: '4'
                         creator:
                           descriptor:
                             name: India Today
@@ -10679,8 +10678,7 @@ x-flows:
                               url: preview_video_image
                             - mimetype: image/jpeg
                               url: preview_image_1
-                        rating:
-                          value: '4'
+                        rating: '4'
                         creator:
                           descriptor:
                             name: India Today
@@ -10839,8 +10837,7 @@ x-flows:
                               url: preview_video_image
                             - mimetype: image/jpeg
                               url: preview_image_1
-                        rating:
-                          value: '4.5'
+                        rating: '4'
                         creator:
                           descriptor:
                             name: India Today
@@ -15422,10 +15419,10 @@ x-examples:
                         - id: F3
                           type: SUBSCRIPTION
                           stops:
-                            time:
-                              schedule:
-                                frequency: P1W
-                              duration: P8W
+                            - time:
+                                schedule:
+                                  frequency: P1W
+                                duration: P8W
                           tags:
                             - descriptor:
                                 code: INFO
@@ -15462,8 +15459,7 @@ x-examples:
                                 url: preview_video_image
                               - mimetype: image/jpeg
                                 url: preview_image_1
-                          rating:
-                            value: '4'
+                          rating: '4'
                           creator:
                             descriptor:
                               name: India Today
@@ -15628,8 +15624,7 @@ x-examples:
                                 url: preview_video_image
                               - mimetype: image/jpeg
                                 url: preview_image_1
-                          rating:
-                            value: '4'
+                          rating: '4'
                           creator:
                             descriptor:
                               name: India Today
@@ -15788,8 +15783,7 @@ x-examples:
                                 url: preview_video_image
                               - mimetype: image/jpeg
                                 url: preview_image_1
-                          rating:
-                            value: '4.5'
+                          rating: '4'
                           creator:
                             descriptor:
                               name: India Today
@@ -16195,10 +16189,10 @@ x-examples:
                         - id: F3
                           type: SUBSCRIPTION
                           stops:
-                            time:
-                              schedule:
-                                frequency: P1W
-                              duration: P8W
+                            - time:
+                                schedule:
+                                  frequency: P1W
+                                duration: P8W
                           tags:
                             - descriptor:
                                 code: INFO
