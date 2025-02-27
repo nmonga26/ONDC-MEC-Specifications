@@ -117,13 +117,15 @@
             {
               "id": "F3",
               "type": "SUBSCRIPTION",
-              "stops": {
-                "time": {
-                  "schedule": {
-                    "frequency": "P1M"
+              "stops": [
+                {
+                  "time": {
+                    "schedule": {
+                      "frequency": "P1M"
+                    }
                   }
                 }
-              },
+              ],
               "tags": [
                 {
                   "descriptor": {

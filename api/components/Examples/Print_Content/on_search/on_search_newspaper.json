@@ -176,14 +176,16 @@
             {
               "id": "F3",
               "type": "SUBSCRIPTION",
-              "stops": {
-                "time": {
-                  "schedule": {
-                    "frequency": "P1W"
-                  },
-                  "duration": "P8W"
+              "stops": [
+                {
+                  "time": {
+                    "schedule": {
+                      "frequency": "P1W"
+                    },
+                    "duration": "P8W"
+                  }
                 }
-              },
+              ],
               "tags": [
                 {
                   "descriptor": {
@@ -255,9 +257,7 @@
                   }
                 ]
               },
-              "rating": {
-                "value": "4"
-              },
+              "rating": "4",
               "creator": {
                 "descriptor": {
                   "name": "India Today"
@@ -515,9 +515,7 @@
                   }
                 ]
               },
-              "rating": {
-                "value": "4"
-              },
+              "rating": "4",
               "creator": {
                 "descriptor": {
                   "name": "India Today"
@@ -766,9 +764,7 @@
                   }
                 ]
               },
-              "rating": {
-                "value": "4.5"
-              },
+              "rating": "4",
               "creator": {
                 "descriptor": {
                   "name": "India Today"
