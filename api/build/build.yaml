@@ -3234,9 +3234,9 @@ x-flows:
                       - id: F4
                         type: SUBSCRIPTION
                         stops:
-                          time:
-                            schedule:
-                              frequency: P1M
+                          - time:
+                              schedule:
+                                frequency: P1M
                         tags:
                           - descriptor:
                               code: INFO
@@ -3260,8 +3260,7 @@ x-flows:
                               url: preview_video_image
                             - mimetype: image/jpeg
                               url: preview_image_1
-                        rating:
-                          value: '4'
+                        rating: '4'
                         creator:
                           descriptor:
                             name: India Today
@@ -10487,9 +10486,9 @@ x-flows:
                       - id: F4
                         type: SUBSCRIPTION
                         stops:
-                          time:
-                            schedule:
-                              frequency: P1M
+                          - time:
+                              schedule:
+                                frequency: P1M
                         tags:
                           - descriptor:
                               code: INFO
@@ -15433,9 +15432,9 @@ x-examples:
                         - id: F4
                           type: SUBSCRIPTION
                           stops:
-                            time:
-                              schedule:
-                                frequency: P1M
+                            - time:
+                                schedule:
+                                  frequency: P1M
                           tags:
                             - descriptor:
                                 code: INFO
@@ -16203,9 +16202,9 @@ x-examples:
                         - id: F4
                           type: SUBSCRIPTION
                           stops:
-                            time:
-                              schedule:
-                                frequency: P1M
+                            - time:
+                                schedule:
+                                  frequency: P1M
                           tags:
                             - descriptor:
                                 code: INFO
@@ -16229,8 +16228,7 @@ x-examples:
                                 url: preview_video_image
                               - mimetype: image/jpeg
                                 url: preview_image_1
-                          rating:
-                            value: '4'
+                          rating: '4'
                           creator:
                             descriptor:
                               name: India Today

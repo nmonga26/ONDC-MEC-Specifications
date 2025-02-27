@@ -91,9 +91,9 @@ value:
             - id: F4
               type: SUBSCRIPTION
               stops:
-                time:
-                  schedule:
-                    frequency: P7D
+                - time:
+                    schedule:
+                      frequency: P7D
               tags:
                 - descriptor:
                     code: INFO

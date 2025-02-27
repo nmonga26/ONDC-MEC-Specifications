@@ -120,9 +120,9 @@ value:
             - id: F4
               type: SUBSCRIPTION
               stops:
-                time:
-                  schedule:
-                    frequency: P1M
+                - time:
+                    schedule:
+                      frequency: P1M
               tags:
                 - descriptor:
                     code: INFO

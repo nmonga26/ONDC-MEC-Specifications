@@ -1,0 +1,1217 @@
+{
+  "context": {
+    "domain": "ONDC:MEC11",
+    "location": {
+      "city": {
+        "code": "std:080"
+      },
+      "country": {
+        "code": "IND"
+      }
+    },
+    "action": "on_search",
+    "version": "2.0.0",
+    "bap_id": "buyerapp.com",
+    "bap_uri": "https://buyerapp.com/ondc",
+    "bpp_id": "sellerapp.com",
+    "bpp_uri": "https://sellerapp.com/ondc",
+    "transaction_id": "T1",
+    "message_id": "M1",
+    "timestamp": "2024-04-01T22:00:30.000Z",
+    "ttl": "PT30S"
+  },
+  "message": {
+    "catalog": {
+      "payments": [
+        {
+          "id": "1",
+          "type": "PRE-FULFILLMENT"
+        }
+      ],
+      "descriptor": {
+        "name": "Videos Service Provider",
+        "short_desc": "Videos Service Provider",
+        "long_desc": "Videos Service Provider",
+        "images": [
+          {
+            "url": "https://abc.com/images/1-logo-img"
+          }
+        ]
+      },
+      "providers": [
+        {
+          "id": "P1",
+          "descriptor": {
+            "name": "Video Content Provider",
+            "code": "N001",
+            "short_desc": "Video Content Provider",
+            "long_desc": "Video Content Provider",
+            "images": [
+              {
+                "url": "https://abc.com/images/1-logo-img"
+              }
+            ]
+          },
+          "rating": "4.4",
+          "ttl": "PT1D",
+          "locations": [
+            {
+              "id": "L1",
+              "gps": "12.967555,77.749666",
+              "address": "Jayanagar 4th Block",
+              "city": {
+                "code": "std:080",
+                "name": "Bengaluru"
+              },
+              "state": {
+                "code": "KA"
+              },
+              "country": {
+                "code": "IND"
+              },
+              "area_code": "560076"
+            }
+          ],
+          "categories": [
+            {
+              "id": "C1",
+              "descriptor": {
+                "name": "Ad Supported Content",
+                "code": "AVOD"
+              }
+            },
+            {
+              "id": "C2",
+              "descriptor": {
+                "name": "Rent a content",
+                "code": "TVOD"
+              }
+            },
+            {
+              "id": "C3",
+              "descriptor": {
+                "name": "Subscription",
+                "code": "SVOD"
+              }
+            },
+            {
+              "id": "V1",
+              "descriptor": {
+                "name": "Variant Group"
+              },
+              "tags": [
+                {
+                  "descriptor": {
+                    "code": "TYPE"
+                  },
+                  "list": [
+                    {
+                      "descriptor": {
+                        "code": "TYPE"
+                      },
+                      "value": "variant_group"
+                    }
+                  ]
+                },
+                {
+                  "descriptor": {
+                    "code": "ATTR"
+                  },
+                  "list": [
+                    {
+                      "descriptor": {
+                        "code": "LANGUAGE"
+                      },
+                      "value": "item.tags.metadata.language"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "SEQ"
+                      },
+                      "value": "1"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "fulfillments": [
+            {
+              "id": "F1",
+              "type": "ONLINE"
+            },
+            {
+              "id": "F2",
+              "type": "SUBSCRIPTION",
+              "stops": [
+                {
+                  "time": {
+                    "schedule": {
+                      "frequency": "P1M"
+                    }
+                  }
+                }
+              ],
+              "tags": [
+                {
+                  "descriptor": {
+                    "code": "INFO"
+                  },
+                  "list": [
+                    {
+                      "descriptor": {
+                        "code": "PARENT_ID"
+                      },
+                      "value": "F1"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "items": [
+            {
+              "id": "I1",
+              "descriptor": {
+                "name": "Sholay",
+                "short_desc": "Former police officer story of revenge & capture the bandits",
+                "long_desc": "Former police officer story of revenge & capture the bandits",
+                "images": [
+                  {
+                    "url": "https://abc.com/images/thumbnail.png",
+                    "size_type": "sm",
+                    "width": "90",
+                    "height": "120"
+                  },
+                  {
+                    "url": "https://abc.com/images/poster.png",
+                    "size_type": "lg",
+                    "width": "1200",
+                    "height": "500"
+                  }
+                ],
+                "media": [
+                  {
+                    "mimetype": "video/mp4",
+                    "url": "trailer_video_url"
+                  },
+                  {
+                    "mimetype": "video/mp4",
+                    "url": "trailer_video_url2"
+                  }
+                ]
+              },
+              "rating": {
+                "value": "4"
+              },
+              "creator": {
+                "descriptor": {
+                  "name": "United Producers"
+                }
+              },
+              "quantity": {
+                "maximum": {
+                  "count": 1
+                },
+                "minimum": {
+                  "count": 1
+                }
+              },
+              "price": {
+                "currency": "INR",
+                "value": "199.00",
+                "offered_value": "199.00",
+                "maximum_value": "199.00"
+              },
+              "category_ids": ["MEC11-1001", "C2", "C3"],
+              "fulfillment_ids": ["F1"],
+              "payment_ids": ["1"],
+              "tags": [
+                {
+                  "descriptor": {
+                    "code": "ATTRIBUTES",
+                    "short_desc": "Content Details",
+                    "long_desc": "Content Details"
+                  },
+                  "list": [
+                    {
+                      "descriptor": {
+                        "code": "METADATA",
+                        "short_desc": "Content Metadata",
+                        "long_desc": "Content Metadata"
+                      }
+                    },
+                    {
+                      "descriptor": {
+                        "code": "RENTAL_INFO",
+                        "short_desc": "Content Metadata",
+                        "long_desc": "Content Metadata"
+                      }
+                    },
+                    {
+                      "descriptor": {
+                        "code": "SUPPORTED_DEVICES",
+                        "short_desc": "Description",
+                        "long_desc": "Description"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "descriptor": {
+                    "code": "METADATA"
+                  },
+                  "list": [
+                    {
+                      "descriptor": {
+                        "code": "CONTENT_ID",
+                        "short_desc": "Description",
+                        "long_desc": "Description"
+                      },
+                      "value": "N001_MOV_000001"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "DURATION",
+                        "short_desc": "Duration in seconds",
+                        "long_desc": "Duration in seconds"
+                      },
+                      "value": "7800"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "STREAMING_URL",
+                        "short_desc": "Description"
+                      },
+                      "value": "https://video_url/path.m3u8"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "GENRE",
+                        "short_desc": "Content Genre",
+                        "long_desc": "Content Genre"
+                      },
+                      "value": "Action,Comedy"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "PARENTAL_RATING",
+                        "short_desc": "Description",
+                        "long_desc": "Description"
+                      },
+                      "value": "UA - 13+"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "CAST",
+                        "short_desc": "Description",
+                        "long_desc": "Description"
+                      },
+                      "value": "Amitabh Bachchan,Dharmendra,Amjad Khan,Hema Malini,Jaya Bhaduri"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "WRITER",
+                        "short_desc": "Description",
+                        "long_desc": "Description"
+                      },
+                      "value": "Salim,Javed"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "MUSIC",
+                        "short_desc": "Description",
+                        "long_desc": "Description"
+                      },
+                      "value": "R.D. Burman"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "DIRECTOR",
+                        "short_desc": "Description",
+                        "long_desc": "Description"
+                      },
+                      "value": "Ramesh Sippy"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "PRODUCER",
+                        "short_desc": "Description",
+                        "long_desc": "Description"
+                      },
+                      "value": "J.P. Sippy"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "RELEASE_YEAR",
+                        "short_desc": "Description",
+                        "long_desc": "Description"
+                      },
+                      "value": "1975"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "DESCRIPTORS",
+                        "short_desc": "Description",
+                        "long_desc": "Description"
+                      },
+                      "value": "Violence,Mature Theme,Strong Language"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "LANGUAGE",
+                        "short_desc": "Description",
+                        "long_desc": "Description"
+                      },
+                      "value": "Hindi"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "DOWNLOADABLE",
+                        "short_desc": "Description",
+                        "long_desc": "Description"
+                      },
+                      "value": "Y"
+                    }
+                  ]
+                },
+                {
+                  "descriptor": {
+                    "code": "RENTAL_INFO"
+                  },
+                  "list": [
+                    {
+                      "descriptor": {
+                        "code": "CONDITION",
+                        "short_desc": "The condition on which the rental watching duration starts"
+                      },
+                      "value": "FIRST_WATCH"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "DURATION",
+                        "short_desc": "The duration time that the user can watch the movie for"
+                      },
+                      "value": "PT48H"
+                    }
+                  ]
+                },
+                {
+                  "descriptor": {
+                    "code": "SUPPORTED_DEVICES",
+                    "list": [
+                      {
+                        "descriptor": {
+                          "code": "DOWNLOAD_DEVICES",
+                          "short_desc": "Description",
+                          "long_desc": "Description"
+                        },
+                        "value": "1"
+                      },
+                      {
+                        "descriptor": {
+                          "code": "MULTI_DEVICE_SUPPORT",
+                          "short_desc": "Description",
+                          "long_desc": "Description"
+                        },
+                        "value": "2"
+                      },
+                      {
+                        "descriptor": {
+                          "code": "CONCURRENT_STREAMING",
+                          "short_desc": "Description",
+                          "long_desc": "Description"
+                        },
+                        "value": "2"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "matched": true,
+              "recommended": true
+            },
+            {
+              "id": "I2",
+              "parent_item_id": "V1",
+              "descriptor": {
+                "name": "The Family Men",
+                "short_desc": "Spy action thriller streaming television series",
+                "long_desc": "Spy action thriller streaming television series",
+                "images": [
+                  {
+                    "url": "https://abc.com/images/thumbnail.png",
+                    "size_type": "sm",
+                    "width": "90",
+                    "height": "120"
+                  },
+                  {
+                    "url": "https://abc.com/images/poster.png",
+                    "size_type": "lg",
+                    "width": "1200",
+                    "height": "500"
+                  }
+                ],
+                "media": [
+                  {
+                    "mimetype": "video/mp4",
+                    "url": "trailer_video_url"
+                  },
+                  {
+                    "mimetype": "video/mp4",
+                    "url": "trailer_video_url2"
+                  }
+                ]
+              },
+              "rating": {
+                "value": "4"
+              },
+              "creator": {
+                "descriptor": {
+                  "name": "Raj & DK"
+                }
+              },
+              "price": {
+                "currency": "INR",
+                "value": "199.00",
+                "offered_value": "199.00",
+                "maximum_value": "199.00"
+              },
+              "category_ids": ["MEC11-1002", "C1"],
+              "fulfillment_ids": ["F1"],
+              "payment_ids": ["1"],
+              "tags": [
+                {
+                  "descriptor": {
+                    "code": "ATTRIBUTES",
+                    "short_desc": "Content Details",
+                    "long_desc": "Content Details"
+                  },
+                  "list": [
+                    {
+                      "descriptor": {
+                        "code": "METADATA",
+                        "short_desc": "Content Metadata",
+                        "long_desc": "Content Metadata"
+                      }
+                    },
+                    {
+                      "descriptor": {
+                        "code": "SUPPORTED_DEVICES",
+                        "short_desc": "Description",
+                        "long_desc": "Description"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "descriptor": {
+                    "code": "METADATA"
+                  },
+                  "list": [
+                    {
+                      "descriptor": {
+                        "code": "CONTENT_ID",
+                        "short_desc": "Description",
+                        "long_desc": "Description"
+                      },
+                      "value": "N001_SHOW_000001"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "TITLE",
+                        "short_desc": "Description",
+                        "long_desc": "Description"
+                      },
+                      "value": "The Family Men"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "GENRE",
+                        "short_desc": "Series Genre",
+                        "long_desc": "Series Genre"
+                      },
+                      "value": "Espionage,Action thriller,Black comedy"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "PARENTAL_RATING",
+                        "short_desc": "Description",
+                        "long_desc": "Description"
+                      },
+                      "value": "UA - 16+"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "WRITER",
+                        "short_desc": "Description",
+                        "long_desc": "Description"
+                      },
+                      "value": "Raj & DK"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "MUSIC",
+                        "short_desc": "Description",
+                        "long_desc": "Description"
+                      },
+                      "value": "Sachin - Jigar"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "DIRECTOR",
+                        "short_desc": "Description",
+                        "long_desc": "Description"
+                      },
+                      "value": "Raj & DK"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "PRODUCER",
+                        "short_desc": "Description",
+                        "long_desc": "Description"
+                      },
+                      "value": "D2R Films"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "RELEASE_YEAR",
+                        "short_desc": "Description",
+                        "long_desc": "Description"
+                      },
+                      "value": "2019"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "DESCRIPTORS",
+                        "short_desc": "Description",
+                        "long_desc": "Description"
+                      },
+                      "value": "Violence,Mature Theme,Strong Language"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "LANGUAGE",
+                        "short_desc": "Description",
+                        "long_desc": "Description"
+                      },
+                      "value": "Hindi"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "NO_OF_SEASONS",
+                        "short_desc": "Description",
+                        "long_desc": "Description"
+                      },
+                      "value": "2"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "SEASONS_IDS",
+                        "short_desc": "Description",
+                        "long_desc": "Description"
+                      },
+                      "value": "SEASON1,SEASON2"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "COUNTRY_OF_ORIGIN",
+                        "short_desc": "Description",
+                        "long_desc": "Description"
+                      },
+                      "value": "INDIA"
+                    }
+                  ]
+                },
+                {
+                  "descriptor": {
+                    "code": "SEASON1"
+                  },
+                  "list": [
+                    {
+                      "descriptor": {
+                        "code": "RELEASE_YEAR",
+                        "short_desc": "Description"
+                      },
+                      "value": "2019"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "SEQ",
+                        "short_desc": "Description"
+                      },
+                      "value": "1"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "SUBTITLES",
+                        "short_desc": "Description"
+                      },
+                      "value": "English,Hindi"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "RESOLUTION_SUPPORTED",
+                        "short_desc": "Description"
+                      },
+                      "value": "480p,720p,1080p,2k,4k"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "TITLE",
+                        "short_desc": "Description"
+                      },
+                      "value": "The Family Men - Season1"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "GENRE",
+                        "short_desc": "Season Genre"
+                      },
+                      "value": "Espionage,Action thriller,Black comedy"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "PARENTAL_RATING",
+                        "short_desc": "Description"
+                      },
+                      "value": "UA - 16+"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "CAST",
+                        "short_desc": "Description"
+                      },
+                      "value": "Manoj Bajpai,Priyamani,Samantha Ruth Prabhu"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "WRITER",
+                        "short_desc": "Description"
+                      },
+                      "value": "Raj & DK"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "MUSIC",
+                        "short_desc": "Description"
+                      },
+                      "value": "Sachin - Jigar"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "DIRECTOR",
+                        "short_desc": "Description"
+                      },
+                      "value": "Raj & DK"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "PRODUCER",
+                        "short_desc": "Description"
+                      },
+                      "value": "D2R Films"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "DESCRIPTORS",
+                        "short_desc": "Description"
+                      },
+                      "value": "Violence,Mature Theme,Strong Language"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "NO_OF_EPISODES",
+                        "short_desc": "Description"
+                      },
+                      "value": "3"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "EPISODES_ID",
+                        "short_desc": "Description"
+                      },
+                      "value": "EPISODE1,EPISODE2,EPISODE3"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "DOWNLOADABLE",
+                        "short_desc": "Description"
+                      },
+                      "value": "Y"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "IMAGES_SM",
+                        "short_desc": "Description"
+                      },
+                      "value": "https://abc.com/images/thumbnail-season1.png"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "IMAGES_LG",
+                        "short_desc": "Description"
+                      },
+                      "value": "https://abc.com/images/thumbnail-season1_lg.png"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "TRAILERS",
+                        "short_desc": "Description"
+                      },
+                      "value": "season1_trailer_video_url_1,season1_trailer_video_url_2"
+                    }
+                  ]
+                },
+                {
+                  "descriptor": {
+                    "code": "EPISODE1"
+                  },
+                  "list": [
+                    {
+                      "descriptor": {
+                        "code": "SEQ",
+                        "short_desc": "Description"
+                      },
+                      "value": "1"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "TITLE",
+                        "short_desc": "Description"
+                      },
+                      "value": "The Family Men"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "STREAMING_URL",
+                        "short_desc": "Description"
+                      },
+                      "value": "https://video_url/path.m3u8"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "CAST",
+                        "short_desc": "Description"
+                      },
+                      "value": "Manoj Bajpai,Priyamani,Samantha Ruth Prabhu"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "RELEASE_DATE",
+                        "short_desc": "Description"
+                      },
+                      "value": "29th December"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "DURATION",
+                        "short_desc": "Episode duration in minutes"
+                      },
+                      "value": "45"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "IMAGES_SM",
+                        "short_desc": "Description"
+                      },
+                      "value": "https://abc.com/images/thumbnail-season1.png"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "IMAGES_LG",
+                        "short_desc": "Description"
+                      },
+                      "value": "https://abc.com/images/thumbnail-season1_lg.png"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "TRAILERS",
+                        "short_desc": "Description"
+                      },
+                      "value": "episode1_trailer_video_url_1,episode1_trailer_video_url_2"
+                    }
+                  ]
+                },
+                {
+                  "descriptor": {
+                    "code": "EPISODE2"
+                  },
+                  "list": [
+                    {
+                      "descriptor": {
+                        "code": "SEQ",
+                        "short_desc": "Description"
+                      },
+                      "value": "2"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "DURATION",
+                        "short_desc": "Episode duration in minutes"
+                      },
+                      "value": "45"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "STREAMING_URL",
+                        "short_desc": "Description"
+                      },
+                      "value": "https://video_url/path.m3u8"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "TITLE",
+                        "short_desc": "Description"
+                      },
+                      "value": "Sleepers"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "CAST",
+                        "short_desc": "Description"
+                      },
+                      "value": "Manoj Bajpai,Priyamani,Samantha Ruth Prabhu"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "RELEASE_DATE",
+                        "short_desc": "Description"
+                      },
+                      "value": "29th December"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "LANGUAGE",
+                        "short_desc": "Description"
+                      },
+                      "value": "Hindi"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "IMAGES_SM",
+                        "short_desc": "Description"
+                      },
+                      "value": "https://abc.com/images/thumbnail-season1.png"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "IMAGES_LG",
+                        "short_desc": "Description"
+                      },
+                      "value": "https://abc.com/images/thumbnail-season1_lg.png"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "TRAILERS",
+                        "short_desc": "Description"
+                      },
+                      "value": "episode2_trailer_video_url_1,episode2_trailer_video_url_2"
+                    }
+                  ]
+                },
+                {
+                  "descriptor": {
+                    "code": "EPISODE3"
+                  },
+                  "list": [
+                    {
+                      "descriptor": {
+                        "code": "SEQ",
+                        "short_desc": "Description"
+                      },
+                      "value": "3"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "DURATION",
+                        "short_desc": "Episode duration in minutes"
+                      },
+                      "value": "45"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "STREAMING_URL",
+                        "short_desc": "Description"
+                      },
+                      "value": "https://video_url/path.m3u8"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "TITLE",
+                        "short_desc": "Description"
+                      },
+                      "value": "The Anti-National"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "CAST",
+                        "short_desc": "Description"
+                      },
+                      "value": "Manoj Bajpai,Priyamani,Samantha Ruth Prabhu"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "RELEASE_DATE",
+                        "short_desc": "Description"
+                      },
+                      "value": "29th December"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "IMAGES_SM",
+                        "short_desc": "Description"
+                      },
+                      "value": "https://abc.com/images/thumbnail-season1.png"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "IMAGES_LG",
+                        "short_desc": "Description"
+                      },
+                      "value": "https://abc.com/images/thumbnail-season1_lg.png"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "TRAILERS",
+                        "short_desc": "Description"
+                      },
+                      "value": "episode3_trailer_video_url_1,episode3_trailer_video_url_2"
+                    }
+                  ]
+                },
+                {
+                  "descriptor": {
+                    "code": "SUPPORTED_DEVICES",
+                    "list": [
+                      {
+                        "descriptor": {
+                          "code": "DOWNLOAD_DEVICES",
+                          "short_desc": "Description",
+                          "long_desc": "Description"
+                        },
+                        "value": "1"
+                      },
+                      {
+                        "descriptor": {
+                          "code": "COMPATIBLE_DEVICES",
+                          "short_desc": "Description",
+                          "long_desc": "Description"
+                        },
+                        "value": "iOS,Android,AndroidTV,AppleTV"
+                      },
+                      {
+                        "descriptor": {
+                          "code": "MULTI_DEVICE_SUPPORT",
+                          "short_desc": "Description",
+                          "long_desc": "Description"
+                        },
+                        "value": "2"
+                      },
+                      {
+                        "descriptor": {
+                          "code": "CONCURRENT_STREAMING",
+                          "short_desc": "Description",
+                          "long_desc": "Description"
+                        },
+                        "value": "2"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "matched": true,
+              "recommended": true
+            },
+            {
+              "id": "I3",
+              "parent_item_id": "V1",
+              "descriptor": {
+                "name": "The Family Men",
+                "short_desc": "Spy action thriller streaming television series",
+                "long_desc": "Spy action thriller streaming television series",
+                "images": [
+                  {
+                    "url": "https://abc.com/images/thumbnail.png",
+                    "size_type": "sm",
+                    "width": "90",
+                    "height": "120"
+                  },
+                  {
+                    "url": "https://abc.com/images/poster.png",
+                    "size_type": "lg",
+                    "width": "1200",
+                    "height": "500"
+                  }
+                ],
+                "media": [
+                  {
+                    "mimetype": "video/mp4",
+                    "url": "trailer_video_url"
+                  },
+                  {
+                    "mimetype": "video/mp4",
+                    "url": "trailer_video_url2"
+                  }
+                ]
+              },
+              "rating": {
+                "value": "4"
+              },
+              "creator": {
+                "descriptor": {
+                  "name": "Raj & DK"
+                }
+              },
+              "price": {
+                "currency": "INR",
+                "value": "299.00",
+                "offered_value": "299.00",
+                "maximum_value": "299.00"
+              },
+              "category_ids": ["MEC11-1002", "C1"],
+              "fulfillment_ids": ["F1"],
+              "payment_ids": ["1"],
+              "tags": [
+                {
+                  "descriptor": {
+                    "code": "ATTRIBUTES",
+                    "short_desc": "Content Details"
+                  },
+                  "list": [
+                    {
+                      "descriptor": {
+                        "code": "METADATA",
+                        "short_desc": "Description"
+                      }
+                    },
+                    {
+                      "descriptor": {
+                        "code": "REFERENCE_ATTR_PRIMARY_ID",
+                        "short_desc": "I2"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "descriptor": {
+                    "code": "METADATA",
+                    "short_desc": "Content Details"
+                  },
+                  "list": [
+                    {
+                      "descriptor": {
+                        "code": "LANGUAGE",
+                        "short_desc": "Description"
+                      },
+                      "value": "English"
+                    }
+                  ]
+                }
+              ],
+              "matched": true,
+              "recommended": true
+            }
+          ],
+          "creds": [
+            {
+              "id": "CBFC-12345678",
+              "type": "Certificate",
+              "desc": "Central Board of Film Certification (CAP)",
+              "url": "https://abcd.cdn.com/images/base-img"
+            }
+          ],
+          "tags": [
+            {
+              "descriptor": {
+                "code": "serviceability"
+              },
+              "list": [
+                {
+                  "descriptor": {
+                    "code": "location"
+                  },
+                  "value": "L1"
+                },
+                {
+                  "descriptor": {
+                    "code": "val"
+                  },
+                  "value": "IND"
+                },
+                {
+                  "descriptor": {
+                    "code": "unit"
+                  },
+                  "value": "country"
+                },
+                {
+                  "descriptor": {
+                    "code": "category"
+                  },
+                  "value": "MEC11-1001"
+                },
+                {
+                  "descriptor": {
+                    "code": "type"
+                  },
+                  "value": "12"
+                }
+              ]
+            },
+            {
+              "descriptor": {
+                "code": "serviceability"
+              },
+              "list": [
+                {
+                  "descriptor": {
+                    "code": "location"
+                  },
+                  "value": "L1"
+                },
+                {
+                  "descriptor": {
+                    "code": "val"
+                  },
+                  "value": "IND"
+                },
+                {
+                  "descriptor": {
+                    "code": "unit"
+                  },
+                  "value": "country"
+                },
+                {
+                  "descriptor": {
+                    "code": "category"
+                  },
+                  "value": "MEC11-1002"
+                },
+                {
+                  "descriptor": {
+                    "code": "type"
+                  },
+                  "value": "12"
+                }
+              ]
+            },
+            {
+              "descriptor": {
+                "code": "SUPPORTED_DRM"
+              },
+              "list": [
+                {
+                  "descriptor": {
+                    "code": "DRM_PROVIDER"
+                  },
+                  "value": "BuyDRM"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
