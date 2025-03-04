@@ -28,7 +28,7 @@
       "items": [
         {
           "id": "I1",
-          "fulfillment_ids": ["F1"]
+          "fulfillment_ids": ["FI1"]
         }
       ],
       "fulfillments": [
@@ -43,8 +43,7 @@
                 "range": {
                   "start": "2024-04-04T22:00:00.000Z",
                   "end": "2024-04-04T23:00:00.000Z"
-                },
-                "days": "4"
+                }
               },
               "location": {
                 "gps": "12.974002,77.613458",

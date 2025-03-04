@@ -28,7 +28,7 @@ value:
       items:
         - id: I1
           fulfillment_ids:
-            - F3
+            - FI1
           quantity:
             selected:
               count: 1

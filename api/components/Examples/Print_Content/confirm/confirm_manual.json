@@ -30,7 +30,7 @@
       "items": [
         {
           "id": "I1",
-          "fulfillment_ids": ["F3"],
+          "fulfillment_ids": ["FI1"],
           "quantity": {
             "selected": {
               "count": 1

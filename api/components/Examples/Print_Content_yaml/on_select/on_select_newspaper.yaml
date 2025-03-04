@@ -25,7 +25,7 @@ value:
       items:
         - id: I1
           fulfillment_ids:
-            - F2
+            - FI1
       fulfillments:
         - id: FI1
           type: OFFLINE
@@ -36,7 +36,6 @@ value:
                 range:
                   start: '2024-04-04T22:00:00.000Z'
                   end: '2024-04-04T23:00:00.000Z'
-                days: '4'
               location:
                 gps: 12.974002,77.613458
                 area_code: '560001'
