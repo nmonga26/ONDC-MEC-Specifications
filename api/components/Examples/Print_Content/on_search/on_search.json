@@ -200,6 +200,9 @@
                 },
                 "minimum": {
                   "count": 1
+                },
+                "available": {
+                  "count": 1
                 }
               },
               "price": {

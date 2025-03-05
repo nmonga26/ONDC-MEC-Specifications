@@ -119,6 +119,8 @@ value:
                   count: 1
                 minimum:
                   count: 1
+                available:
+                  count: 1
               price:
                 currency: INR
                 value: '499.00'
