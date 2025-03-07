@@ -162,7 +162,7 @@ steps:
     example:
       $ref: "../../Examples/Print_Content_yaml/on_status/on_status_online_completed_2.yaml"
   - summary: Seller completes the subscription
-    api: on_update (Subscription completed)
+    api: on_status (Subscription completed)
     description: After all child orders are fulfilled and completed, parent subscription order is completed
     reference: if any
     example:
