@@ -3269,6 +3269,8 @@ x-flows:
                             count: 2
                           minimum:
                             count: 1
+                          available:
+                            count: 1
                         price:
                           currency: INR
                           value: '199.00'
@@ -3923,7 +3925,7 @@ x-flows:
                       selected:
                         count: 1
                 fulfillments:
-                  - type: ONLINE
+                  - type: SUBSCRIPTION
                     stops:
                       - type: end
                         time:
@@ -3938,6 +3940,12 @@ x-flows:
                           - descriptor:
                               code: PARENT_ID
                             value: F1
+                      - descriptor:
+                          code: SELECTION
+                        list:
+                          - descriptor:
+                              code: ITEM_IDS
+                            value: I1
       - summary: Seller confirms the schedule and returns the quote for service
         api: on_select
         description: Seller confirms the schedule and returns the quote for service
@@ -5953,6 +5961,13 @@ x-flows:
                         location:
                           gps: 12.974002,77.613458
                           area_code: '560001'
+                    tags:
+                      - descriptor:
+                          code: SELECTION
+                        list:
+                          - descriptor:
+                              code: ITEM_IDS
+                            value: I1
       - summary: Seller confirms the schedule and returns the quote for service
         api: on_select
         description: Seller confirms the schedule and returns the quote for service
@@ -9338,6 +9353,9 @@ x-flows:
                 fulfillments:
                   - id: FI1
                     type: SUBSCRIPTION
+                    state:
+                      descriptor:
+                        code: PENDING
                     stops:
                       - type: start
                         time:
@@ -10519,6 +10537,8 @@ x-flows:
                             count: 2
                           minimum:
                             count: 1
+                          available:
+                            count: 1
                         price:
                           currency: INR
                           value: '199.00'
@@ -11177,6 +11197,13 @@ x-flows:
                         location:
                           gps: 12.974002,77.613458
                           area_code: '560001'
+                    tags:
+                      - descriptor:
+                          code: SELECTION
+                        list:
+                          - descriptor:
+                              code: ITEM_IDS
+                            value: I1
       - summary: Seller confirms the schedule and returns the quote for service
         api: on_select
         description: Seller confirms the schedule and returns the quote for service
@@ -12062,6 +12089,12 @@ x-flows:
                           - descriptor:
                               code: PARENT_ID
                             value: F1
+                      - descriptor:
+                          code: SELECTION
+                        list:
+                          - descriptor:
+                              code: ITEM_IDS
+                            value: I1
       - summary: Seller confirms the schedule and returns the quote for service
         api: on_select
         description: Seller confirms the schedule and returns the quote for service
@@ -13339,6 +13372,13 @@ x-examples:
                           location:
                             gps: 12.974002,77.613458
                             area_code: '560001'
+                      tags:
+                        - descriptor:
+                            code: SELECTION
+                          list:
+                            - descriptor:
+                                code: ITEM_IDS
+                              value: I1
           - summary: ''
             description: ''
             value:
@@ -13379,6 +13419,13 @@ x-examples:
                             range:
                               start: '2024-04-04T22:00:00.000Z'
                               end: '2024-04-04T23:00:00.000Z'
+                      tags:
+                        - descriptor:
+                            code: SELECTION
+                          list:
+                            - descriptor:
+                                code: ITEM_IDS
+                              value: I1
           - summary: ''
             description: ''
             value:
@@ -13411,7 +13458,7 @@ x-examples:
                         selected:
                           count: 1
                   fulfillments:
-                    - type: ONLINE
+                    - type: SUBSCRIPTION
                       stops:
                         - type: end
                           time:
@@ -13426,6 +13473,12 @@ x-examples:
                             - descriptor:
                                 code: PARENT_ID
                               value: F1
+                        - descriptor:
+                            code: SELECTION
+                          list:
+                            - descriptor:
+                                code: ITEM_IDS
+                              value: I1
       init:
         examples:
           - summary: ''
@@ -15462,6 +15515,8 @@ x-examples:
                               count: 2
                             minimum:
                               count: 1
+                            available:
+                              count: 1
                           price:
                             currency: INR
                             value: '199.00'
@@ -16231,6 +16286,8 @@ x-examples:
                             maximum:
                               count: 2
                             minimum:
+                              count: 1
+                            available:
                               count: 1
                           price:
                             currency: INR
@@ -17927,6 +17984,9 @@ x-examples:
                   fulfillments:
                     - id: FI1
                       type: SUBSCRIPTION
+                      state:
+                        descriptor:
+                          code: PENDING
                       stops:
                         - type: start
                           time:

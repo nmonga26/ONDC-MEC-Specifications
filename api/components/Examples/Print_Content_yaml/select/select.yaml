@@ -45,3 +45,9 @@ value:
                 - descriptor:
                     code: PARENT_ID
                   value: F1
+            - descriptor:
+                code: SELECTION
+              list:
+                - descriptor:
+                    code: ITEM_IDS
+                  value: I1

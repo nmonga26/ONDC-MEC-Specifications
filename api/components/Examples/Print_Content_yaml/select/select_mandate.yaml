@@ -30,7 +30,7 @@ value:
             selected:
               count: 1
       fulfillments:
-        - type: ONLINE
+        - type: SUBSCRIPTION
           stops:
             - type: end
               time:
@@ -45,3 +45,9 @@ value:
                 - descriptor:
                     code: PARENT_ID
                   value: F1
+            - descriptor:
+                code: SELECTION
+              list:
+                - descriptor:
+                    code: ITEM_IDS
+                  value: I1
