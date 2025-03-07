@@ -9,34 +9,67 @@
         "code": "IND"
       }
     },
-    "action": "on_confirm",
+    "action": "on_status",
     "version": "2.0.0",
     "bap_id": "buyerapp.com",
     "bap_uri": "https://buyerapp.com/services",
     "bpp_id": "sellerapp.com",
     "bpp_uri": "https://sellerapp.com/services",
     "transaction_id": "T1",
-    "message_id": "M4",
-    "timestamp": "2024-04-01T22:00:39.000Z",
+    "message_id": "M10",
+    "timestamp": "2024-04-01T22:00:49.000Z",
     "ttl": "PT30S"
   },
   "message": {
     "order": {
-      "id": "O1",
-      "status": "Accepted",
+      "id": "C1",
+      "status": "Completed",
+      "ref_order_ids": ["O1"],
       "provider": {
-        "id": "P1",
-        "rateable": true
+        "id": "P1"
       },
       "items": [
         {
           "id": "I1",
-          "fulfillment_ids": ["FI1"],
+          "fulfillment_ids": ["FI2"],
           "quantity": {
             "selected": {
               "count": 1
             }
-          }
+          },
+          "tags": [
+            {
+              "descriptor": {
+                "code": "RESCHEDULE_TERMS"
+              },
+              "list": [
+                {
+                  "descriptor": {
+                    "code": "FULFILLMENT_STATE"
+                  },
+                  "value": "Pending"
+                },
+                {
+                  "descriptor": {
+                    "code": "RESCHEDULE_ELIGIBLE"
+                  },
+                  "value": "true"
+                },
+                {
+                  "descriptor": {
+                    "code": "RESCHEDULE_FEE"
+                  },
+                  "value": "0.00"
+                },
+                {
+                  "descriptor": {
+                    "code": "RESCHEDULE_WITHIN"
+                  },
+                  "value": "PT1D"
+                }
+              ]
+            }
+          ]
         }
       ],
       "billing": {
@@ -54,11 +87,11 @@
       },
       "fulfillments": [
         {
-          "id": "FI1",
-          "type": "SUBSCRIPTION",
+          "id": "FI2",
+          "type": "ONLINE",
           "state": {
             "descriptor": {
-              "code": "PENDING"
+              "code": "COMPLETED"
             }
           },
           "stops": [
@@ -68,28 +101,9 @@
                 "label": "confirmed",
                 "range": {
                   "start": "2024-04-04T09:30:00.000Z",
-                  "end": "2024-10-04T00:00:00.000Z"
+                  "end": "2024-04-11T00:00:00.000Z"
                 }
-              },
-              "duration": "P6M",
-              "schedule": {
-                "frequency": "P1M"
               }
-            }
-          ],
-          "tags": [
-            {
-              "descriptor": {
-                "code": "INFO"
-              },
-              "list": [
-                {
-                  "descriptor": {
-                    "code": "PARENT_ID"
-                  },
-                  "value": "F1"
-                }
-              ]
             }
           ]
         }
@@ -97,14 +111,14 @@
       "quote": {
         "price": {
           "currency": "INR",
-          "value": "3094"
+          "value": "199"
         },
         "breakup": [
           {
-            "title": "Basic Membership",
+            "title": "Weekly India Today Magazine",
             "price": {
               "currency": "INR",
-              "value": "2994"
+              "value": "199"
             },
             "item": {
               "id": "I1",
@@ -115,9 +129,8 @@
               },
               "price": {
                 "currency": "INR",
-                "value": "499"
-              },
-              "fulfillment_ids": ["FII"]
+                "value": "199"
+              }
             },
             "tags": [
               {
@@ -134,42 +147,16 @@
                 ]
               }
             ]
-          },
-          {
-            "title": "tax",
-            "price": {
-              "currency": "INR",
-              "value": "100"
-            },
-            "item": {
-              "id": "I1"
-            },
-            "tags": [
-              {
-                "descriptor": {
-                  "code": "title"
-                },
-                "list": [
-                  {
-                    "descriptor": {
-                      "code": "type"
-                    },
-                    "value": "tax"
-                  }
-                ]
-              }
-            ]
           }
         ],
         "ttl": "P1D"
       },
       "payments": [
         {
-          "id": "P1",
-          "collected_by": "BPP",
-          "url": "https://e-mandate-payment-gateway-url",
+          "id": "P3C",
+          "collected_by": "BAP",
           "params": {
-            "amount": "599",
+            "amount": "199",
             "currency": "INR"
           },
           "status": "PAID",
@@ -184,7 +171,7 @@
                   "descriptor": {
                     "code": "COUNTERPARTY"
                   },
-                  "value": "BAP"
+                  "value": "BPP"
                 },
                 {
                   "descriptor": {
@@ -256,10 +243,70 @@
               "value": "0.00"
             }
           }
+        },
+        {
+          "fulfillment_state": {
+            "descriptor": {
+              "code": "PACKED",
+              "short_desc": "002"
+            }
+          },
+          "cancellation_fee": {
+            "percentage": "0.00",
+            "amount": {
+              "currency": "INR",
+              "value": "0.00"
+            }
+          }
+        },
+        {
+          "fulfillment_state": {
+            "descriptor": {
+              "code": "AGENT-ASSIGNED",
+              "short_desc": "002"
+            }
+          },
+          "cancellation_fee": {
+            "percentage": "0.00",
+            "amount": {
+              "currency": "INR",
+              "value": "0.00"
+            }
+          }
+        },
+        {
+          "fulfillment_state": {
+            "descriptor": {
+              "code": "ORDER-PICKED-UP",
+              "short_desc": "002"
+            }
+          },
+          "cancellation_fee": {
+            "percentage": "0.00",
+            "amount": {
+              "currency": "INR",
+              "value": "0.00"
+            }
+          }
+        },
+        {
+          "fulfillment_state": {
+            "descriptor": {
+              "code": "OUT-FOR-DELIVERY",
+              "short_desc": "002"
+            }
+          },
+          "cancellation_fee": {
+            "percentage": "0.00",
+            "amount": {
+              "currency": "INR",
+              "value": "0.00"
+            }
+          }
         }
       ],
       "created_at": "2024-04-01T22:00:38.000Z",
-      "updated_at": "2024-04-01T22:00:39.000Z"
+      "updated_at": "2024-04-01T22:00:49.000Z"
     }
   }
 }

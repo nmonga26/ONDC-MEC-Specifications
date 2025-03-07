@@ -8,27 +8,28 @@ value:
         code: std:080
       country:
         code: IND
-    action: on_confirm
+    action: on_status
     version: 2.0.0
     bap_id: buyerapp.com
     bap_uri: https://buyerapp.com/services
     bpp_id: sellerapp.com
     bpp_uri: https://sellerapp.com/services
     transaction_id: T1
-    message_id: M4
-    timestamp: '2024-04-01T22:00:39.000Z'
+    message_id: M10
+    timestamp: '2024-04-01T22:00:49.000Z'
     ttl: PT30S
   message:
     order:
-      id: O1
-      status: Accepted
+      id: C1
+      status: Completed
+      ref_order_ids:
+        - O1
       provider:
         id: P1
-        rateable: true
       items:
         - id: I1
           fulfillment_ids:
-            - FI1
+            - FI2
           quantity:
             selected:
               count: 1
@@ -48,11 +49,6 @@ value:
                 - descriptor:
                     code: RESCHEDULE_WITHIN
                   value: PT1D
-            - descriptor:
-                code: TNC_LINK
-                name: Terms & Conditions
-                short_desc: Terms and Conditions
-              value: https://abc.com/tnc.html
       billing:
         name: ONDC buyer
         address: >-
@@ -66,32 +62,22 @@ value:
         email: nobody@nomail.com
         phone: '9886098860'
       fulfillments:
-        - id: FI1
-          type: SUBSCRIPTION
+        - id: FI2
+          type: ONLINE
           state:
             descriptor:
-              code: PENDING
+              code: COMPLETED
           stops:
             - type: start
               time:
                 label: confirmed
                 range:
                   start: '2024-04-04T09:30:00.000Z'
-                  end: '2024-10-04T00:00:00.000Z'
-              duration: P8W
-              schedule:
-                frequency: P1W
-          tags:
-            - descriptor:
-                code: INFO
-              list:
-                - descriptor:
-                    code: PARENT_ID
-                  value: F1
+                  end: '2024-04-11T00:00:00.000Z'
       quote:
         price:
           currency: INR
-          value: '1592'
+          value: '199'
         breakup:
           - title: Weekly India Today Magazine
             price:
@@ -105,8 +91,6 @@ value:
               price:
                 currency: INR
                 value: '199'
-              fulfillment_ids:
-                - FII
             tags:
               - descriptor:
                   code: title
@@ -116,22 +100,35 @@ value:
                     value: item
         ttl: P1D
       payments:
-        - id: PG1
-          collected_by: BPP
-          url: https://e-mandate-payment-gateway-url/installment
-          type: PRE-FULFILLMENT
-          status: PAID
+        - id: P3C
+          collected_by: BAP
           params:
-            amount: '1592'
+            amount: '199'
             currency: INR
+          status: PAID
+          type: PRE-FULFILLMENT
           tags:
             - descriptor:
-                name: Payment Method
-                code: PAYMENT_METHOD
+                code: SETTLEMENT_DETAILS
               list:
                 - descriptor:
+                    code: COUNTERPARTY
+                  value: BPP
+                - descriptor:
                     code: MODE
-                  value: MANDATE_REGISTRATION
+                  value: UPI
+                - descriptor:
+                    code: BENEFICIARY_NAME
+                  value: xxxxx
+                - descriptor:
+                    code: BANK_ACCOUNT_NO
+                  value: xxxxx
+                - descriptor:
+                    code: IFSC_CODE
+                  value: xxxxxxx
+                - descriptor:
+                    code: UPI_ADDRESS
+                  value: xxxxxxx
             - descriptor:
                 code: BUYER_FINDER_FEES
               display: false
@@ -142,13 +139,6 @@ value:
                 - descriptor:
                     code: BUYER_FINDER_FEE_AMOUNT
                   value: '0'
-            - descriptor:
-                code: INFO
-              display: false
-              list:
-                - descriptor:
-                    code: TOTAL_PAYMENTS
-                  value: '8'
       cancellation_terms:
         - fulfillment_state:
             descriptor:
@@ -159,5 +149,41 @@ value:
             amount:
               currency: INR
               value: '0.00'
+        - fulfillment_state:
+            descriptor:
+              code: PACKED
+              short_desc: '002'
+          cancellation_fee:
+            percentage: '0.00'
+            amount:
+              currency: INR
+              value: '0.00'
+        - fulfillment_state:
+            descriptor:
+              code: AGENT-ASSIGNED
+              short_desc: '002'
+          cancellation_fee:
+            percentage: '0.00'
+            amount:
+              currency: INR
+              value: '0.00'
+        - fulfillment_state:
+            descriptor:
+              code: ORDER-PICKED-UP
+              short_desc: '002'
+          cancellation_fee:
+            percentage: '0.00'
+            amount:
+              currency: INR
+              value: '0.00'
+        - fulfillment_state:
+            descriptor:
+              code: OUT-FOR-DELIVERY
+              short_desc: '002'
+          cancellation_fee:
+            percentage: '0.00'
+            amount:
+              currency: INR
+              value: '0.00'
       created_at: '2024-04-01T22:00:38.000Z'
-      updated_at: '2024-04-01T22:00:39.000Z'
+      updated_at: '2024-04-01T22:00:49.000Z'

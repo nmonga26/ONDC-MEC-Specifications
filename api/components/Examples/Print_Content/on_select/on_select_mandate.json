@@ -116,7 +116,7 @@
         {
           "id": "PG1",
           "collected_by": "BPP",
-          "type": "PRE_FULFILLMENT",
+          "type": "PRE-FULFILLMENT",
           "tags": [
             {
               "descriptor": {
@@ -137,7 +137,7 @@
         {
           "id": "PG2",
           "collected_by": "bpp",
-          "type": "PRE_FULFILLMENT",
+          "type": "PRE-FULFILLMENT",
           "tags": [
             {
               "descriptor": {
@@ -158,7 +158,7 @@
         {
           "id": "PG3",
           "collected_by": "bpp",
-          "type": "PRE_FULFILLMENT",
+          "type": "PRE-FULFILLMENT",
           "tags": [
             {
               "descriptor": {

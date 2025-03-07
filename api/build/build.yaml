@@ -4029,7 +4029,7 @@ x-flows:
                 payments:
                   - id: PG1
                     collected_by: BPP
-                    type: PRE_FULFILLMENT
+                    type: PRE-FULFILLMENT
                     tags:
                       - descriptor:
                           name: Payment Method
@@ -4040,7 +4040,7 @@ x-flows:
                             value: MANDATE_REGISTRATION
                   - id: PG2
                     collected_by: bpp
-                    type: PRE_FULFILLMENT
+                    type: PRE-FULFILLMENT
                     tags:
                       - descriptor:
                           name: Payment Method
@@ -4051,7 +4051,7 @@ x-flows:
                             value: MANUAL_EMI
                   - id: PG3
                     collected_by: bpp
-                    type: PRE_FULFILLMENT
+                    type: PRE-FULFILLMENT
                     tags:
                       - descriptor:
                           name: Payment Method
@@ -4131,7 +4131,7 @@ x-flows:
                 payments:
                   - id: PG1
                     collected_by: BPP
-                    type: PRE_FULFILLMENT
+                    type: PRE-FULFILLMENT
                     params:
                       amount: '1592'
                       currency: INR
@@ -4244,7 +4244,7 @@ x-flows:
                   - id: PG1
                     collected_by: BPP
                     url: https://e-mandate-payment-gateway-url/installment
-                    type: PRE_FULFILLMENT
+                    type: PRE-FULFILLMENT
                     params:
                       amount: '1592'
                       currency: INR
@@ -4326,6 +4326,9 @@ x-flows:
                 fulfillments:
                   - id: FI1
                     type: SUBSCRIPTION
+                    state:
+                      descriptor:
+                        code: PENDING
                     stops:
                       - type: start
                         time:
@@ -4374,7 +4377,7 @@ x-flows:
                   - id: PG1
                     collected_by: BPP
                     url: https://e-mandate-payment-gateway-url/installment
-                    type: PRE_FULFILLMENT
+                    type: PRE-FULFILLMENT
                     status: PAID
                     params:
                       amount: '1592'
@@ -4506,7 +4509,7 @@ x-flows:
                   - id: PG1
                     collected_by: BPP
                     url: https://e-mandate-payment-gateway-url/installment
-                    type: PRE_FULFILLMENT
+                    type: PRE-FULFILLMENT
                     status: PAID
                     params:
                       amount: '1592'
@@ -4615,6 +4618,9 @@ x-flows:
                 fulfillments:
                   - id: FI1
                     type: SUBSCRIPTION
+                    state:
+                      descriptor:
+                        code: PENDING
                     stops:
                       - type: start
                         time:
@@ -4663,7 +4669,7 @@ x-flows:
                   - id: PG1
                     collected_by: BPP
                     url: https://e-mandate-payment-gateway-url/installment
-                    type: PRE_FULFILLMENT
+                    type: PRE-FULFILLMENT
                     status: PAID
                     params:
                       amount: '1592'
@@ -4893,7 +4899,6 @@ x-flows:
                   - C1
                 provider:
                   id: P1
-                  rateable: true
                 items:
                   - id: I1
                     fulfillment_ids:
@@ -4937,6 +4942,9 @@ x-flows:
                 fulfillments:
                   - id: FI1
                     type: SUBSCRIPTION
+                    state:
+                      descriptor:
+                        code: PENDING
                     stops:
                       - type: start
                         time:
@@ -4985,7 +4993,7 @@ x-flows:
                   - id: PG1
                     collected_by: BPP
                     url: https://e-mandate-payment-gateway-url/installment
-                    type: PRE_FULFILLMENT
+                    type: PRE-FULFILLMENT
                     status: PAID
                     params:
                       amount: '1592'
@@ -5718,6 +5726,9 @@ x-flows:
                 fulfillments:
                   - id: FI1
                     type: SUBSCRIPTION
+                    state:
+                      descriptor:
+                        code: PENDING
                     stops:
                       - type: start
                         time:
@@ -8182,7 +8193,7 @@ x-flows:
                 payments:
                   - id: PG2
                     collected_by: BPP
-                    type: PRE_FULFILLMENT
+                    type: PRE-FULFILLMENT
                     params:
                       amount: '1592'
                       currency: INR
@@ -8294,7 +8305,7 @@ x-flows:
                 payments:
                   - id: PG2
                     collected_by: BPP
-                    type: PRE_FULFILLMENT
+                    type: PRE-FULFILLMENT
                     params:
                       amount: '1592'
                       currency: INR
@@ -8424,7 +8435,7 @@ x-flows:
                 payments:
                   - id: PG2
                     collected_by: BPP
-                    type: PRE_FULFILLMENT
+                    type: PRE-FULFILLMENT
                     params:
                       amount: '1592'
                       currency: INR
@@ -8532,6 +8543,9 @@ x-flows:
                 fulfillments:
                   - id: FI1
                     type: SUBSCRIPTION
+                    state:
+                      descriptor:
+                        code: PENDING
                     stops:
                       - type: start
                         time:
@@ -8579,7 +8593,7 @@ x-flows:
                 payments:
                   - id: PG2
                     collected_by: BPP
-                    type: PRE_FULFILLMENT
+                    type: PRE-FULFILLMENT
                     params:
                       amount: '1592'
                       currency: INR
@@ -8967,7 +8981,7 @@ x-flows:
                 payments:
                   - id: PG3
                     collected_by: BAP
-                    type: PRE_FULFILLMENT
+                    type: PRE-FULFILLMENT
                     params:
                       amount: '1592'
                       currency: INR
@@ -9079,7 +9093,7 @@ x-flows:
                 payments:
                   - id: PG3
                     collected_by: BAP
-                    type: PRE_FULFILLMENT
+                    type: PRE-FULFILLMENT
                     params:
                       amount: '1592'
                       currency: INR
@@ -9223,7 +9237,7 @@ x-flows:
                 payments:
                   - id: PG3
                     collected_by: BAP
-                    type: PRE_FULFILLMENT
+                    type: PRE-FULFILLMENT
                     params:
                       amount: '1592'
                       currency: INR
@@ -9279,8 +9293,8 @@ x-flows:
       - summary: Seller accepts the order for service
         api: on_confirm
         description: >-
-          Seller app confirms the payment received and sends an /on_confirm call
-          for confirming subscription
+          Seller app confirms the order and sends an /on_confirm call for
+          confirming subscription
         reference: if any
         example:
           summary: ''
@@ -9403,10 +9417,1186 @@ x-flows:
                 payments:
                   - id: PG3
                     collected_by: BAP
-                    type: PRE_FULFILLMENT
+                    type: PRE-FULFILLMENT
                     params:
                       amount: '1592'
                       currency: INR
+                    status: PAID
+                    tags:
+                      - descriptor:
+                          name: Payment Method
+                          code: PAYMENT_METHOD
+                        list:
+                          - descriptor:
+                              code: MODE
+                            value: FULl_PAYMENT
+                      - descriptor:
+                          code: BUYER_FINDER_FEES
+                        display: false
+                        list:
+                          - descriptor:
+                              code: BUYER_FINDER_FEE_TYPE
+                            value: percent
+                          - descriptor:
+                              code: BUYER_FINDER_FEE_AMOUNT
+                            value: '0'
+                      - descriptor:
+                          code: INFO
+                        display: false
+                        list:
+                          - descriptor:
+                              code: TOTAL_PAYMENTS
+                            value: '8'
+                cancellation_terms:
+                  - fulfillment_state:
+                      descriptor:
+                        code: PENDING
+                        short_desc: '002'
+                    cancellation_fee:
+                      percentage: '0.00'
+                      amount:
+                        currency: INR
+                        value: '0.00'
+                created_at: '2024-04-01T22:00:38.000Z'
+                updated_at: '2024-04-01T22:00:39.000Z'
+      - summary: Seller accepts the order for service
+        api: on_confirm (Child order - 1st order)
+        description: >-
+          Seller app creates a child order for each fulfillment and sends an
+          /on_confirm call
+        reference: if any
+        example:
+          summary: ''
+          description: ''
+          value:
+            context:
+              domain: ONDC:MEC10
+              location:
+                city:
+                  code: std:080
+                country:
+                  code: IND
+              action: on_confirm
+              version: 2.0.0
+              bap_id: buyerapp.com
+              bap_uri: https://buyerapp.com/services
+              bpp_id: sellerapp.com
+              bpp_uri: https://sellerapp.com/services
+              transaction_id: T1
+              message_id: M4
+              timestamp: '2024-04-01T22:00:39.000Z'
+              ttl: PT30S
+            message:
+              order:
+                id: C1
+                ref_order_ids:
+                  - O1
+                status: In-Progress
+                provider:
+                  id: P1
+                items:
+                  - id: I1
+                    fulfillment_ids:
+                      - FI2
+                    quantity:
+                      selected:
+                        count: 1
+                billing:
+                  name: ONDC buyer
+                  address: >-
+                    22, Mahatma Gandhi Rd, Craig Park Layout, Ashok Nagar,
+                    Bengaluru, Karnataka 560001
+                  state:
+                    name: Karnataka
+                  city:
+                    name: Bengaluru
+                  tax_id: XXXXXXXXXXXXXXX
+                  email: nobody@nomail.com
+                  phone: '9886098860'
+                fulfillments:
+                  - id: FI2
+                    type: ONLINE
+                    state:
+                      descriptor:
+                        code: PENDING
+                    stops:
+                      - type: start
+                        time:
+                          label: confirmed
+                          range:
+                            start: '2024-04-04T09:30:00.000Z'
+                            end: '2024-04-11T00:00:00.000Z'
+                quote:
+                  price:
+                    currency: INR
+                    value: '199'
+                  breakup:
+                    - title: Weekly India Today Magazine
+                      price:
+                        currency: INR
+                        value: '199'
+                      item:
+                        id: I1
+                        quantity:
+                          selected:
+                            count: 1
+                        price:
+                          currency: INR
+                          value: '199'
+                      tags:
+                        - descriptor:
+                            code: title
+                          list:
+                            - descriptor:
+                                code: type
+                              value: item
+                  ttl: P1D
+                payments:
+                  - id: P3C
+                    collected_by: BAP
+                    params:
+                      amount: '199'
+                      currency: INR
+                    status: PAID
+                    type: PRE-FULFILLMENT
+                    tags:
+                      - descriptor:
+                          code: SETTLEMENT_DETAILS
+                        list:
+                          - descriptor:
+                              code: COUNTERPARTY
+                            value: BPP
+                          - descriptor:
+                              code: MODE
+                            value: UPI
+                          - descriptor:
+                              code: BENEFICIARY_NAME
+                            value: xxxxx
+                          - descriptor:
+                              code: BANK_ACCOUNT_NO
+                            value: xxxxx
+                          - descriptor:
+                              code: IFSC_CODE
+                            value: xxxxxxx
+                          - descriptor:
+                              code: UPI_ADDRESS
+                            value: xxxxxxx
+                      - descriptor:
+                          code: BUYER_FINDER_FEES
+                        display: false
+                        list:
+                          - descriptor:
+                              code: BUYER_FINDER_FEE_TYPE
+                            value: percent
+                          - descriptor:
+                              code: BUYER_FINDER_FEE_AMOUNT
+                            value: '0'
+                cancellation_terms:
+                  - fulfillment_state:
+                      descriptor:
+                        code: PENDING
+                        short_desc: '002'
+                    cancellation_fee:
+                      percentage: '0.00'
+                      amount:
+                        currency: INR
+                        value: '0.00'
+                created_at: '2024-04-01T22:00:38.000Z'
+                updated_at: '2024-04-01T22:00:39.000Z'
+      - summary: Seller accepts the order for service
+        api: on_update (Updated parent order with child)
+        description: Seller app confirms updates the parent app with the child order id
+        reference: if any
+        example:
+          summary: ''
+          description: ''
+          value:
+            context:
+              domain: ONDC:MEC10
+              location:
+                city:
+                  code: std:080
+                country:
+                  code: IND
+              action: on_update
+              version: 2.0.0
+              bap_id: buyerapp.com
+              bap_uri: https://buyerapp.com/services
+              bpp_id: sellerapp.com
+              bpp_uri: https://sellerapp.com/services
+              transaction_id: T1
+              message_id: M6
+              timestamp: '2024-04-01T22:00:39.000Z'
+              ttl: PT30S
+            message:
+              order:
+                id: O1
+                status: Active
+                ref_order_ids:
+                  - C1
+                provider:
+                  id: P1
+                items:
+                  - id: I1
+                    fulfillment_ids:
+                      - FI1
+                    quantity:
+                      selected:
+                        count: 1
+                    tags:
+                      - descriptor:
+                          code: RESCHEDULE_TERMS
+                        list:
+                          - descriptor:
+                              code: FULFILLMENT_STATE
+                            value: Pending
+                          - descriptor:
+                              code: RESCHEDULE_ELIGIBLE
+                            value: 'true'
+                          - descriptor:
+                              code: RESCHEDULE_FEE
+                            value: '0.00'
+                          - descriptor:
+                              code: RESCHEDULE_WITHIN
+                            value: PT1D
+                      - descriptor:
+                          code: TNC_LINK
+                          name: Terms & Conditions
+                          short_desc: Terms and Conditions
+                        value: https://abc.com/tnc.html
+                billing:
+                  name: ONDC buyer
+                  address: >-
+                    22, Mahatma Gandhi Rd, Craig Park Layout, Ashok Nagar,
+                    Bengaluru, Karnataka 560001
+                  state:
+                    name: Karnataka
+                  city:
+                    name: Bengaluru
+                  tax_id: XXXXXXXXXXXXXXX
+                  email: nobody@nomail.com
+                  phone: '9886098860'
+                fulfillments:
+                  - id: FI1
+                    type: SUBSCRIPTION
+                    state:
+                      descriptor:
+                        code: PENDING
+                    stops:
+                      - type: start
+                        time:
+                          label: confirmed
+                          range:
+                            start: '2024-04-04T09:30:00.000Z'
+                            end: '2024-10-04T00:00:00.000Z'
+                        duration: P8W
+                        schedule:
+                          frequency: P1W
+                    tags:
+                      - descriptor:
+                          code: INFO
+                        list:
+                          - descriptor:
+                              code: PARENT_ID
+                            value: F1
+                quote:
+                  price:
+                    currency: INR
+                    value: '1592'
+                  breakup:
+                    - title: Weekly India Today Magazine
+                      price:
+                        currency: INR
+                        value: '199'
+                      item:
+                        id: I1
+                        quantity:
+                          selected:
+                            count: 1
+                        price:
+                          currency: INR
+                          value: '199'
+                        fulfillment_ids:
+                          - FII
+                      tags:
+                        - descriptor:
+                            code: title
+                          list:
+                            - descriptor:
+                                code: type
+                              value: item
+                  ttl: P1D
+                payments:
+                  - id: PG3
+                    collected_by: BAP
+                    type: PRE-FULFILLMENT
+                    params:
+                      amount: '1592'
+                      currency: INR
+                    status: PAID
+                    tags:
+                      - descriptor:
+                          name: Payment Method
+                          code: PAYMENT_METHOD
+                        list:
+                          - descriptor:
+                              code: MODE
+                            value: FULl_PAYMENT
+                      - descriptor:
+                          code: BUYER_FINDER_FEES
+                        display: false
+                        list:
+                          - descriptor:
+                              code: BUYER_FINDER_FEE_TYPE
+                            value: percent
+                          - descriptor:
+                              code: BUYER_FINDER_FEE_AMOUNT
+                            value: '0'
+                      - descriptor:
+                          code: INFO
+                        display: false
+                        list:
+                          - descriptor:
+                              code: TOTAL_PAYMENTS
+                            value: '8'
+                cancellation_terms:
+                  - fulfillment_state:
+                      descriptor:
+                        code: PENDING
+                        short_desc: '002'
+                    cancellation_fee:
+                      percentage: '0.00'
+                      amount:
+                        currency: INR
+                        value: '0.00'
+                created_at: '2024-04-01T22:00:38.000Z'
+                updated_at: '2024-04-01T22:00:39.000Z'
+      - summary: Seller sends completion status of child order
+        api: on_status (Complete - 1st Order)
+        description: Seller app completes and sends status update for 1st order
+        reference: if any
+        example:
+          summary: ''
+          description: ''
+          value:
+            context:
+              domain: ONDC:MEC10
+              location:
+                city:
+                  code: std:080
+                country:
+                  code: IND
+              action: on_status
+              version: 2.0.0
+              bap_id: buyerapp.com
+              bap_uri: https://buyerapp.com/services
+              bpp_id: sellerapp.com
+              bpp_uri: https://sellerapp.com/services
+              transaction_id: T1
+              message_id: M10
+              timestamp: '2024-04-01T22:00:49.000Z'
+              ttl: PT30S
+            message:
+              order:
+                id: C1
+                status: Completed
+                ref_order_ids:
+                  - O1
+                provider:
+                  id: P1
+                items:
+                  - id: I1
+                    fulfillment_ids:
+                      - FI2
+                    quantity:
+                      selected:
+                        count: 1
+                    tags:
+                      - descriptor:
+                          code: RESCHEDULE_TERMS
+                        list:
+                          - descriptor:
+                              code: FULFILLMENT_STATE
+                            value: Pending
+                          - descriptor:
+                              code: RESCHEDULE_ELIGIBLE
+                            value: 'true'
+                          - descriptor:
+                              code: RESCHEDULE_FEE
+                            value: '0.00'
+                          - descriptor:
+                              code: RESCHEDULE_WITHIN
+                            value: PT1D
+                billing:
+                  name: ONDC buyer
+                  address: >-
+                    22, Mahatma Gandhi Rd, Craig Park Layout, Ashok Nagar,
+                    Bengaluru, Karnataka 560001
+                  state:
+                    name: Karnataka
+                  city:
+                    name: Bengaluru
+                  tax_id: XXXXXXXXXXXXXXX
+                  email: nobody@nomail.com
+                  phone: '9886098860'
+                fulfillments:
+                  - id: FI2
+                    type: ONLINE
+                    state:
+                      descriptor:
+                        code: COMPLETED
+                    stops:
+                      - type: start
+                        time:
+                          label: confirmed
+                          range:
+                            start: '2024-04-04T09:30:00.000Z'
+                            end: '2024-04-11T00:00:00.000Z'
+                quote:
+                  price:
+                    currency: INR
+                    value: '199'
+                  breakup:
+                    - title: Weekly India Today Magazine
+                      price:
+                        currency: INR
+                        value: '199'
+                      item:
+                        id: I1
+                        quantity:
+                          selected:
+                            count: 1
+                        price:
+                          currency: INR
+                          value: '199'
+                      tags:
+                        - descriptor:
+                            code: title
+                          list:
+                            - descriptor:
+                                code: type
+                              value: item
+                  ttl: P1D
+                payments:
+                  - id: P3C
+                    collected_by: BAP
+                    params:
+                      amount: '199'
+                      currency: INR
+                    status: PAID
+                    type: PRE-FULFILLMENT
+                    tags:
+                      - descriptor:
+                          code: SETTLEMENT_DETAILS
+                        list:
+                          - descriptor:
+                              code: COUNTERPARTY
+                            value: BPP
+                          - descriptor:
+                              code: MODE
+                            value: UPI
+                          - descriptor:
+                              code: BENEFICIARY_NAME
+                            value: xxxxx
+                          - descriptor:
+                              code: BANK_ACCOUNT_NO
+                            value: xxxxx
+                          - descriptor:
+                              code: IFSC_CODE
+                            value: xxxxxxx
+                          - descriptor:
+                              code: UPI_ADDRESS
+                            value: xxxxxxx
+                      - descriptor:
+                          code: BUYER_FINDER_FEES
+                        display: false
+                        list:
+                          - descriptor:
+                              code: BUYER_FINDER_FEE_TYPE
+                            value: percent
+                          - descriptor:
+                              code: BUYER_FINDER_FEE_AMOUNT
+                            value: '0'
+                cancellation_terms:
+                  - fulfillment_state:
+                      descriptor:
+                        code: PENDING
+                        short_desc: '002'
+                    cancellation_fee:
+                      percentage: '0.00'
+                      amount:
+                        currency: INR
+                        value: '0.00'
+                  - fulfillment_state:
+                      descriptor:
+                        code: PACKED
+                        short_desc: '002'
+                    cancellation_fee:
+                      percentage: '0.00'
+                      amount:
+                        currency: INR
+                        value: '0.00'
+                  - fulfillment_state:
+                      descriptor:
+                        code: AGENT-ASSIGNED
+                        short_desc: '002'
+                    cancellation_fee:
+                      percentage: '0.00'
+                      amount:
+                        currency: INR
+                        value: '0.00'
+                  - fulfillment_state:
+                      descriptor:
+                        code: ORDER-PICKED-UP
+                        short_desc: '002'
+                    cancellation_fee:
+                      percentage: '0.00'
+                      amount:
+                        currency: INR
+                        value: '0.00'
+                  - fulfillment_state:
+                      descriptor:
+                        code: OUT-FOR-DELIVERY
+                        short_desc: '002'
+                    cancellation_fee:
+                      percentage: '0.00'
+                      amount:
+                        currency: INR
+                        value: '0.00'
+                created_at: '2024-04-01T22:00:38.000Z'
+                updated_at: '2024-04-01T22:00:49.000Z'
+      - summary: Seller accepts the order for service
+        api: on_confirm (Child order - 2nd order)
+        description: >-
+          Seller app creates a 2nd child order for fulfillment and sends an
+          /on_confirm call
+        reference: if any
+        example:
+          summary: ''
+          description: ''
+          value:
+            context:
+              domain: ONDC:MEC10
+              location:
+                city:
+                  code: std:080
+                country:
+                  code: IND
+              action: on_confirm
+              version: 2.0.0
+              bap_id: buyerapp.com
+              bap_uri: https://buyerapp.com/services
+              bpp_id: sellerapp.com
+              bpp_uri: https://sellerapp.com/services
+              transaction_id: T1
+              message_id: M4
+              timestamp: '2024-04-01T22:00:39.000Z'
+              ttl: PT30S
+            message:
+              order:
+                id: C2
+                ref_order_ids:
+                  - O1
+                status: In-Progress
+                provider:
+                  id: P1
+                items:
+                  - id: I1
+                    fulfillment_ids:
+                      - FI3
+                    quantity:
+                      selected:
+                        count: 1
+                billing:
+                  name: ONDC buyer
+                  address: >-
+                    22, Mahatma Gandhi Rd, Craig Park Layout, Ashok Nagar,
+                    Bengaluru, Karnataka 560001
+                  state:
+                    name: Karnataka
+                  city:
+                    name: Bengaluru
+                  tax_id: XXXXXXXXXXXXXXX
+                  email: nobody@nomail.com
+                  phone: '9886098860'
+                fulfillments:
+                  - id: FI3
+                    type: ONLINE
+                    state:
+                      descriptor:
+                        code: PENDING
+                    stops:
+                      - type: start
+                        time:
+                          label: confirmed
+                          range:
+                            start: '2024-04-04T09:30:00.000Z'
+                            end: '2024-04-11T00:00:00.000Z'
+                quote:
+                  price:
+                    currency: INR
+                    value: '199'
+                  breakup:
+                    - title: Weekly India Today Magazine
+                      price:
+                        currency: INR
+                        value: '199'
+                      item:
+                        id: I1
+                        quantity:
+                          selected:
+                            count: 1
+                        price:
+                          currency: INR
+                          value: '199'
+                      tags:
+                        - descriptor:
+                            code: title
+                          list:
+                            - descriptor:
+                                code: type
+                              value: item
+                  ttl: P1D
+                payments:
+                  - id: P4C
+                    collected_by: BAP
+                    params:
+                      amount: '199'
+                      currency: INR
+                    status: PAID
+                    type: PRE-FULFILLMENT
+                    tags:
+                      - descriptor:
+                          code: SETTLEMENT_DETAILS
+                        list:
+                          - descriptor:
+                              code: COUNTERPARTY
+                            value: BPP
+                          - descriptor:
+                              code: MODE
+                            value: UPI
+                          - descriptor:
+                              code: BENEFICIARY_NAME
+                            value: xxxxx
+                          - descriptor:
+                              code: BANK_ACCOUNT_NO
+                            value: xxxxx
+                          - descriptor:
+                              code: IFSC_CODE
+                            value: xxxxxxx
+                          - descriptor:
+                              code: UPI_ADDRESS
+                            value: xxxxxxx
+                      - descriptor:
+                          code: BUYER_FINDER_FEES
+                        display: false
+                        list:
+                          - descriptor:
+                              code: BUYER_FINDER_FEE_TYPE
+                            value: percent
+                          - descriptor:
+                              code: BUYER_FINDER_FEE_AMOUNT
+                            value: '0'
+                cancellation_terms:
+                  - fulfillment_state:
+                      descriptor:
+                        code: PENDING
+                        short_desc: '002'
+                    cancellation_fee:
+                      percentage: '0.00'
+                      amount:
+                        currency: INR
+                        value: '0.00'
+                created_at: '2024-04-01T22:00:38.000Z'
+                updated_at: '2024-04-01T22:00:39.000Z'
+      - summary: Seller accepts the order for service
+        api: on_update (Updated parent order with child)
+        description: Seller app confirms updates the parent app with the child order id
+        reference: if any
+        example:
+          summary: ''
+          description: ''
+          value:
+            context:
+              domain: ONDC:MEC10
+              location:
+                city:
+                  code: std:080
+                country:
+                  code: IND
+              action: on_update
+              version: 2.0.0
+              bap_id: buyerapp.com
+              bap_uri: https://buyerapp.com/services
+              bpp_id: sellerapp.com
+              bpp_uri: https://sellerapp.com/services
+              transaction_id: T1
+              message_id: M6
+              timestamp: '2024-04-01T22:00:39.000Z'
+              ttl: PT30S
+            message:
+              order:
+                id: O1
+                status: Active
+                ref_order_ids:
+                  - C1
+                  - C2
+                provider:
+                  id: P1
+                items:
+                  - id: I1
+                    fulfillment_ids:
+                      - FI1
+                    quantity:
+                      selected:
+                        count: 1
+                    tags:
+                      - descriptor:
+                          code: RESCHEDULE_TERMS
+                        list:
+                          - descriptor:
+                              code: FULFILLMENT_STATE
+                            value: Pending
+                          - descriptor:
+                              code: RESCHEDULE_ELIGIBLE
+                            value: 'true'
+                          - descriptor:
+                              code: RESCHEDULE_FEE
+                            value: '0.00'
+                          - descriptor:
+                              code: RESCHEDULE_WITHIN
+                            value: PT1D
+                      - descriptor:
+                          code: TNC_LINK
+                          name: Terms & Conditions
+                          short_desc: Terms and Conditions
+                        value: https://abc.com/tnc.html
+                billing:
+                  name: ONDC buyer
+                  address: >-
+                    22, Mahatma Gandhi Rd, Craig Park Layout, Ashok Nagar,
+                    Bengaluru, Karnataka 560001
+                  state:
+                    name: Karnataka
+                  city:
+                    name: Bengaluru
+                  tax_id: XXXXXXXXXXXXXXX
+                  email: nobody@nomail.com
+                  phone: '9886098860'
+                fulfillments:
+                  - id: FI1
+                    type: SUBSCRIPTION
+                    state:
+                      descriptor:
+                        code: PENDING
+                    stops:
+                      - type: start
+                        time:
+                          label: confirmed
+                          range:
+                            start: '2024-04-04T09:30:00.000Z'
+                            end: '2024-10-04T00:00:00.000Z'
+                        duration: P8W
+                        schedule:
+                          frequency: P1W
+                    tags:
+                      - descriptor:
+                          code: INFO
+                        list:
+                          - descriptor:
+                              code: PARENT_ID
+                            value: F1
+                quote:
+                  price:
+                    currency: INR
+                    value: '1592'
+                  breakup:
+                    - title: Weekly India Today Magazine
+                      price:
+                        currency: INR
+                        value: '199'
+                      item:
+                        id: I1
+                        quantity:
+                          selected:
+                            count: 1
+                        price:
+                          currency: INR
+                          value: '199'
+                        fulfillment_ids:
+                          - FII
+                      tags:
+                        - descriptor:
+                            code: title
+                          list:
+                            - descriptor:
+                                code: type
+                              value: item
+                  ttl: P1D
+                payments:
+                  - id: PG3
+                    collected_by: BAP
+                    type: PRE-FULFILLMENT
+                    params:
+                      amount: '1592'
+                      currency: INR
+                    status: PAID
+                    tags:
+                      - descriptor:
+                          name: Payment Method
+                          code: PAYMENT_METHOD
+                        list:
+                          - descriptor:
+                              code: MODE
+                            value: FULl_PAYMENT
+                      - descriptor:
+                          code: BUYER_FINDER_FEES
+                        display: false
+                        list:
+                          - descriptor:
+                              code: BUYER_FINDER_FEE_TYPE
+                            value: percent
+                          - descriptor:
+                              code: BUYER_FINDER_FEE_AMOUNT
+                            value: '0'
+                      - descriptor:
+                          code: INFO
+                        display: false
+                        list:
+                          - descriptor:
+                              code: TOTAL_PAYMENTS
+                            value: '8'
+                cancellation_terms:
+                  - fulfillment_state:
+                      descriptor:
+                        code: PENDING
+                        short_desc: '002'
+                    cancellation_fee:
+                      percentage: '0.00'
+                      amount:
+                        currency: INR
+                        value: '0.00'
+                created_at: '2024-04-01T22:00:38.000Z'
+                updated_at: '2024-04-01T22:00:39.000Z'
+      - summary: Seller sends completion status of child order
+        api: on_status (Complete - 2nd Order)
+        description: Seller app completes and sends status update for 2nd order
+        reference: if any
+        example:
+          summary: ''
+          description: ''
+          value:
+            context:
+              domain: ONDC:MEC10
+              location:
+                city:
+                  code: std:080
+                country:
+                  code: IND
+              action: on_status
+              version: 2.0.0
+              bap_id: buyerapp.com
+              bap_uri: https://buyerapp.com/services
+              bpp_id: sellerapp.com
+              bpp_uri: https://sellerapp.com/services
+              transaction_id: T1
+              message_id: M10
+              timestamp: '2024-04-01T22:00:49.000Z'
+              ttl: PT30S
+            message:
+              order:
+                id: C2
+                status: Completed
+                ref_order_ids:
+                  - O1
+                  - O2
+                provider:
+                  id: P1
+                items:
+                  - id: I1
+                    fulfillment_ids:
+                      - FI3
+                    quantity:
+                      selected:
+                        count: 1
+                billing:
+                  name: ONDC buyer
+                  address: >-
+                    22, Mahatma Gandhi Rd, Craig Park Layout, Ashok Nagar,
+                    Bengaluru, Karnataka 560001
+                  state:
+                    name: Karnataka
+                  city:
+                    name: Bengaluru
+                  tax_id: XXXXXXXXXXXXXXX
+                  email: nobody@nomail.com
+                  phone: '9886098860'
+                fulfillments:
+                  - id: FI3
+                    type: ONLINE
+                    state:
+                      descriptor:
+                        code: COMPLETED
+                    stops:
+                      - type: start
+                        time:
+                          label: confirmed
+                          range:
+                            start: '2024-04-04T09:30:00.000Z'
+                            end: '2024-04-11T00:00:00.000Z'
+                quote:
+                  price:
+                    currency: INR
+                    value: '199'
+                  breakup:
+                    - title: Weekly India Today Magazine
+                      price:
+                        currency: INR
+                        value: '199'
+                      item:
+                        id: I1
+                        quantity:
+                          selected:
+                            count: 1
+                        price:
+                          currency: INR
+                          value: '199'
+                      tags:
+                        - descriptor:
+                            code: title
+                          list:
+                            - descriptor:
+                                code: type
+                              value: item
+                  ttl: P1D
+                payments:
+                  - id: P4C
+                    collected_by: BAP
+                    params:
+                      amount: '199'
+                      currency: INR
+                    status: PAID
+                    type: PRE-FULFILLMENT
+                    tags:
+                      - descriptor:
+                          code: SETTLEMENT_DETAILS
+                        list:
+                          - descriptor:
+                              code: COUNTERPARTY
+                            value: BPP
+                          - descriptor:
+                              code: MODE
+                            value: UPI
+                          - descriptor:
+                              code: BENEFICIARY_NAME
+                            value: xxxxx
+                          - descriptor:
+                              code: BANK_ACCOUNT_NO
+                            value: xxxxx
+                          - descriptor:
+                              code: IFSC_CODE
+                            value: xxxxxxx
+                          - descriptor:
+                              code: UPI_ADDRESS
+                            value: xxxxxxx
+                      - descriptor:
+                          code: BUYER_FINDER_FEES
+                        display: false
+                        list:
+                          - descriptor:
+                              code: BUYER_FINDER_FEE_TYPE
+                            value: percent
+                          - descriptor:
+                              code: BUYER_FINDER_FEE_AMOUNT
+                            value: '0'
+                cancellation_terms:
+                  - fulfillment_state:
+                      descriptor:
+                        code: PENDING
+                        short_desc: '002'
+                    cancellation_fee:
+                      percentage: '0.00'
+                      amount:
+                        currency: INR
+                        value: '0.00'
+                  - fulfillment_state:
+                      descriptor:
+                        code: PACKED
+                        short_desc: '002'
+                    cancellation_fee:
+                      percentage: '0.00'
+                      amount:
+                        currency: INR
+                        value: '0.00'
+                  - fulfillment_state:
+                      descriptor:
+                        code: AGENT-ASSIGNED
+                        short_desc: '002'
+                    cancellation_fee:
+                      percentage: '0.00'
+                      amount:
+                        currency: INR
+                        value: '0.00'
+                  - fulfillment_state:
+                      descriptor:
+                        code: ORDER-PICKED-UP
+                        short_desc: '002'
+                    cancellation_fee:
+                      percentage: '0.00'
+                      amount:
+                        currency: INR
+                        value: '0.00'
+                  - fulfillment_state:
+                      descriptor:
+                        code: OUT-FOR-DELIVERY
+                        short_desc: '002'
+                    cancellation_fee:
+                      percentage: '0.00'
+                      amount:
+                        currency: INR
+                        value: '0.00'
+                created_at: '2024-04-01T22:00:38.000Z'
+                updated_at: '2024-04-01T22:00:49.000Z'
+      - summary: Seller completes the subscription
+        api: on_update (Subscription completed)
+        description: >-
+          After all child orders are fulfilled and completed, parent
+          subscription order is completed
+        reference: if any
+        example:
+          summary: ''
+          description: ''
+          value:
+            context:
+              domain: ONDC:MEC10
+              location:
+                city:
+                  code: std:080
+                country:
+                  code: IND
+              action: on_status
+              version: 2.0.0
+              bap_id: buyerapp.com
+              bap_uri: https://buyerapp.com/services
+              bpp_id: sellerapp.com
+              bpp_uri: https://sellerapp.com/services
+              transaction_id: T1
+              message_id: M10
+              timestamp: '2024-04-01T22:00:49.000Z'
+              ttl: PT30S
+            message:
+              order:
+                id: O1
+                status: Completed
+                ref_order_ids:
+                  - C1
+                  - C2
+                  - C3
+                  - C4
+                  - C5
+                  - C6
+                  - C7
+                  - C8
+                provider:
+                  id: P1
+                items:
+                  - id: I1
+                    fulfillment_ids:
+                      - FI1
+                    quantity:
+                      selected:
+                        count: 1
+                    tags:
+                      - descriptor:
+                          code: RESCHEDULE_TERMS
+                        list:
+                          - descriptor:
+                              code: FULFILLMENT_STATE
+                            value: Pending
+                          - descriptor:
+                              code: RESCHEDULE_ELIGIBLE
+                            value: 'true'
+                          - descriptor:
+                              code: RESCHEDULE_FEE
+                            value: '0.00'
+                          - descriptor:
+                              code: RESCHEDULE_WITHIN
+                            value: PT1D
+                      - descriptor:
+                          code: TNC_LINK
+                          name: Terms & Conditions
+                          short_desc: Terms and Conditions
+                        value: https://abc.com/tnc.html
+                billing:
+                  name: ONDC buyer
+                  address: >-
+                    22, Mahatma Gandhi Rd, Craig Park Layout, Ashok Nagar,
+                    Bengaluru, Karnataka 560001
+                  state:
+                    name: Karnataka
+                  city:
+                    name: Bengaluru
+                  tax_id: XXXXXXXXXXXXXXX
+                  email: nobody@nomail.com
+                  phone: '9886098860'
+                fulfillments:
+                  - id: FI1
+                    type: SUBSCRIPTION
+                    state:
+                      descriptor:
+                        code: COMPLETED
+                    stops:
+                      - type: start
+                        time:
+                          label: confirmed
+                          range:
+                            start: '2024-04-04T09:30:00.000Z'
+                            end: '2024-10-04T00:00:00.000Z'
+                        duration: P8W
+                        schedule:
+                          frequency: P1W
+                    tags:
+                      - descriptor:
+                          code: INFO
+                        list:
+                          - descriptor:
+                              code: PARENT_ID
+                            value: F1
+                quote:
+                  price:
+                    currency: INR
+                    value: '1592'
+                  breakup:
+                    - title: Weekly India Today Magazine
+                      price:
+                        currency: INR
+                        value: '199'
+                      item:
+                        id: I1
+                        quantity:
+                          selected:
+                            count: 1
+                        price:
+                          currency: INR
+                          value: '199'
+                        fulfillment_ids:
+                          - FII
+                      tags:
+                        - descriptor:
+                            code: title
+                          list:
+                            - descriptor:
+                                code: type
+                              value: item
+                  ttl: P1D
+                payments:
+                  - id: PG3
+                    collected_by: BAP
+                    type: PRE-FULFILLMENT
+                    params:
+                      amount: '1592'
+                      currency: INR
+                    status: PAID
                     tags:
                       - descriptor:
                           name: Payment Method
@@ -9878,7 +11068,7 @@ x-flows:
                   - id: PG1
                     collected_by: BPP
                     url: https://e-mandate-payment-gateway-url/installment
-                    type: PRE_FULFILLMENT
+                    type: PRE-FULFILLMENT
                     status: PAID
                     params:
                       amount: '1592'
@@ -10204,7 +11394,7 @@ x-flows:
                   - id: PG1
                     collected_by: BPP
                     url: https://e-mandate-payment-gateway-url/installment
-                    type: PRE_FULFILLMENT
+                    type: PRE-FULFILLMENT
                     status: PAID
                     params:
                       amount: '1592'
@@ -12178,7 +13368,7 @@ x-flows:
                 payments:
                   - id: PG1
                     collected_by: BPP
-                    type: PRE_FULFILLMENT
+                    type: PRE-FULFILLMENT
                     tags:
                       - descriptor:
                           name: Payment Method
@@ -12189,7 +13379,7 @@ x-flows:
                             value: MANDATE_REGISTRATION
                   - id: PG2
                     collected_by: bpp
-                    type: PRE_FULFILLMENT
+                    type: PRE-FULFILLMENT
                     tags:
                       - descriptor:
                           name: Payment Method
@@ -12200,7 +13390,7 @@ x-flows:
                             value: MANUAL_EMI
                   - id: PG3
                     collected_by: bpp
-                    type: PRE_FULFILLMENT
+                    type: PRE-FULFILLMENT
                     tags:
                       - descriptor:
                           name: Payment Method
@@ -12280,7 +13470,7 @@ x-flows:
                 payments:
                   - id: PG1
                     collected_by: BPP
-                    type: PRE_FULFILLMENT
+                    type: PRE-FULFILLMENT
                     params:
                       amount: '1592'
                       currency: INR
@@ -12393,7 +13583,7 @@ x-flows:
                   - id: PG1
                     collected_by: BPP
                     url: https://e-mandate-payment-gateway-url/installment
-                    type: PRE_FULFILLMENT
+                    type: PRE-FULFILLMENT
                     params:
                       amount: '1592'
                       currency: INR
@@ -12531,7 +13721,7 @@ x-flows:
                   - id: PG1
                     collected_by: BPP
                     url: https://e-mandate-payment-gateway-url/installment
-                    type: PRE_FULFILLMENT
+                    type: PRE-FULFILLMENT
                     status: PAID
                     params:
                       amount: '1592'
@@ -12640,6 +13830,9 @@ x-flows:
                 fulfillments:
                   - id: FI1
                     type: SUBSCRIPTION
+                    state:
+                      descriptor:
+                        code: PENDING
                     stops:
                       - type: start
                         time:
@@ -12688,7 +13881,7 @@ x-flows:
                   - id: PG1
                     collected_by: BPP
                     url: https://e-mandate-payment-gateway-url/installment
-                    type: PRE_FULFILLMENT
+                    type: PRE-FULFILLMENT
                     status: PAID
                     params:
                       amount: '1592'
@@ -12918,7 +14111,6 @@ x-flows:
                   - C1
                 provider:
                   id: P1
-                  rateable: true
                 items:
                   - id: I1
                     fulfillment_ids:
@@ -12962,6 +14154,9 @@ x-flows:
                 fulfillments:
                   - id: FI1
                     type: SUBSCRIPTION
+                    state:
+                      descriptor:
+                        code: PENDING
                     stops:
                       - type: start
                         time:
@@ -13010,7 +14205,7 @@ x-flows:
                   - id: PG1
                     collected_by: BPP
                     url: https://e-mandate-payment-gateway-url/installment
-                    type: PRE_FULFILLMENT
+                    type: PRE-FULFILLMENT
                     status: PAID
                     params:
                       amount: '1592'
@@ -13547,7 +14742,7 @@ x-examples:
                   payments:
                     - id: PG3
                       collected_by: BAP
-                      type: PRE_FULFILLMENT
+                      type: PRE-FULFILLMENT
                       params:
                         amount: '1592'
                         currency: INR
@@ -13625,7 +14820,7 @@ x-examples:
                   payments:
                     - id: PG1
                       collected_by: BPP
-                      type: PRE_FULFILLMENT
+                      type: PRE-FULFILLMENT
                       params:
                         amount: '1592'
                         currency: INR
@@ -13703,7 +14898,7 @@ x-examples:
                   payments:
                     - id: PG2
                       collected_by: BPP
-                      type: PRE_FULFILLMENT
+                      type: PRE-FULFILLMENT
                       params:
                         amount: '1592'
                         currency: INR
@@ -14092,7 +15287,7 @@ x-examples:
                   payments:
                     - id: PG2
                       collected_by: BPP
-                      type: PRE_FULFILLMENT
+                      type: PRE-FULFILLMENT
                       params:
                         amount: '1592'
                         currency: INR
@@ -14219,7 +15414,7 @@ x-examples:
                     - id: PG1
                       collected_by: BPP
                       url: https://e-mandate-payment-gateway-url/installment
-                      type: PRE_FULFILLMENT
+                      type: PRE-FULFILLMENT
                       status: PAID
                       params:
                         amount: '1592'
@@ -14346,7 +15541,7 @@ x-examples:
                   payments:
                     - id: PG3
                       collected_by: BAP
-                      type: PRE_FULFILLMENT
+                      type: PRE-FULFILLMENT
                       params:
                         amount: '1592'
                         currency: INR
@@ -16989,7 +18184,7 @@ x-examples:
                   payments:
                     - id: PG1
                       collected_by: BPP
-                      type: PRE_FULFILLMENT
+                      type: PRE-FULFILLMENT
                       tags:
                         - descriptor:
                             name: Payment Method
@@ -17000,7 +18195,7 @@ x-examples:
                               value: MANDATE_REGISTRATION
                     - id: PG2
                       collected_by: bpp
-                      type: PRE_FULFILLMENT
+                      type: PRE-FULFILLMENT
                       tags:
                         - descriptor:
                             name: Payment Method
@@ -17011,7 +18206,7 @@ x-examples:
                               value: MANUAL_EMI
                     - id: PG3
                       collected_by: bpp
-                      type: PRE_FULFILLMENT
+                      type: PRE-FULFILLMENT
                       tags:
                         - descriptor:
                             name: Payment Method
@@ -17377,7 +18572,7 @@ x-examples:
                   payments:
                     - id: PG3
                       collected_by: BAP
-                      type: PRE_FULFILLMENT
+                      type: PRE-FULFILLMENT
                       params:
                         amount: '1592'
                         currency: INR
@@ -17514,7 +18709,7 @@ x-examples:
                     - id: PG1
                       collected_by: BPP
                       url: https://e-mandate-payment-gateway-url/installment
-                      type: PRE_FULFILLMENT
+                      type: PRE-FULFILLMENT
                       params:
                         amount: '1592'
                         currency: INR
@@ -17636,7 +18831,7 @@ x-examples:
                   payments:
                     - id: PG2
                       collected_by: BPP
-                      type: PRE_FULFILLMENT
+                      type: PRE-FULFILLMENT
                       params:
                         amount: '1592'
                         currency: INR
@@ -18034,10 +19229,11 @@ x-examples:
                   payments:
                     - id: PG3
                       collected_by: BAP
-                      type: PRE_FULFILLMENT
+                      type: PRE-FULFILLMENT
                       params:
                         amount: '1592'
                         currency: INR
+                      status: PAID
                       tags:
                         - descriptor:
                             name: Payment Method
@@ -18291,6 +19487,9 @@ x-examples:
                   fulfillments:
                     - id: FI1
                       type: SUBSCRIPTION
+                      state:
+                        descriptor:
+                          code: PENDING
                       stops:
                         - type: start
                           time:
@@ -18339,7 +19538,7 @@ x-examples:
                     - id: PG1
                       collected_by: BPP
                       url: https://e-mandate-payment-gateway-url/installment
-                      type: PRE_FULFILLMENT
+                      type: PRE-FULFILLMENT
                       status: PAID
                       params:
                         amount: '1592'
@@ -18579,6 +19778,9 @@ x-examples:
                   fulfillments:
                     - id: FI1
                       type: SUBSCRIPTION
+                      state:
+                        descriptor:
+                          code: PENDING
                       stops:
                         - type: start
                           time:
@@ -19283,6 +20485,9 @@ x-examples:
                   fulfillments:
                     - id: FI1
                       type: SUBSCRIPTION
+                      state:
+                        descriptor:
+                          code: PENDING
                       stops:
                         - type: start
                           time:
@@ -19330,7 +20535,7 @@ x-examples:
                   payments:
                     - id: PG2
                       collected_by: BPP
-                      type: PRE_FULFILLMENT
+                      type: PRE-FULFILLMENT
                       params:
                         amount: '1592'
                         currency: INR
@@ -20494,6 +21699,9 @@ x-examples:
                   fulfillments:
                     - id: FI1
                       type: SUBSCRIPTION
+                      state:
+                        descriptor:
+                          code: PENDING
                       stops:
                         - type: start
                           time:
@@ -20542,7 +21750,7 @@ x-examples:
                     - id: PG1
                       collected_by: BPP
                       url: https://e-mandate-payment-gateway-url/installment
-                      type: PRE_FULFILLMENT
+                      type: PRE-FULFILLMENT
                       status: PAID
                       params:
                         amount: '1592'
@@ -20959,7 +22167,6 @@ x-examples:
                     - C1
                   provider:
                     id: P1
-                    rateable: true
                   items:
                     - id: I1
                       fulfillment_ids:
@@ -21003,6 +22210,9 @@ x-examples:
                   fulfillments:
                     - id: FI1
                       type: SUBSCRIPTION
+                      state:
+                        descriptor:
+                          code: PENDING
                       stops:
                         - type: start
                           time:
@@ -21051,7 +22261,7 @@ x-examples:
                     - id: PG1
                       collected_by: BPP
                       url: https://e-mandate-payment-gateway-url/installment
-                      type: PRE_FULFILLMENT
+                      type: PRE-FULFILLMENT
                       status: PAID
                       params:
                         amount: '1592'
@@ -21216,7 +22426,7 @@ x-examples:
                     - id: PG1
                       collected_by: BPP
                       url: https://e-mandate-payment-gateway-url/installment
-                      type: PRE_FULFILLMENT
+                      type: PRE-FULFILLMENT
                       status: PAID
                       params:
                         amount: '1592'
@@ -21523,7 +22733,7 @@ x-examples:
                     - id: PG1
                       collected_by: BPP
                       url: https://e-mandate-payment-gateway-url/installment
-                      type: PRE_FULFILLMENT
+                      type: PRE-FULFILLMENT
                       status: PAID
                       params:
                         amount: '1592'

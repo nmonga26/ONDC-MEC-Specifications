@@ -53,6 +53,11 @@
         {
           "id": "FI1",
           "type": "SUBSCRIPTION",
+          "state": {
+            "descriptor": {
+              "code": "PENDING"
+            }
+          },
           "stops": [
             {
               "type": "start",
@@ -135,7 +140,7 @@
           "id": "PG1",
           "collected_by": "BPP",
           "url": "https://e-mandate-payment-gateway-url/installment",
-          "type": "PRE_FULFILLMENT",
+          "type": "PRE-FULFILLMENT",
           "status": "PAID",
           "params": {
             "amount": "1592",

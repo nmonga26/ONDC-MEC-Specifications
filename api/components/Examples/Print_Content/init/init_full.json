@@ -90,7 +90,7 @@
         {
           "id": "PG3",
           "collected_by": "BAP",
-          "type": "PRE_FULFILLMENT",
+          "type": "PRE-FULFILLMENT",
           "params": {
             "amount": "1592",
             "currency": "INR"

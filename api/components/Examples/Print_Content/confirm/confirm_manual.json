@@ -136,7 +136,7 @@
         {
           "id": "PG2",
           "collected_by": "BPP",
-          "type": "PRE_FULFILLMENT",
+          "type": "PRE-FULFILLMENT",
           "params": {
             "amount": "1592",
             "currency": "INR"

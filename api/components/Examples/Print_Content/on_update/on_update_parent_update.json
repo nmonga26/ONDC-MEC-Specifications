@@ -26,8 +26,7 @@
       "status": "Active",
       "ref_order_ids": ["C1"],
       "provider": {
-        "id": "P1",
-        "rateable": true
+        "id": "P1"
       },
       "items": [
         {
@@ -98,6 +97,11 @@
         {
           "id": "FI1",
           "type": "SUBSCRIPTION",
+          "state": {
+            "descriptor": {
+              "code": "PENDING"
+            }
+          },
           "stops": [
             {
               "type": "start",
@@ -180,7 +184,7 @@
           "id": "PG1",
           "collected_by": "BPP",
           "url": "https://e-mandate-payment-gateway-url/installment",
-          "type": "PRE_FULFILLMENT",
+          "type": "PRE-FULFILLMENT",
           "status": "PAID",
           "params": {
             "amount": "1592",

@@ -8,23 +8,31 @@ value:
         code: std:080
       country:
         code: IND
-    action: on_confirm
+    action: on_status
     version: 2.0.0
     bap_id: buyerapp.com
     bap_uri: https://buyerapp.com/services
     bpp_id: sellerapp.com
     bpp_uri: https://sellerapp.com/services
     transaction_id: T1
-    message_id: M4
-    timestamp: '2024-04-01T22:00:39.000Z'
+    message_id: M10
+    timestamp: '2024-04-01T22:00:49.000Z'
     ttl: PT30S
   message:
     order:
       id: O1
-      status: Accepted
+      status: Completed
+      ref_order_ids:
+        - C1
+        - C2
+        - C3
+        - C4
+        - C5
+        - C6
+        - C7
+        - C8
       provider:
         id: P1
-        rateable: true
       items:
         - id: I1
           fulfillment_ids:
@@ -70,7 +78,7 @@ value:
           type: SUBSCRIPTION
           state:
             descriptor:
-              code: PENDING
+              code: COMPLETED
           stops:
             - type: start
               time:
@@ -116,14 +124,13 @@ value:
                     value: item
         ttl: P1D
       payments:
-        - id: PG1
-          collected_by: BPP
-          url: https://e-mandate-payment-gateway-url/installment
+        - id: PG3
+          collected_by: BAP
           type: PRE-FULFILLMENT
-          status: PAID
           params:
             amount: '1592'
             currency: INR
+          status: PAID
           tags:
             - descriptor:
                 name: Payment Method
@@ -131,7 +138,7 @@ value:
               list:
                 - descriptor:
                     code: MODE
-                  value: MANDATE_REGISTRATION
+                  value: FULl_PAYMENT
             - descriptor:
                 code: BUYER_FINDER_FEES
               display: false

@@ -26,7 +26,6 @@ value:
         - C1
       provider:
         id: P1
-        rateable: true
       items:
         - id: I1
           fulfillment_ids:
@@ -70,6 +69,9 @@ value:
       fulfillments:
         - id: FI1
           type: SUBSCRIPTION
+          state:
+            descriptor:
+              code: PENDING
           stops:
             - type: start
               time:
@@ -118,7 +120,7 @@ value:
         - id: PG1
           collected_by: BPP
           url: https://e-mandate-payment-gateway-url/installment
-          type: PRE_FULFILLMENT
+          type: PRE-FULFILLMENT
           status: PAID
           params:
             amount: '1592'

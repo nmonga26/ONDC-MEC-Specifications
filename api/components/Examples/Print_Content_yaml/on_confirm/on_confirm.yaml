@@ -47,6 +47,9 @@ value:
       fulfillments:
         - id: FI1
           type: SUBSCRIPTION
+          state:
+            descriptor:
+              code: PENDING
           stops:
             - type: start
               time:

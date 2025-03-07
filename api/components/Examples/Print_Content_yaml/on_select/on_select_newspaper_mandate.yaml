@@ -76,7 +76,7 @@ value:
       payments:
         - id: PG1
           collected_by: BPP
-          type: PRE_FULFILLMENT
+          type: PRE-FULFILLMENT
           tags:
             - descriptor:
                 name: Payment Method
@@ -87,7 +87,7 @@ value:
                   value: MANDATE_REGISTRATION
         - id: PG2
           collected_by: bpp
-          type: PRE_FULFILLMENT
+          type: PRE-FULFILLMENT
           tags:
             - descriptor:
                 name: Payment Method
@@ -98,7 +98,7 @@ value:
                   value: MANUAL_EMI
         - id: PG3
           collected_by: bpp
-          type: PRE_FULFILLMENT
+          type: PRE-FULFILLMENT
           tags:
             - descriptor:
                 name: Payment Method

@@ -121,7 +121,49 @@ steps:
       $ref: "../../Examples/Print_Content_yaml/confirm/confirm_full.yaml"
   - summary: Seller accepts the order for service
     api: on_confirm
-    description: Seller app confirms the payment received and sends an /on_confirm call for confirming subscription
+    description: Seller app confirms the order and sends an /on_confirm call for confirming subscription
     reference: if any
     example:
       $ref: "../../Examples/Print_Content_yaml/on_confirm/on_confirm_full.yaml"
+  - summary: Seller accepts the order for service
+    api: on_confirm (Child order - 1st order)
+    description: Seller app creates a child order for each fulfillment and sends an /on_confirm call
+    reference: if any
+    example:
+      $ref: "../../Examples/Print_Content_yaml/on_confirm/on_confirm_full_child.yaml"
+  - summary: Seller accepts the order for service
+    api: on_update (Updated parent order with child)
+    description: Seller app confirms updates the parent app with the child order id
+    reference: if any
+    example:
+      $ref: "../../Examples/Print_Content_yaml/on_update/on_update_full_parent_update.yaml"
+  - summary: Seller sends completion status of child order
+    api: on_status (Complete - 1st Order)
+    description: Seller app completes and sends status update for 1st order
+    reference: if any
+    example:
+      $ref: "../../Examples/Print_Content_yaml/on_status/on_status_online_completed.yaml"
+  - summary: Seller accepts the order for service
+    api: on_confirm (Child order - 2nd order)
+    description: Seller app creates a 2nd child order for fulfillment and sends an /on_confirm call
+    reference: if any
+    example:
+      $ref: "../../Examples/Print_Content_yaml/on_confirm/on_confirm_full_child_2.yaml"
+  - summary: Seller accepts the order for service
+    api: on_update (Updated parent order with child)
+    description: Seller app confirms updates the parent app with the child order id
+    reference: if any
+    example:
+      $ref: "../../Examples/Print_Content_yaml/on_update/on_update_full_parent_update_2.yaml"
+  - summary: Seller sends completion status of child order
+    api: on_status (Complete - 2nd Order)
+    description: Seller app completes and sends status update for 2nd order
+    reference: if any
+    example:
+      $ref: "../../Examples/Print_Content_yaml/on_status/on_status_online_completed_2.yaml"
+  - summary: Seller completes the subscription
+    api: on_update (Subscription completed)
+    description: After all child orders are fulfilled and completed, parent subscription order is completed
+    reference: if any
+    example:
+      $ref: "../../Examples/Print_Content_yaml/on_status/on_status_subscription_completed.yaml"
