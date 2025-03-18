@@ -55,7 +55,6 @@ async function validateFlows(flows, schemaMap) {
           if (step.api === api) {
             const result = await validateSchema(schemaMap[api], step.example);
             if (result) {
-              console.log("Error[flows]:", `${flowItem?.summary + "/" + api}`);
               return (hasTrueResult = true);
             }
           }
@@ -78,7 +77,6 @@ async function validateExamples(exampleSets, schemaMap) {
             exampleList[payload]
           );
           if (result) {
-            console.log("error[Example] :", `${example + "/" + api}`);
             return (hasTrueResult = true);
           }
         }
@@ -106,7 +104,7 @@ async function matchKeyType(
       type = allOfType;
     }
     if (typeof checkEnum?.code != type) {
-          throw Error(`Enum type not matched: ${currentAttrib} in ${logObject}`);
+      throw Error(`Enum type not matched: ${currentAttrib} in ${logObject}`);
     }
   }
 }
@@ -116,7 +114,12 @@ async function checkObjectKeys(currentExamplePos, currentSchemaPos, logObject) {
     const currentSchema = currentSchemaPos[currentAttrib];
     if (currentSchema) {
       if (Array.isArray(currentExample)) {
-        await matchKeyType(currentAttrib, currentExamplePos, currentSchemaPos, logObject);
+        await matchKeyType(
+          currentAttrib,
+          currentExamplePos,
+          currentSchemaPos,
+          logObject
+        );
       } else {
         let schema;
         if (currentSchema.type === "object") {
@@ -158,7 +161,6 @@ async function validateEnumsTags(exampleEnums, schemaMap) {
   }
 }
 async function traverseTags(currentTagValue, schemaForTraversal, logObject) {
-    //console.log('currentTagValue', currentTagValue)
   for (const currentTagKey of Object.keys(currentTagValue)) {
     const currentTag = currentTagValue[currentTagKey];
     const schemaType = schemaForTraversal[currentTagKey];
@@ -170,8 +172,9 @@ async function traverseTags(currentTagValue, schemaForTraversal, logObject) {
         const schema =
           schemaType.type === "object"
             ? schemaType?.properties
-            : schemaType.items?.properties || schemaType.items?.allOf[0]?.properties
-            || schemaType.allOf[0]?.properties;
+            : schemaType.items?.properties ||
+              schemaType.items?.allOf[0]?.properties ||
+              schemaType.allOf[0]?.properties;
         await traverseTags(currentTag, schema, logObject);
       }
     } else {
