@@ -221,7 +221,7 @@
                 "offered_value": "199.00",
                 "maximum_value": "199.00"
               },
-              "category_ids": ["MEC11-1001", "C2", "C3"],
+              "category_ids": ["MEC11-1001", "C2"],
               "fulfillment_ids": ["F1"],
               "payment_ids": ["1"],
               "tags": [
@@ -405,6 +405,14 @@
                           "long_desc": "Description"
                         },
                         "value": "1"
+                      },
+                      {
+                        "descriptor": {
+                          "code": "COMPATIBLE_DEVICES",
+                          "short_desc": "Description",
+                          "long_desc": "Description"
+                        },
+                        "value": "iOS,Android,AndroidTV,AppleTV"
                       },
                       {
                         "descriptor": {

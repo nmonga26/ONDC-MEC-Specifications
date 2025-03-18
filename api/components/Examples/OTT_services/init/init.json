@@ -28,9 +28,7 @@
       "items": [
         {
           "id": "I1",
-          "fulfillment_ids": [
-            "F1"
-          ],
+          "fulfillment_ids": ["F1"],
           "quantity": {
             "selected": {
               "count": 1
@@ -53,7 +51,6 @@
       },
       "payments": [
         {
-          "id": "PG1",
           "collected_by": "BAP",
           "type": "PRE_FULFILLMENT"
         }
