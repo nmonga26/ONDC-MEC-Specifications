@@ -26,7 +26,6 @@ function toUnderscoreCase(inputText) {
 async function getFeatures(branchName) {
   if (!branchName) return;
   const url = `https://api.github.com/repos/ONDC-Official/ONDC-MEC-Specifications/contents/api/docs?ref=${branchName}`;
-  console.log(url);
   try {
     const response = await fetch(url, {
       headers: {
@@ -58,7 +57,6 @@ async function getFeatures(branchName) {
 
 function loadFeatures(data) {
   features = data;
-  console.log(features);
   let firstKey = features.keys().next().value;
   const splitArr = firstKey.split(".");
   markdownConverter(splitArr[0]);

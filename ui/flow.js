@@ -52,7 +52,6 @@ function loadSteps(steps) {
 function updateFlow() {
   var flowDropdown = document.getElementById("flow-dropdown");
   var selectedValue = flowDropdown.value;
-  console.log("update", selectedValue);
   loadFlow(selectedValue);
 }
 
@@ -67,7 +66,6 @@ async function loadFlow(flowName) {
   flowSummary.textContent = selectedFlow["summary"];
   flowDescription.textContent = selectedFlow["description"];
   var mermaidDiv = document.createElement("description-div");
-  console.log(selectedFlow);
   if (selectedFlow["details"]) {
     var mermaidDiv = document.createElement("mermaid-div");
     for (const [index, step] of selectedFlow["details"].entries()) {
@@ -96,7 +94,6 @@ async function loadFlow(flowName) {
 }
 
 function loadFlows(data) {
-  console.log("data", data);
   flows = data;
   const flowDropdown = document.getElementById("flow-dropdown");
   flowDropdown.innerHTML = "";
@@ -104,7 +101,6 @@ function loadFlows(data) {
   flows.forEach((flow) => {
     var option = document.createElement("option");
     option.text = flow.summary;
-    console.log(option);
     flowDropdown.add(option);
   });
   loadFlow(flows[0].summary);

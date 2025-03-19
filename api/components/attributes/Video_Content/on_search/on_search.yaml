@@ -157,3 +157,309 @@ message:
               required: optional
               usage: "9886098860"
               reference: if any
+        tags:
+          ATTRIBUTES:
+            METADATA:
+              description: Metadata of the content
+              required: required
+              usage: "-"
+              reference: if any
+            RENTAL_INFO:
+              description: Rental information if the item is available on rent
+              required: optional
+              usage: "-"
+              reference: if any
+            SUPPORTED_DEVICES:
+              description: Supported devices to stream on
+              required: required
+              usage: "-"
+              reference: if any
+          METADATA:
+            CONTENT_ID:
+              description: Unique ID of the content, created by BPP
+              required: required
+              usage: "N001_MOV_000001"
+              reference: if any
+            DURATION:
+              description: Duration in seconds
+              required: required
+              usage: "7800"
+              reference: if any
+            STREAMING_URL:
+              description: URL on which media is available
+              required: required
+              usage: "https://ondc.org/video-path.m3u8"
+              reference: if any
+            GENRE:
+              description: Comma separated list of genres
+              required: required
+              usage: "Action,Comedy"
+              reference: if any
+            PARENTAL_RATING:
+              description: Parental rating of the content
+              required: required
+              usage: "UA - 13+"
+              reference: if any
+            CAST:
+              description: Comma-separated list of the cast of the movie/show
+              required: required
+              usage: "Amitabh Bachchan,Dharmendra"
+              reference: if any
+            WRITER:
+              description: Comma-separated list of writers on the show
+              required: required
+              usage: "Salim,Javed"
+              reference: if any
+            MUSIC:
+              description: Comma-separated list of music composers on the show
+              required: required
+              usage: "R.D. Burman"
+              reference: if any
+            DIRECTOR:
+              description: The director of the show
+              required: required
+              usage: "Ramesh Sippy"
+              reference: if any
+            PRODUCER:
+              description: The producer of the show
+              required: required
+              usage: "J.P. Sippy"
+              reference: if any
+            RELEASE_YEAR:
+              description: The year of release
+              required: required
+              usage: "1975"
+              reference: if any
+            DESCRIPTORS:
+              description: The descriptors for show
+              required: required
+              usage: "Violence,Mature Theme"
+              reference: if any
+            LANGUAGE:
+              description: Language the media is available in
+              required: required
+              usage: "Hindi"
+              reference: if any
+            DOWNLOADABLE:
+              description: Whether the show is downloaded or not
+              required: required
+              usage: "Y"
+              reference: if any
+            NO_OF_SEASONS:
+              description: Seasons in the show, required if TV Show
+              required: optional
+              usage: "2"
+              reference: if any
+            SEASONS_IDS:
+              description: Comma-separated list of season IDs, required if TV show
+              required: required
+              usage: "S-FAM-001,S-FAM-002"
+              reference: if any
+            COUNTRY_OF_ORIGIN:
+              description: Whether the show is downloaded or not
+              required: optional
+              usage: "IND"
+              reference: if any
+          RENTAL_INFO:
+            CONDITION:
+              description: Condition on which the watching duration starts
+              required: required
+              usage: "FIRST_WATCH"
+              reference: if any
+            DURATION:
+              description: The duration time that the user can watch the movie for
+              required: required
+              usage: "PT24H"
+              reference: if any
+          SUPPORTED_DEVICES:
+            DOWNLOAD_DEVICES:
+              description: Max number of devices on which download is allowed
+              required: required
+              usage: "1"
+              reference: if any
+            MULTI_DEVICE_SUPPORT:
+              description: Max number of devices on which content is allowed to play
+              required: required
+              usage: "2"
+              reference: if any
+            CONCURRENT_STREAMING:
+              description: Max number of devices on which content is allowed to play concurrently
+              required: required
+              usage: "2"
+              reference: if any
+          SEASON_ID:
+            SEQ:
+              description: Sequence of the season
+              required: required
+              usage: "1"
+              reference: if any
+            SUBTITLES:
+              description: Comma-separated list of available subtitles
+              required: required
+              usage: "English,Hindi"
+              reference: if any
+            RESOLUTION_SUPPORTED:
+              description: Comma-separated list of video quality available
+              required: required
+              usage: "480p,720p,1080p,2k,4k"
+              reference: if any
+            TITLE:
+              description: Title of the series
+              required: required
+              usage: "The Family Men - Season1"
+              reference: if any
+            GENRE:
+              description: Comma separated list of genres
+              required: optional
+              usage: "Action,Comedy"
+              reference: if any
+            PARENTAL_RATING:
+              description: Parental rating of the content
+              required: optional
+              usage: "UA - 13+"
+              reference: if any
+            CAST:
+              description: Comma-separated list of the cast of the movie/show
+              required: optional
+              usage: "Amitabh Bachchan,Dharmendra"
+              reference: if any
+            WRITER:
+              description: Comma-separated list of writers on the show
+              required: optional
+              usage: "Salim,Javed"
+              reference: if any
+            MUSIC:
+              description: Comma-separated list of music composers on the show
+              required: optional
+              usage: "R.D. Burman"
+              reference: if any
+            DIRECTOR:
+              description: The director of the show
+              required: optional
+              usage: "Ramesh Sippy"
+              reference: if any
+            PRODUCER:
+              description: The producer of the show
+              required: optional
+              usage: "J.P. Sippy"
+              reference: if any
+            RELEASE_YEAR:
+              description: The year of release
+              required: optional
+              usage: "1975"
+              reference: if any
+            DESCRIPTORS:
+              description: The descriptors for show
+              required: optional
+              usage: "Violence,Mature Theme"
+              reference: if any
+            LANGUAGE:
+              description: Language the media is available in
+              required: optional
+              usage: "Hindi"
+              reference: if any
+            DOWNLOADABLE:
+              description: Whether the show is downloaded or not
+              required: required
+              usage: "Y"
+              reference: if any
+            NO_OF_EPISODES:
+              description: Seasons in the show, required if TV Show
+              required: optional
+              usage: "2"
+              reference: if any
+            EPISODES_IDS:
+              description: Comma-separated list of season IDs, required if TV show
+              required: required
+              usage: "S-FAM-EP-001,S-FAM-EP-002"
+              reference: if any
+            IMAGES_SM:
+              description: Comma-separated list of small sizes images to be used for thumbnails
+              required: required
+              usage: "https://abc.com/images/thumbnail-season1.png"
+              reference: if any
+            IMAGES_LG:
+              description: Comma-separated list of small sizes images to be used for previews
+              required: required
+              usage: "https://abc.com/images/thumbnail-season1_lg.png"
+              reference: if any
+            TRAILERS:
+              description: Comma-separated list of trailers
+              required: required
+              usage: "https://www.youtube.com/watch?v=NGf_B81Hc2M&pp=ygUSZmFtaWx5IG1hbiB0cmFpbGVy,https://www.youtube.com/watch?v=NGf_B81Hc2M&pp=ygUSZmFtaWx5IG1hbiB0cmFpbGVy"
+              reference: if any
+          EPISODE_ID:
+            SEQ:
+              description: Sequence of the season
+              required: required
+              usage: "1"
+              reference: if any
+            TITLE:
+              description: Title of the series
+              required: required
+              usage: "The Family Men"
+              reference: if any
+            RELEASE_DATE:
+              description: Release date of the episode
+              required: required
+              usage: "29th December"
+              reference: if any
+            STREAMING_URL:
+              description: Streaming URL of the media
+              required: required
+              usage: "https://ondc.org/video-path.m3u8"
+              reference: if any
+            CAST:
+              description: Comma-separated list of the cast of the movie/show
+              required: optional
+              usage: "Amitabh Bachchan,Dharmendra"
+              reference: if any
+            DURATION:
+              description: Duration in seconds
+              required: required
+              usage: "72000"
+              reference: if any
+            IMAGES_SM:
+              description: Comma-separated list of small sizes images to be used for thumbnails
+              required: required
+              usage: "https://abc.com/images/thumbnail-season1.png"
+              reference: if any
+            IMAGES_LG:
+              description: Comma-separated list of small sizes images to be used for previews
+              required: required
+              usage: "https://abc.com/images/thumbnail-season1_lg.png"
+              reference: if any
+            TRAILERS:
+              description: Comma-separated list of trailers
+              required: required
+              usage: "https://www.youtube.com/watch?v=NGf_B81Hc2M&pp=ygUSZmFtaWx5IG1hbiB0cmFpbGVy,https://www.youtube.com/watch?v=NGf_B81Hc2M&pp=ygUSZmFtaWx5IG1hbiB0cmFpbGVy"
+              reference: if any
+      tags:
+        parent: true
+        serviceability:
+          parent: true
+          location:
+            description: location id of the provider location
+            required: required
+            usage: "L1"
+            reference: if any
+          category:
+            description: category id taken from taxonomy
+            required: required
+            usage: "SRVXX-XXXX"
+            reference: if any
+          type:
+            description: the type of serviceability that is being declared
+            required: required
+            usage: "12"
+            reference: if any
+          val:
+            description: the value for this serviceability
+            required: required
+            usage: "IND"
+            reference: if any
+          unit:
+            description: the type of unit being declared
+            required: required
+            usage: "country"
+            reference: if any

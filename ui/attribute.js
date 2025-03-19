@@ -20,12 +20,12 @@ function updateL1Attribute() {
   var example_set = document.getElementById("attribute-sets-dropdown");
   var l1Dropdown = document.getElementById("attribute-l1-dropdown");
   document.querySelectorAll(".content").forEach((div) => div.remove());
+
   var object =
     attributes[attributesDropDown.value]?.attribute_set[example_set.value];
   for (const each of l1Dropdown.value.split(".")) {
     object = object[each];
   }
-  console.log("Object to render", object);
   object = removeParentAttributes(object);
   if (
     "required" in object[Object.keys(object).filter((e) => e !== "parent")[0]]
@@ -39,8 +39,7 @@ function removeParentAttributes(obj) {
     if (
       !["parent", "usage", "description", "reference", "required"].includes(
         key
-      )
-       &&
+      ) &&
       !("parent" in obj[key])
     )
       newObj = { ...newObj, [key]: { ...obj[key] } };
@@ -82,7 +81,11 @@ function updateSets(value, option) {
     keyDetail = keyDetail[each];
   }
 
-  console.log("Object to render", keyDetail);
+  // print(keyDetail);
+
+  console.log("well2", firstKey);
+
+  console.log("well", keyDetail);
 
   // if ("required" in keyDetail)
   flattenObject(keyDetail, null, null, keyDetail?.required_attributes);
@@ -120,8 +123,6 @@ function addAttributeSets(option) {
   for (const each of firstKey.split(".")) {
     keyDetail = keyDetail[each];
   }
-
-  console.log("Object to render", keyDetail);
 
   if (
     "required" in

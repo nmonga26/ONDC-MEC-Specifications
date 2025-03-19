@@ -2795,28 +2795,6 @@ x-tags:
                   reference: <PR/Issue/Discussion Links md format text>
           items:
             tags:
-              - code: RESCHEDULE_TERMS
-                description: Reschedule terms for the item
-                reference: <PR/Issue/Discussion Links md format text>
-                list:
-                  - code: FULFILLMENT_STATE
-                    description: >-
-                      Describing the fulfilment state for which reschdule will
-                      be applicable
-                    reference: <PR/Issue/Discussion Links md format text>
-                  - code: RESCHEDULE_ELIGIBLE
-                    description: Whether reschedule is available at this fulfillment state
-                    reference: <PR/Issue/Discussion Links md format text>
-                  - code: RESCHEDULE_FEE
-                    description: >-
-                      Fees that will be charged if rescheduled at this
-                      fulfillment state
-                    reference: <PR/Issue/Discussion Links md format text>
-                  - code: RESCHEDULE_WITHIN
-                    description: >-
-                      Time within which it should be rescheduled after the
-                      fulfilment has been changed
-                    reference: <PR/Issue/Discussion Links md format text>
               - code: ATTRIBUTES
                 description: Attribute of a particular item
                 reference: <PR/Issue/Discussion Links md format text>
@@ -3035,8 +3013,8 @@ x-tags:
     message:
       order:
         quote:
-          breakup: &ref_8
-            tags: &ref_11
+          breakup: &ref_7
+            tags: &ref_10
               - code: title
                 description: title tag
                 reference: <PR/Issue/Discussion Links md format text>
@@ -3046,37 +3024,12 @@ x-tags:
                       Depending upon the context, it can take the value of the
                       discount, tax, misc or item type value.
                     reference: <PR/Issue/Discussion Links md format text>
-  init:
-    message:
-      order:
-        items: &ref_7
-          tags:
-            - code: REPORT_REQUIREMENT
-              description: Attribute of a particular item
-              reference: <PR/Issue/Discussion Links md format text>
-              list:
-                - code: REPORT_DEADLINE
-                  description: The deadline within which report is required
-                  reference: <PR/Issue/Discussion Links md format text>
-                - code: CROP
-                  description: The crop for which the service is required, optional
-                  reference: <PR/Issue/Discussion Links md format text>
-                - code: DATE_OF_SOWING
-                  description: The sowing date of the crop, optional
-                  reference: <PR/Issue/Discussion Links md format text>
-                - code: FARM_STATUS
-                  description: Status of the farm - Eg. RAIN_FED, optional
-                  reference: <PR/Issue/Discussion Links md format text>
-                - code: ACRAGE
-                  description: Acrage of the farm, optional
-                  reference: <PR/Issue/Discussion Links md format text>
   on_init:
-    message: &ref_9
+    message: &ref_8
       order:
-        items: *ref_7
         quote:
-          breakup: *ref_8
-        payments: &ref_10
+          breakup: *ref_7
+        payments: &ref_9
           tags:
             - code: SETTLEMENT_DETAILS
               description: Define Payment Settlement Details here
@@ -3111,27 +3064,18 @@ x-tags:
                   description: Amount for the finder fee
                   reference: <PR/Issue/Discussion Links md format text>
   confirm:
-    message: *ref_9
+    message: *ref_8
   on_status:
-    message: *ref_9
+    message: *ref_8
   update:
-    message: &ref_12
+    message: &ref_11
       order:
-        payments: *ref_10
+        payments: *ref_9
         quote:
           breakup:
-            tags: *ref_11
-          item:
-            tags:
-              - code: attributes
-                description: Update parameter for attributes
-                reference: <PR/Issue/Discussion Links md format text>
-                list:
-                  - code: color
-                    description: Hex Code for color
-                    reference: <PR/Issue/Discussion Links md format text>
+            tags: *ref_10
   on_update:
-    message: *ref_12
+    message: *ref_11
 x-flows:
   - summary: OTT - Discovery of Catalog
     description: >-
@@ -3317,7 +3261,7 @@ x-flows:
           Seller responds with their full or partial catalog based on intent
           matching
         reference: if any
-        example: &ref_13
+        example: &ref_12
           summary: ''
           description: ''
           value:
@@ -4188,7 +4132,7 @@ x-flows:
         api: on_search
         description: Returns the catalog specific to the search intent
         reference: if any
-        example: *ref_13
+        example: *ref_12
       - summary: Buyer selects the required media service
         api: select
         description: Buyer selects the required media service + suitable fulfillment type
@@ -4495,7 +4439,7 @@ x-flows:
         description: >-
           Buyer makes the payment on the seller payment link that is rendered by
           the buyer app to confirm the order
-        example: &ref_14
+        example: &ref_13
           summary: ''
           description: ''
           value:
@@ -4640,7 +4584,7 @@ x-flows:
           Seller app confirms the payment received and sends an /on_confirm call
           for confirming subscription
         reference: if any
-        example: &ref_15
+        example: &ref_14
           summary: ''
           description: ''
           value:
@@ -4783,7 +4727,7 @@ x-flows:
         api: status
         description: Buyer requests for status of the order
         reference: if any
-        example: &ref_16
+        example: &ref_15
           summary: ''
           description: ''
           value:
@@ -4810,7 +4754,7 @@ x-flows:
         api: on_status (Pending)
         description: Seller app sends the current status update of the order
         reference: if any
-        example: &ref_17
+        example: &ref_16
           summary: ''
           description: ''
           value:
@@ -4938,7 +4882,7 @@ x-flows:
           Seller app sends the current status update of the order when the order
           is completed
         reference: if any
-        example: &ref_18
+        example: &ref_17
           summary: ''
           description: ''
           value:
@@ -5110,31 +5054,31 @@ x-flows:
         description: >-
           Buyer makes the payment on the seller payment link that is rendered by
           the buyer app to confirm the order
-        example: *ref_14
+        example: *ref_13
       - summary: Seller accepts the order for service
         api: on_confirm
         description: >-
           Seller app confirms the payment received and sends an /on_confirm call
           for confirming subscription
         reference: if any
-        example: *ref_15
+        example: *ref_14
       - summary: Buyer requests for status of the order
         api: status
         description: Buyer requests for status of the order
         reference: if any
-        example: *ref_16
+        example: *ref_15
       - summary: Seller sends back the current status of the order
         api: on_status (Pending)
         description: Seller app sends the current status update of the order
         reference: if any
-        example: *ref_17
+        example: *ref_16
       - summary: Seller sends back the current status of the order
         api: on_status (Completed)
         description: >-
           Seller app sends the current status update of the order when the order
           is completed
         reference: if any
-        example: *ref_18
+        example: *ref_17
       - summary: Buyer tries to access the content
         api: update
         description: Buyer tries to view the content for a session
@@ -13709,7 +13653,7 @@ x-examples:
                   created_at: '2024-04-01T22:00:38.000Z'
                   updated_at: '2024-04-01T22:00:39.000Z'
 x-attributes:
-  Print Media:
+  Video Content:
     attribute_set:
       search:
         parent: true
@@ -13984,6 +13928,326 @@ x-attributes:
                       required: optional
                       usage: '9886098860'
                       reference: if any
+                tags:
+                  ATTRIBUTES:
+                    METADATA:
+                      description: Metadata of the content
+                      required: required
+                      usage: '-'
+                      reference: if any
+                    RENTAL_INFO:
+                      description: Rental information if the item is available on rent
+                      required: optional
+                      usage: '-'
+                      reference: if any
+                    SUPPORTED_DEVICES:
+                      description: Supported devices to stream on
+                      required: required
+                      usage: '-'
+                      reference: if any
+                  METADATA:
+                    CONTENT_ID:
+                      description: Unique ID of the content, created by BPP
+                      required: required
+                      usage: N001_MOV_000001
+                      reference: if any
+                    DURATION:
+                      description: Duration in seconds
+                      required: required
+                      usage: '7800'
+                      reference: if any
+                    STREAMING_URL:
+                      description: URL on which media is available
+                      required: required
+                      usage: https://ondc.org/video-path.m3u8
+                      reference: if any
+                    GENRE:
+                      description: Comma separated list of genres
+                      required: required
+                      usage: Action,Comedy
+                      reference: if any
+                    PARENTAL_RATING:
+                      description: Parental rating of the content
+                      required: required
+                      usage: UA - 13+
+                      reference: if any
+                    CAST:
+                      description: Comma-separated list of the cast of the movie/show
+                      required: required
+                      usage: Amitabh Bachchan,Dharmendra
+                      reference: if any
+                    WRITER:
+                      description: Comma-separated list of writers on the show
+                      required: required
+                      usage: Salim,Javed
+                      reference: if any
+                    MUSIC:
+                      description: Comma-separated list of music composers on the show
+                      required: required
+                      usage: R.D. Burman
+                      reference: if any
+                    DIRECTOR:
+                      description: The director of the show
+                      required: required
+                      usage: Ramesh Sippy
+                      reference: if any
+                    PRODUCER:
+                      description: The producer of the show
+                      required: required
+                      usage: J.P. Sippy
+                      reference: if any
+                    RELEASE_YEAR:
+                      description: The year of release
+                      required: required
+                      usage: '1975'
+                      reference: if any
+                    DESCRIPTORS:
+                      description: The descriptors for show
+                      required: required
+                      usage: Violence,Mature Theme
+                      reference: if any
+                    LANGUAGE:
+                      description: Language the media is available in
+                      required: required
+                      usage: Hindi
+                      reference: if any
+                    DOWNLOADABLE:
+                      description: Whether the show is downloaded or not
+                      required: required
+                      usage: 'Y'
+                      reference: if any
+                    NO_OF_SEASONS:
+                      description: Seasons in the show, required if TV Show
+                      required: optional
+                      usage: '2'
+                      reference: if any
+                    SEASONS_IDS:
+                      description: Comma-separated list of season IDs, required if TV show
+                      required: required
+                      usage: S-FAM-001,S-FAM-002
+                      reference: if any
+                    COUNTRY_OF_ORIGIN:
+                      description: Whether the show is downloaded or not
+                      required: optional
+                      usage: IND
+                      reference: if any
+                  RENTAL_INFO:
+                    CONDITION:
+                      description: Condition on which the watching duration starts
+                      required: required
+                      usage: FIRST_WATCH
+                      reference: if any
+                    DURATION:
+                      description: The duration time that the user can watch the movie for
+                      required: required
+                      usage: PT24H
+                      reference: if any
+                  SUPPORTED_DEVICES:
+                    DOWNLOAD_DEVICES:
+                      description: Max number of devices on which download is allowed
+                      required: required
+                      usage: '1'
+                      reference: if any
+                    MULTI_DEVICE_SUPPORT:
+                      description: >-
+                        Max number of devices on which content is allowed to
+                        play
+                      required: required
+                      usage: '2'
+                      reference: if any
+                    CONCURRENT_STREAMING:
+                      description: >-
+                        Max number of devices on which content is allowed to
+                        play concurrently
+                      required: required
+                      usage: '2'
+                      reference: if any
+                  SEASON_ID:
+                    SEQ:
+                      description: Sequence of the season
+                      required: required
+                      usage: '1'
+                      reference: if any
+                    SUBTITLES:
+                      description: Comma-separated list of available subtitles
+                      required: required
+                      usage: English,Hindi
+                      reference: if any
+                    RESOLUTION_SUPPORTED:
+                      description: Comma-separated list of video quality available
+                      required: required
+                      usage: 480p,720p,1080p,2k,4k
+                      reference: if any
+                    TITLE:
+                      description: Title of the series
+                      required: required
+                      usage: The Family Men - Season1
+                      reference: if any
+                    GENRE:
+                      description: Comma separated list of genres
+                      required: optional
+                      usage: Action,Comedy
+                      reference: if any
+                    PARENTAL_RATING:
+                      description: Parental rating of the content
+                      required: optional
+                      usage: UA - 13+
+                      reference: if any
+                    CAST:
+                      description: Comma-separated list of the cast of the movie/show
+                      required: optional
+                      usage: Amitabh Bachchan,Dharmendra
+                      reference: if any
+                    WRITER:
+                      description: Comma-separated list of writers on the show
+                      required: optional
+                      usage: Salim,Javed
+                      reference: if any
+                    MUSIC:
+                      description: Comma-separated list of music composers on the show
+                      required: optional
+                      usage: R.D. Burman
+                      reference: if any
+                    DIRECTOR:
+                      description: The director of the show
+                      required: optional
+                      usage: Ramesh Sippy
+                      reference: if any
+                    PRODUCER:
+                      description: The producer of the show
+                      required: optional
+                      usage: J.P. Sippy
+                      reference: if any
+                    RELEASE_YEAR:
+                      description: The year of release
+                      required: optional
+                      usage: '1975'
+                      reference: if any
+                    DESCRIPTORS:
+                      description: The descriptors for show
+                      required: optional
+                      usage: Violence,Mature Theme
+                      reference: if any
+                    LANGUAGE:
+                      description: Language the media is available in
+                      required: optional
+                      usage: Hindi
+                      reference: if any
+                    DOWNLOADABLE:
+                      description: Whether the show is downloaded or not
+                      required: required
+                      usage: 'Y'
+                      reference: if any
+                    NO_OF_EPISODES:
+                      description: Seasons in the show, required if TV Show
+                      required: optional
+                      usage: '2'
+                      reference: if any
+                    EPISODES_IDS:
+                      description: Comma-separated list of season IDs, required if TV show
+                      required: required
+                      usage: S-FAM-EP-001,S-FAM-EP-002
+                      reference: if any
+                    IMAGES_SM:
+                      description: >-
+                        Comma-separated list of small sizes images to be used
+                        for thumbnails
+                      required: required
+                      usage: https://abc.com/images/thumbnail-season1.png
+                      reference: if any
+                    IMAGES_LG:
+                      description: >-
+                        Comma-separated list of small sizes images to be used
+                        for previews
+                      required: required
+                      usage: https://abc.com/images/thumbnail-season1_lg.png
+                      reference: if any
+                    TRAILERS:
+                      description: Comma-separated list of trailers
+                      required: required
+                      usage: >-
+                        https://www.youtube.com/watch?v=NGf_B81Hc2M&pp=ygUSZmFtaWx5IG1hbiB0cmFpbGVy,https://www.youtube.com/watch?v=NGf_B81Hc2M&pp=ygUSZmFtaWx5IG1hbiB0cmFpbGVy
+                      reference: if any
+                  EPISODE_ID:
+                    SEQ:
+                      description: Sequence of the season
+                      required: required
+                      usage: '1'
+                      reference: if any
+                    TITLE:
+                      description: Title of the series
+                      required: required
+                      usage: The Family Men
+                      reference: if any
+                    RELEASE_DATE:
+                      description: Release date of the episode
+                      required: required
+                      usage: 29th December
+                      reference: if any
+                    STREAMING_URL:
+                      description: Streaming URL of the media
+                      required: required
+                      usage: https://ondc.org/video-path.m3u8
+                      reference: if any
+                    CAST:
+                      description: Comma-separated list of the cast of the movie/show
+                      required: optional
+                      usage: Amitabh Bachchan,Dharmendra
+                      reference: if any
+                    DURATION:
+                      description: Duration in seconds
+                      required: required
+                      usage: '72000'
+                      reference: if any
+                    IMAGES_SM:
+                      description: >-
+                        Comma-separated list of small sizes images to be used
+                        for thumbnails
+                      required: required
+                      usage: https://abc.com/images/thumbnail-season1.png
+                      reference: if any
+                    IMAGES_LG:
+                      description: >-
+                        Comma-separated list of small sizes images to be used
+                        for previews
+                      required: required
+                      usage: https://abc.com/images/thumbnail-season1_lg.png
+                      reference: if any
+                    TRAILERS:
+                      description: Comma-separated list of trailers
+                      required: required
+                      usage: >-
+                        https://www.youtube.com/watch?v=NGf_B81Hc2M&pp=ygUSZmFtaWx5IG1hbiB0cmFpbGVy,https://www.youtube.com/watch?v=NGf_B81Hc2M&pp=ygUSZmFtaWx5IG1hbiB0cmFpbGVy
+                      reference: if any
+              tags:
+                parent: true
+                serviceability:
+                  parent: true
+                  location:
+                    description: location id of the provider location
+                    required: required
+                    usage: L1
+                    reference: if any
+                  category:
+                    description: category id taken from taxonomy
+                    required: required
+                    usage: SRVXX-XXXX
+                    reference: if any
+                  type:
+                    description: the type of serviceability that is being declared
+                    required: required
+                    usage: '12'
+                    reference: if any
+                  val:
+                    description: the value for this serviceability
+                    required: required
+                    usage: IND
+                    reference: if any
+                  unit:
+                    description: the type of unit being declared
+                    required: required
+                    usage: country
+                    reference: if any
       select:
         parent: true
         message:

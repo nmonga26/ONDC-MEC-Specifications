@@ -20,11 +20,11 @@ catalog:
           $ref: "./Tag.yaml#/serviceability"
     items:
       tags:
-        - code: RESCHEDULE_TERMS
-          description: Reschedule terms for the item
-          reference: <PR/Issue/Discussion Links md format text>
-          list:
-            $ref: "./Tag.yaml#/RESCHEDULE_TERMS"
+        # - code: RESCHEDULE_TERMS
+        #   description: Reschedule terms for the item
+        #   reference: <PR/Issue/Discussion Links md format text>
+        #   list:
+        #     $ref: "./Tag.yaml#/RESCHEDULE_TERMS"
         - code: ATTRIBUTES
           description: Attribute of a particular item
           reference: <PR/Issue/Discussion Links md format text>
@@ -63,13 +63,13 @@ catalog:
         list:
           $ref: "./Tag.yaml#/SELECTION"
 order:
-  items:
-    tags:
-      - code: REPORT_REQUIREMENT
-        description: Attribute of a particular item
-        reference: <PR/Issue/Discussion Links md format text>
-        list:
-          $ref: "./Tag.yaml#/REPORT_REQUIREMENT"
+  # items:
+  #   tags:
+  #     - code: REPORT_REQUIREMENT
+  #       description: Attribute of a particular item
+  #       reference: <PR/Issue/Discussion Links md format text>
+  #       list:
+  #         $ref: "./Tag.yaml#/REPORT_REQUIREMENT"
   quote:
     breakup:
       tags: &ref2
